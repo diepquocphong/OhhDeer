@@ -6,6 +6,7 @@ TagManager:
   tags:
   - RealDeerMarker
   - Chicken
+  - PositionPlayer
   layers:
   - Default
   - TransparentFX

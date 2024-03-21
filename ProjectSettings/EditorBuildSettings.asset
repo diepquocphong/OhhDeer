@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/The Hidden Valley - Stylized Low Poly Environment Pack/Scenes/Daylight_Mobile.unity
     guid: 258b59982196b9d4fa25cd7e439b77cd
+  - enabled: 1
+    path: Assets/Waypoint Indicators/Demo/Scenes/_root.unity
+    guid: 57c29fef368cb95478f221bd300cc0dc
   m_configObjects:
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000,
       guid: 549561f98b15f4f78aa8567424328251, type: 2}
