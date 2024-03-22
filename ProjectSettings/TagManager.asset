@@ -7,6 +7,10 @@ TagManager:
   - RealDeerMarker
   - Chicken
   - PositionPlayer
+  - Canvas
+  - FakeDeer
+  - DamageArrow
+  - Joystick
   layers:
   - Default
   - TransparentFX

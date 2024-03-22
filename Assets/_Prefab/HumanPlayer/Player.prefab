@@ -550,7 +550,7 @@ MonoBehaviour:
           m_Focus:
             m_InteractionMode:
               rid: 7546138958612135953
-        m_Speed: 6
+        m_Speed: 6.1
         m_Rotation:
           m_IsEnabled: 1
           m_Value: 1800
@@ -653,6 +653,7 @@ MonoBehaviour:
         - rid: 7546138977741570303
         - rid: 7546138972368142429
         - rid: 7546138977741570172
+        - rid: 7546139006975082711
     - rid: 7546138958612136190
       type: {class: NameVariable, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
       data:
@@ -708,6 +709,21 @@ MonoBehaviour:
         m_Name:
           m_String: StartGame
     - rid: 7546138977741570304
+      type: {class: ValueBool, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Value: 0
+    - rid: 7546139006975082711
+      type: {class: NameVariable, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Value:
+          rid: 7546139006975082712
+        m_Name:
+          m_String: ArrowLoad
+    - rid: 7546139006975082712
       type: {class: ValueBool, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
       data:
         m_Breakpoint: 0

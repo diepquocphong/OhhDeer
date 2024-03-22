@@ -398,7 +398,7 @@ MonoBehaviour:
     - rid: 7546138958612136171
       type: {class: TriggerNode, ns: NinjutsuGames.StateMachine.Runtime, asm: NinjutsuGames.StateMachine.Runtime}
       data:
-        nodeCustomName: TriggerDead
+        nodeCustomName: TrigerEnterArrow
         GUID: b8a2e81c-d5c6-46e4-9be1-281a8746ca2d
         computeOrder: 2
         position:
@@ -412,18 +412,7 @@ MonoBehaviour:
         nodeLock: 0
         enabledForExecution: 1
         triggerEvent:
-          rid: 7546138958612136173
-    - rid: 7546138958612136173
-      type: {class: EventTriggerEnter, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
-      data:
-        m_Collider:
-          m_Option: 1
-          m_GameObject:
-            m_Property:
-              rid: 7546138958612136174
-    - rid: 7546138958612136174
-      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
-      data: 
+          rid: 7546139003559346436
     - rid: 7546138958612136175
       type: {class: ActionsNode, ns: NinjutsuGames.StateMachine.Runtime, asm: NinjutsuGames.StateMachine.Runtime}
       data:
@@ -806,3 +795,9 @@ MonoBehaviour:
       type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
         m_Value: 0.2
+    - rid: 7546139003559346436
+      type: {class: EventTriggerEnterTag, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Tag:
+          m_Value: DamageArrow

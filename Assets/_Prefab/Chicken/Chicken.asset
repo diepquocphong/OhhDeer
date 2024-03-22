@@ -70,8 +70,8 @@ MonoBehaviour:
   serializedParameterList: []
   stickyNotes: []
   nodeInspectorReference: {fileID: 0}
-  position: {x: -783.5, y: -172, z: 0}
-  scale: {x: 1.3225, y: 1.3225, z: 1}
+  position: {x: -361, y: -39, z: 0}
+  scale: {x: 1, y: 1, z: 1}
   references:
     version: 2
     RefIds:
@@ -406,32 +406,21 @@ MonoBehaviour:
     - rid: 7546138958612136171
       type: {class: TriggerNode, ns: NinjutsuGames.StateMachine.Runtime, asm: NinjutsuGames.StateMachine.Runtime}
       data:
-        nodeCustomName: TriggerDead
+        nodeCustomName: TriggerEnterArrow
         GUID: b8a2e81c-d5c6-46e4-9be1-281a8746ca2d
         computeOrder: 2
         position:
           serializedVersion: 2
-          x: 649
+          x: 639.5
           y: 222.5
-          width: 131
+          width: 167.5
           height: 44
         expanded: 0
         debug: 0
         nodeLock: 0
         enabledForExecution: 1
         triggerEvent:
-          rid: 7546138958612136173
-    - rid: 7546138958612136173
-      type: {class: EventTriggerEnter, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
-      data:
-        m_Collider:
-          m_Option: 1
-          m_GameObject:
-            m_Property:
-              rid: 7546138958612136174
-    - rid: 7546138958612136174
-      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
-      data: 
+          rid: 7546139003559346435
     - rid: 7546138958612136176
       type: {class: TriggerNode, ns: NinjutsuGames.StateMachine.Runtime, asm: NinjutsuGames.StateMachine.Runtime}
       data:
@@ -851,9 +840,9 @@ MonoBehaviour:
         instructions:
           m_Instructions:
           - rid: 7546138977741570916
+          - rid: 7546138977741570920
           - rid: 7546138977741570964
           - rid: 7546138977741570919
-          - rid: 7546138977741570920
           - rid: 7546138977741570921
           - rid: 7546138977741570922
         networkingSettings:
@@ -970,3 +959,9 @@ MonoBehaviour:
     - rid: 7546138977741570970
       type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data: 
+    - rid: 7546139003559346435
+      type: {class: EventTriggerEnterTag, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Tag:
+          m_Value: DamageArrow

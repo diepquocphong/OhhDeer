@@ -12,11 +12,13 @@ Library: /Users/macbook/Documents/OhhDeer/Temp/BurstOutput/tempburstlibs/armeabi
 --assembly-defines=Assembly-CSharp;
 --assembly-defines=Unity.AI.Navigation;
 --assembly-defines=GameCreator.Runtime.Perception;
+--assembly-defines=Unity.Formats.Fbx.Runtime;
 --assembly-defines=Unity.VisualScripting.Flow;
 --assembly-defines=Unity.Collections;
 --assembly-defines=NinjutsuGames.StateMachine.Runtime;
 --assembly-defines=Unity.TextMeshPro;
 --assembly-defines=GameCreator.Runtime.Core;
+--assembly-defines=FbxBuildTestAssets;
 --assembly-defines=Unity.Profiling.Core;
 --assembly-defines=Unity.Notifications.Unified;
 --assembly-defines=GameCreator.Runtime.Stats;
