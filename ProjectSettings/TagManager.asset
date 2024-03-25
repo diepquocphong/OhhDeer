@@ -11,6 +11,8 @@ TagManager:
   - FakeDeer
   - DamageArrow
   - Joystick
+  - DamageFakeDeer
+  - RealDeer
   layers:
   - Default
   - TransparentFX

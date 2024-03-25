@@ -151,7 +151,7 @@ MonoBehaviour:
   serializedParameterList: []
   stickyNotes: []
   nodeInspectorReference: {fileID: 0}
-  position: {x: 116, y: -88, z: 0}
+  position: {x: -119.5, y: -90.5, z: 0}
   scale: {x: 0.7561437, y: 0.7561437, z: 1}
   references:
     version: 2
@@ -510,6 +510,7 @@ MonoBehaviour:
           m_Instructions:
           - rid: 7546138958612136316
           - rid: 7546138958612136335
+          - rid: 7546139060943192109
           - rid: 7546138958612136339
           - rid: 7546138958612136321
           - rid: 7546138958612136325
@@ -1033,7 +1034,7 @@ MonoBehaviour:
     - rid: 7546138977741570153
       type: {class: GetAudioClip, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
-        m_Value: {fileID: 8300000, guid: 3db6190890f7345a78fcbf5ceaf525ff, type: 3}
+        m_Value: {fileID: 8300000, guid: 84591b5a5f5f0413a86cd8696184d9e6, type: 3}
     - rid: 7546138977741570154
       type: {class: GetGameObjectNone, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data: 
@@ -1783,7 +1784,7 @@ MonoBehaviour:
     - rid: 7546139006975082634
       type: {class: GetBoolValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
-        m_Value: 1
+        m_Value: 0
     - rid: 7546139006975082635
       type: {class: GetGameObjectByName, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
@@ -1969,3 +1970,42 @@ MonoBehaviour:
       type: {class: GetBoolValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
         m_Value: 0
+    - rid: 7546139060943192109
+      type: {class: InstructionGameObjectSetActive, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_GameObject:
+          m_Property:
+            rid: 7546139060943192110
+        m_Active:
+          m_Property:
+            rid: 7546139060943192111
+    - rid: 7546139060943192110
+      type: {class: GetGameObjectChildByPath, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Transform:
+          m_Property:
+            rid: 7546139060943192112
+        m_Path:
+          m_Property:
+            rid: 7546139060943192113
+    - rid: 7546139060943192111
+      type: {class: GetBoolValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 0
+    - rid: 7546139060943192112
+      type: {class: GetGameObjectByName, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Name:
+          m_Property:
+            rid: 7546139060943192114
+    - rid: 7546139060943192113
+      type: {class: GetStringString, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: Button_Shoot
+    - rid: 7546139060943192114
+      type: {class: GetStringString, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: Canvas

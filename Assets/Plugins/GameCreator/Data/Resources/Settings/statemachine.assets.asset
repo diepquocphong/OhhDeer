@@ -24,7 +24,9 @@ MonoBehaviour:
         m_StateMachineAssets:
           m_StateMachineAssets:
           - {fileID: 11400000, guid: 36ccb719802df468c8c5d1257755f133, type: 2}
+          - {fileID: 11400000, guid: f3374f1bd57ea45f58700aa794de228e, type: 2}
           - {fileID: 11400000, guid: b620bdb1fee404bcb87d8a4f6b404caa, type: 2}
+          - {fileID: 11400000, guid: 18a9bc586d3164e9d8c3bbe5c5e68953, type: 2}
           - {fileID: 11400000, guid: 321ac7b67cc114c38a2a7f028cf0c22d, type: 2}
           - {fileID: 11400000, guid: 9ed63714c972346e681976b9f26a95ce, type: 2}
           - {fileID: 11400000, guid: 05990a884316a47ddab11fd2f078b817, type: 2}

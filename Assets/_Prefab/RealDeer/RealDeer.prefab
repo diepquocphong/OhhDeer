@@ -1011,7 +1011,7 @@ GameObject:
   - component: {fileID: 5011002772344997682}
   m_Layer: 0
   m_Name: RealDeer
-  m_TagString: Untagged
+  m_TagString: RealDeer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
