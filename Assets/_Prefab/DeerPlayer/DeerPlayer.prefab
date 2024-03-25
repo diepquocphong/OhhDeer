@@ -938,7 +938,7 @@ GameObject:
   - component: {fileID: 1720107411062413736}
   m_Layer: 0
   m_Name: DeerPlayer
-  m_TagString: Untagged
+  m_TagString: FakeDeer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1126,6 +1126,7 @@ MonoBehaviour:
         - rid: 7546139060943192170
         - rid: 7546139060943192172
         - rid: 7546139060943192420
+        - rid: 7546139090521161943
     - rid: 7546139060943192170
       type: {class: NameVariable, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
       data:
@@ -1166,6 +1167,21 @@ MonoBehaviour:
         m_Name:
           m_String: startgame
     - rid: 7546139060943192421
+      type: {class: ValueBool, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Value: 0
+    - rid: 7546139090521161943
+      type: {class: NameVariable, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Value:
+          rid: 7546139090521161944
+        m_Name:
+          m_String: monster
+    - rid: 7546139090521161944
       type: {class: ValueBool, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
       data:
         m_Breakpoint: 0

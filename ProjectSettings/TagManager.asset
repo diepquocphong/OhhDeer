@@ -13,6 +13,7 @@ TagManager:
   - Joystick
   - DamageFakeDeer
   - RealDeer
+  - DamageHumanDeer
   layers:
   - Default
   - TransparentFX
