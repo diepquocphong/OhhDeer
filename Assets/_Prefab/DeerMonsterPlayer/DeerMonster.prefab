@@ -1993,6 +1993,8 @@ MonoBehaviour:
     - rid: 7546139093507769106
     - rid: 7546139093507769114
     - rid: 7546139094626337469
+    - rid: 7546139104626869179
+    - rid: 7546139104626869213
   m_TriggerEvent:
     rid: 7546139093507769105
   references:
@@ -2130,6 +2132,50 @@ MonoBehaviour:
         asm: GameCreator.Runtime.Core}
       data:
         m_Character: {fileID: 478680106857096602}
+    - rid: 7546139104626869179
+      type: {class: InstructionLogicCheckConditions, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Conditions:
+          m_Conditions:
+          - rid: 7546139104626869196
+    - rid: 7546139104626869196
+      type: {class: ConditionPlatformIsMobile, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Sign: 1
+    - rid: 7546139104626869213
+      type: {class: InstructionCharacterPlayer, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Character:
+          m_Property:
+            rid: 7546139108562960386
+        m_Input:
+          m_Player:
+            rid: 7546139104626869215
+    - rid: 7546139104626869215
+      type: {class: UnitPlayerDirectional, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data:
+        m_IsControllable: 1
+        m_InputMove:
+          m_Input:
+            rid: 7546139108562960436
+    - rid: 7546139108562960386
+      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_GameObject: {fileID: 1656897454074428208}
+    - rid: 7546139108562960436
+      type: {class: InputValueVector2MobileStickPrefab, ns: GameCreator.Runtime.Common,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Touchstick: {fileID: 11400000, guid: 5c1903204f398ae429ba26c4f0bdc724, type: 2}
 --- !u!1 &6761734550015963820
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,9 +9,11 @@ Library: /Users/macbook/Documents/OhhDeer/Temp/BurstOutput/tempburstlibs/armeabi
 --target-framework=NetFramework
 --assembly-defines=Assembly-CSharp-firstpass;
 --assembly-defines=Assembly-CSharp;
+--assembly-defines=GameCreator.Runtime.Behavior;
 --assembly-defines=GameCreator.Runtime.Core;
 --assembly-defines=GameCreator.Runtime.Perception;
 --assembly-defines=GameCreator.Runtime.Stats;
+--assembly-defines=MaxSdk.Scripts;
 --assembly-defines=Mono.Security;
 --assembly-defines=mscorlib;
 --assembly-defines=NinjutsuGames.StateMachine.Runtime;

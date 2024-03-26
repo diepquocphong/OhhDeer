@@ -38934,6 +38934,53 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1824f33fc7a45d41a1ea0e44836de2c, type: 3}
+--- !u!1 &1346349092
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1346349094}
+  - component: {fileID: 1346349093}
+  m_Layer: 0
+  m_Name: AdsManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1346349093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346349092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cebd4a3a3088349af803923b0e1120c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onRewardedVideoCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!4 &1346349094
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346349092}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 33.31979, y: 13.418286, z: 16.5084}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1346858331
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39865,6 +39912,8 @@ MonoBehaviour:
   m_Instructions:
     m_Instructions:
     - rid: 7546138998094692383
+    - rid: 7546139104626869165
+    - rid: 7546139104626869166
     - rid: 7546138998094692463
   references:
     version: 2
@@ -39899,9 +39948,45 @@ MonoBehaviour:
       type: {class: GetSceneAsset, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
         m_Scene:
-          m_Scene: {fileID: 0}
-          m_SceneName: 
-          m_SceneIndex: -1
+          m_Scene: {fileID: 102900000, guid: c850ee8c3b14cc8459e7e186857cf567, type: 3}
+          m_SceneName: MenuGame
+          m_SceneIndex: 0
+    - rid: 7546139104626869165
+      type: {class: InstructionLogicCallMethod, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Method:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 1346349093}
+              m_TargetAssemblyTypeName: AdsManager, Assembly-CSharp
+              m_MethodName: ShowInterstitial
+              m_Mode: 1
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
+    - rid: 7546139104626869166
+      type: {class: InstructionCommonTimeScale, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_TimeScale:
+          m_Property:
+            rid: 7546139104626869167
+        m_TransitionDuration: 0.25
+        m_Layer: 0
+    - rid: 7546139104626869167
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 1
 --- !u!114 &1375677488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106434,6 +106519,8 @@ MonoBehaviour:
   m_Instructions:
     m_Instructions:
     - rid: 7546139006975083317
+    - rid: 7546139104626869159
+    - rid: 7546139104626869160
     - rid: 7546139006975083319
   references:
     version: 2
@@ -106468,9 +106555,45 @@ MonoBehaviour:
       type: {class: GetSceneAsset, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
         m_Scene:
-          m_Scene: {fileID: 102900000, guid: 920c75949c86645808982400655c2f90, type: 3}
-          m_SceneName: 1_Main_Menu
-          m_SceneIndex: -1
+          m_Scene: {fileID: 102900000, guid: c850ee8c3b14cc8459e7e186857cf567, type: 3}
+          m_SceneName: MenuGame
+          m_SceneIndex: 0
+    - rid: 7546139104626869159
+      type: {class: InstructionLogicCallMethod, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Method:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 1346349093}
+              m_TargetAssemblyTypeName: AdsManager, Assembly-CSharp
+              m_MethodName: ShowInterstitial
+              m_Mode: 1
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
+    - rid: 7546139104626869160
+      type: {class: InstructionCommonTimeScale, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_TimeScale:
+          m_Property:
+            rid: 7546139104626869161
+        m_TransitionDuration: 0.25
+        m_Layer: 0
+    - rid: 7546139104626869161
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 1
 --- !u!199 &6509356432285532666
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -106791,6 +106914,7 @@ MonoBehaviour:
     - rid: 7546138998094692496
     - rid: 7546138998094692498
     - rid: 7546138998094692501
+    - rid: 7546139104626869149
   references:
     version: 2
     RefIds:
@@ -106842,6 +106966,27 @@ MonoBehaviour:
       type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
         m_Value: 1
+    - rid: 7546139104626869149
+      type: {class: InstructionLogicCallMethod, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Method:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 1346349093}
+              m_TargetAssemblyTypeName: AdsManager, Assembly-CSharp
+              m_MethodName: ShowInterstitial
+              m_Mode: 1
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
 --- !u!222 &6745013756011598901
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -106897,7 +107042,9 @@ MonoBehaviour:
   m_Instructions:
     m_Instructions:
     - rid: 7546138998094692496
-    - rid: 7546138998094692511
+    - rid: 7546139104626869151
+    - rid: 7546139104626869154
+    - rid: 7546139104626869152
   references:
     version: 2
     RefIds:
@@ -106914,11 +107061,62 @@ MonoBehaviour:
       type: {class: GetStringString, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
         m_Value: Click!
-    - rid: 7546138998094692511
-      type: {class: InstructionAppQuit, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+    - rid: 7546139104626869151
+      type: {class: InstructionLogicCallMethod, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
       data:
         m_Breakpoint: 0
         m_IsEnabled: 1
+        m_Method:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 1346349093}
+              m_TargetAssemblyTypeName: AdsManager, Assembly-CSharp
+              m_MethodName: ShowInterstitial
+              m_Mode: 1
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
+    - rid: 7546139104626869152
+      type: {class: InstructionCommonSceneLoad, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Scene:
+          m_Property:
+            rid: 7546139104626869153
+        m_Mode: 0
+        m_Async: 0
+        m_SceneEntries:
+          m_Entries: []
+    - rid: 7546139104626869153
+      type: {class: GetSceneAsset, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Scene:
+          m_Scene: {fileID: 102900000, guid: c850ee8c3b14cc8459e7e186857cf567, type: 3}
+          m_SceneName: MenuGame
+          m_SceneIndex: 0
+    - rid: 7546139104626869154
+      type: {class: InstructionCommonTimeScale, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_TimeScale:
+          m_Property:
+            rid: 7546139104626869155
+        m_TransitionDuration: 0.25
+        m_Layer: 0
+    - rid: 7546139104626869155
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 1
 --- !u!1 &6834087787493778988
 GameObject:
   m_ObjectHideFlags: 0
@@ -122443,6 +122641,8 @@ MonoBehaviour:
   m_Instructions:
     m_Instructions:
     - rid: 7546139006975083132
+    - rid: 7546139104626869156
+    - rid: 7546139104626869157
     - rid: 7546139006975083134
   references:
     version: 2
@@ -122478,8 +122678,44 @@ MonoBehaviour:
       data:
         m_Scene:
           m_Scene: {fileID: 102900000, guid: 5e2f2c7e15e1e4b08a4b0a146295842d, type: 3}
-          m_SceneName: GamePlay
+          m_SceneName: FamerGame
           m_SceneIndex: 1
+    - rid: 7546139104626869156
+      type: {class: InstructionLogicCallMethod, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Method:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 1346349093}
+              m_TargetAssemblyTypeName: AdsManager, Assembly-CSharp
+              m_MethodName: ShowInterstitial
+              m_Mode: 1
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
+    - rid: 7546139104626869157
+      type: {class: InstructionCommonTimeScale, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_TimeScale:
+          m_Property:
+            rid: 7546139104626869158
+        m_TransitionDuration: 0.25
+        m_Layer: 0
+    - rid: 7546139104626869158
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 1
 --- !u!222 &8270008007601278532
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -127590,6 +127826,7 @@ MonoBehaviour:
     m_Instructions:
     - rid: 7546138998094692503
     - rid: 7546138998094692505
+    - rid: 7546139104626869150
     - rid: 7546138998094692507
   references:
     version: 2
@@ -127640,8 +127877,29 @@ MonoBehaviour:
       data:
         m_Scene:
           m_Scene: {fileID: 102900000, guid: 5e2f2c7e15e1e4b08a4b0a146295842d, type: 3}
-          m_SceneName: GamePlay
+          m_SceneName: FamerGame
           m_SceneIndex: 1
+    - rid: 7546139104626869150
+      type: {class: InstructionLogicCallMethod, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Method:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 1346349093}
+              m_TargetAssemblyTypeName: AdsManager, Assembly-CSharp
+              m_MethodName: ShowInterstitial
+              m_Mode: 1
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
 --- !u!224 &8663935793159182454
 RectTransform:
   m_ObjectHideFlags: 0
@@ -127780,6 +128038,8 @@ MonoBehaviour:
   m_Instructions:
     m_Instructions:
     - rid: 7546138998094692385
+    - rid: 7546139104626869162
+    - rid: 7546139104626869163
     - rid: 7546138998094692461
   references:
     version: 2
@@ -127815,8 +128075,44 @@ MonoBehaviour:
       data:
         m_Scene:
           m_Scene: {fileID: 102900000, guid: 5e2f2c7e15e1e4b08a4b0a146295842d, type: 3}
-          m_SceneName: GamePlay
+          m_SceneName: FamerGame
           m_SceneIndex: 1
+    - rid: 7546139104626869162
+      type: {class: InstructionLogicCallMethod, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Method:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 1346349093}
+              m_TargetAssemblyTypeName: AdsManager, Assembly-CSharp
+              m_MethodName: ShowInterstitial
+              m_Mode: 1
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
+    - rid: 7546139104626869163
+      type: {class: InstructionCommonTimeScale, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_TimeScale:
+          m_Property:
+            rid: 7546139104626869164
+        m_TransitionDuration: 0.25
+        m_Layer: 0
+    - rid: 7546139104626869164
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 1
 --- !u!224 &8821942326146233765
 RectTransform:
   m_ObjectHideFlags: 0
@@ -128207,3 +128503,4 @@ SceneRoots:
   - {fileID: 518361601}
   - {fileID: 1042127292}
   - {fileID: 302730594}
+  - {fileID: 1346349094}

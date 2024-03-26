@@ -900,6 +900,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &721551683
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 721551685}
+  - component: {fileID: 721551684}
+  m_Layer: 0
+  m_Name: AdsManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &721551684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721551683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cebd4a3a3088349af803923b0e1120c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onRewardedVideoCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!4 &721551685
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721551683}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 33.31979, y: 13.418286, z: 16.5084}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &740536053
 GameObject:
   m_ObjectHideFlags: 0
@@ -955,7 +1002,7 @@ MonoBehaviour:
         m_Scene:
           m_Scene: {fileID: 102900000, guid: 26f6080bd384a4f3e8772b09824ef3b1, type: 3}
           m_SceneName: FakeDeerGame
-          m_SceneIndex: -1
+          m_SceneIndex: 2
     - rid: 7546139060943192134
       type: {class: InstructionCommonTimeWait, ns: GameCreator.Runtime.VisualScripting,
         asm: GameCreator.Runtime.Core}
@@ -1225,6 +1272,7 @@ MonoBehaviour:
     m_Instructions:
     - rid: 7546139006975082882
     - rid: 7546139006975082900
+    - rid: 7546139104626869170
     - rid: 7546139006975082934
     - rid: 7546139006975082945
     - rid: 7546139006975082955
@@ -1381,6 +1429,27 @@ MonoBehaviour:
         asm: GameCreator.Runtime.Core}
       data:
         m_Actions: {fileID: 970167618}
+    - rid: 7546139104626869170
+      type: {class: InstructionLogicCallMethod, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Method:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 721551684}
+              m_TargetAssemblyTypeName: AdsManager, Assembly-CSharp
+              m_MethodName: ShowInterstitial
+              m_Mode: 1
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
 --- !u!114 &893770940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2064,6 +2133,7 @@ MonoBehaviour:
     m_Instructions:
     - rid: 7546139006975082882
     - rid: 7546139006975082897
+    - rid: 7546139104626869171
     - rid: 7546139006975082929
     - rid: 7546139006975082948
     - rid: 7546139006975082958
@@ -2220,6 +2290,27 @@ MonoBehaviour:
         asm: GameCreator.Runtime.Core}
       data:
         m_Actions: {fileID: 740536054}
+    - rid: 7546139104626869171
+      type: {class: InstructionLogicCallMethod, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Method:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 721551684}
+              m_TargetAssemblyTypeName: AdsManager, Assembly-CSharp
+              m_MethodName: ShowInterstitial
+              m_Mode: 1
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
 --- !u!114 &1075736316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4703,3 +4794,4 @@ SceneRoots:
   - {fileID: 1232142982}
   - {fileID: 970167619}
   - {fileID: 740536055}
+  - {fileID: 721551685}
