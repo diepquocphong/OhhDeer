@@ -190,7 +190,7 @@ MonoBehaviour:
   serializedParameterList: []
   stickyNotes: []
   nodeInspectorReference: {fileID: 0}
-  position: {x: -129, y: -190.5, z: 0}
+  position: {x: -558, y: -67.5, z: 0}
   scale: {x: 1, y: 1, z: 1}
   references:
     version: 2
@@ -1689,6 +1689,7 @@ MonoBehaviour:
         enabledForExecution: 1
         instructions:
           m_Instructions:
+          - rid: 7546139127916789966
           - rid: 7546139093507768965
           - rid: 7546139094626337656
           - rid: 7546139094626337541
@@ -1949,3 +1950,40 @@ MonoBehaviour:
         asm: GameCreator.Runtime.Core}
       data:
         m_Touchstick: {fileID: 11400000, guid: 5c1903204f398ae429ba26c4f0bdc724, type: 2}
+    - rid: 7546139127916789966
+      type: {class: InstructionLogicCheckConditions, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Conditions:
+          m_Conditions:
+          - rid: 7546139127916789967
+    - rid: 7546139127916789967
+      type: {class: ConditionMathCompareBooleans, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Sign: 1
+        m_Value:
+          m_Property:
+            rid: 7546139127916789971
+        m_Comparison: 0
+        m_CompareTo:
+          m_Property:
+            rid: 7546139127916789970
+    - rid: 7546139127916789970
+      type: {class: GetBoolValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 1
+    - rid: 7546139127916789971
+      type: {class: GetBoolGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: boolean
+          m_Variable: {fileID: 11400000, guid: dd67a2bedcdfa4db58dcc53da6dd8c45, type: 2}
+          m_Name:
+            m_String: back_home
+            m_ID: -1168031842

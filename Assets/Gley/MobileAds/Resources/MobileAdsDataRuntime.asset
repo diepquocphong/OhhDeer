@@ -26,19 +26,19 @@ MonoBehaviour:
         displayName: SDK key
         required: 1
       idBanner:
-        id: d5ce7525238877f8
+        id: 463690cbffda09d5
         displayName: Banner ID
         required: 1
       idMRec:
-        id: d5ce7525238877f8
+        id: 463690cbffda09d5
         displayName: MRec ID
         required: 1
       idInterstitial:
-        id: d5ce7525238877f8
+        id: 463690cbffda09d5
         displayName: Interstitial ID
         required: 1
       idRewarded:
-        id: d5ce7525238877f8
+        id: 463690cbffda09d5
         displayName: Rewarded ID
         required: 1
       idRewardedInterstitial:
@@ -46,7 +46,7 @@ MonoBehaviour:
         displayName: 
         required: 0
       idOpenApp:
-        id: d5ce7525238877f8
+        id: 463690cbffda09d5
         displayName: App Open ID
         required: 1
       testMode: 0
