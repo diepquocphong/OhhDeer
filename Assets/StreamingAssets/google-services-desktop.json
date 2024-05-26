@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "77044232329",
+    "project_id": "unity-e69f2",
+    "storage_bucket": "unity-e69f2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:77044232329:android:ba9ecdb3a757a1bc465658",
+        "android_client_info": {
+          "package_name": "com.DSStudio.Game03"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1SwyrmrVUqG2Vc9AoMpqIxtI2Irzz4oc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
