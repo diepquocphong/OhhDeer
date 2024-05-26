@@ -11,24 +11,24 @@ namespace Gley.MobileAds.Internal
 
     public class AdmobImplementation : MonoBehaviour, IAdProvider
     {
-        private const float reloadTime = 30;
+        private readonly float reloadTime = 30;
         private readonly int maxRetryCount = 10;
+        private readonly float bufferTime = 1;
 
         private UnityAction<bool> onRewardedVideoClosed;
         private UnityAction<bool> onRewardedInterstitialClosed;
-
         private UnityAction onInterstitialClosed;
         private UnityAction onAppOpenClosed;
         private UnityAction onConsentPopupClosed;
         private UnityAction onInitialized;
         private InterstitialAd interstitial;
-        private DateTime appOpenExpireTime;
         private AppOpenAd appOpen;
-        private ConsentForm _consentForm;
+        private ConsentForm consentForm;
         private BannerView banner;
         private RewardedAd rewardedVideo;
         private RewardedInterstitialAd rewardedInterstitial;
         private Events events;
+        private DateTime appOpenExpireTime;
         private BannerPosition position;
         private BannerType bannerType;
         private DebugGeography debugGeography;
@@ -40,12 +40,14 @@ namespace Gley.MobileAds.Internal
         private string mrecId;
         private string designedForFamilies;
         private string testDeviceID;
+        private float callbackTime;
         private int currentRetryRewardedVideo;
         private int currentRetryRewardedInterstitial;
         private int currentRetryInterstitial;
         private int currentRetryAppOpen;
         private bool initialized;
         private bool rewardedVideoWatched;
+        private bool rewardedVideoClosed;
         private bool rewardedInterstitialWatched;
         private bool bannerLoaded;
         private bool interstitialFailedToLoad;
@@ -208,7 +210,7 @@ namespace Gley.MobileAds.Internal
         ///  /// <param name="bannerType"> can be Banner or SmartBanner</param>
         public void ShowBanner(BannerPosition position, BannerType bannerType, Vector2Int customSize, Vector2Int customPosition)
         {
-            ShowBanner(bannerId, position, bannerType, customSize, customPosition,false);
+            ShowBanner(bannerId, position, bannerType, customSize, customPosition, false);
         }
 
 
@@ -353,7 +355,7 @@ namespace Gley.MobileAds.Internal
             var request = CreateRequest();
             if (collapsable)
             {
-                
+
                 if (position.ToString().Contains("Top"))
                 {
                     GleyLogger.AddLog("Collapsible banner top");
@@ -888,6 +890,7 @@ namespace Gley.MobileAds.Internal
             {
                 onRewardedVideoClosed = CompleteMethod;
                 rewardedVideoWatched = false;
+                rewardedVideoClosed = false;
                 rewardedVideo.Show(RewardedVideoWatched);
             }
             else
@@ -1016,9 +1019,6 @@ namespace Gley.MobileAds.Internal
         {
             GleyLogger.AddLog($"Rewarded Video Watched -> Reward amount: {reward.Amount} Reward type: {reward.Type}");
             rewardedVideoWatched = true;
-#if UNITY_EDITOR
-            RewardedAdClosed();
-#endif
         }
 
 
@@ -1028,8 +1028,8 @@ namespace Gley.MobileAds.Internal
         private void RewardedAdClosed()
         {
             GleyLogger.AddLog("Rewarded Ad Closed");
-            //trigger complete method
-            StartCoroutine(CompleteMethodRewardedVideo(rewardedVideoWatched));
+            rewardedVideoClosed = true;
+            callbackTime = Time.realtimeSinceStartup;
         }
 
 
@@ -1037,9 +1037,9 @@ namespace Gley.MobileAds.Internal
         /// Because Admob has some problems when used in multi-threading applications with Unity a frame needs to be skipped before returning to application
         /// </summary>
         /// <returns></returns>
-        private IEnumerator CompleteMethodRewardedVideo(bool val)
+        private void CompleteMethodRewardedVideo(bool val)
         {
-            yield return null;
+            rewardedVideoClosed = false;
             if (onRewardedVideoClosed != null)
             {
                 onRewardedVideoClosed(val);
@@ -1095,9 +1095,7 @@ namespace Gley.MobileAds.Internal
         private void RewardedFullScreenClosed()
         {
             GleyLogger.AddLog("Rewarded ad full screen content closed.");
-#if !UNITY_EDITOR
             RewardedAdClosed();
-#endif
         }
 
 
@@ -1426,7 +1424,7 @@ namespace Gley.MobileAds.Internal
             GleyLogger.AddLog($"Consent Status: {ConsentInformation.ConsentStatus}");
             // The consent form was loaded.
             // Save the consent form for future requests.
-            _consentForm = consentForm;
+            this.consentForm = consentForm;
 
             if (ConsentInformation.ConsentStatus == ConsentStatus.Required)
             {
@@ -1442,9 +1440,9 @@ namespace Gley.MobileAds.Internal
 
         private void ShowForm()
         {
-            if (_consentForm != null)
+            if (consentForm != null)
             {
-                _consentForm.Show(OnShowForm);
+                consentForm.Show(OnShowForm);
             }
             else
             {
@@ -1584,6 +1582,14 @@ namespace Gley.MobileAds.Internal
         /// </summary>
         private void Update()
         {
+            if (rewardedVideoClosed)
+            {
+                if (Time.realtimeSinceStartup - callbackTime > bufferTime)
+                {
+                    CompleteMethodRewardedVideo(rewardedVideoWatched);
+                }
+            }
+
             if (interstitialFailedToLoad)
             {
                 interstitialFailedToLoad = false;
@@ -1608,6 +1614,8 @@ namespace Gley.MobileAds.Internal
                 Invoke("LoadAppOpen", reloadTime);
             }
         }
+
+
 
         //private void Awake()
         //{

@@ -139,7 +139,7 @@ PlayerSettings:
   loadStoreDebugModeEnabled: 0
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
-  bundleVersion: 5
+  bundleVersion: 7
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -166,12 +166,12 @@ PlayerSettings:
   buildNumber:
     Standalone: 0
     VisionOS: 0
-    iPhone: 5
+    iPhone: 7
     tvOS: 0
   overrideDefaultApplicationIdentifier: 1
-  AndroidBundleVersionCode: 5
+  AndroidBundleVersionCode: 7
   AndroidMinSdkVersion: 22
-  AndroidTargetSdkVersion: 33
+  AndroidTargetSdkVersion: 34
   AndroidPreferredInstallLocation: 1
   aotOptions: 
   stripEngineCode: 1
@@ -272,7 +272,7 @@ PlayerSettings:
   AndroidEnableTango: 0
   androidEnableBanner: 1
   androidUseLowAccuracyLocation: 0
-  androidUseCustomKeystore: 1
+  androidUseCustomKeystore: 0
   m_AndroidBanners:
   - width: 320
     height: 180
@@ -839,10 +839,10 @@ PlayerSettings:
   webGLMemoryGeometricGrowthCap: 96
   webGLPowerPreference: 2
   scriptingDefineSymbols:
-    Android: CROSS_PLATFORM_INPUT;GLEY_APPLOVIN
+    Android: CROSS_PLATFORM_INPUT;USE_ADMOB;USE_ADMOB_PATCH
     Standalone: CROSS_PLATFORM_INPUT
     Windows Store Apps: 
-    iPhone: CROSS_PLATFORM_INPUT;GLEY_ATT;GLEY_APPLOVIN
+    iPhone: CROSS_PLATFORM_INPUT;USE_ADMOB_PATCH;GLEY_ADMOB;GLEY_PATCH_ADMOB
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   advertiserSettings:
   - advertiser: 20
-    useSDK: 0
+    useSDK: 1
     preprocessorDirective: GLEY_ADMOB
     sdkLink: https://github.com/googleads/googleads-mobile-unity/releases
     directedForChildrenRequired: 1
@@ -56,30 +56,31 @@ MonoBehaviour:
         required: 1
       testMode: 0
       testDevice: 
+      debugGeography: 0
     - platform: 1
-      enabled: 0
+      enabled: 1
       appId:
-        id: 
+        id: ca-app-pub-6626601540311877~5376387436
         displayName: App ID
         required: 1
       idBanner:
-        id: 
+        id: ca-app-pub-6626601540311877/8707675081
         displayName: Banner ID
         required: 1
       idMRec:
-        id: 
+        id: ca-app-pub-6626601540311877/8707675081
         displayName: MRec ID
         required: 1
       idInterstitial:
-        id: 
+        id: ca-app-pub-6626601540311877/8707675081
         displayName: Interstitial ID
         required: 1
       idRewarded:
-        id: 
+        id: ca-app-pub-6626601540311877/8707675081
         displayName: Rewarded Video ID
         required: 1
       idRewardedInterstitial:
-        id: 
+        id: ca-app-pub-6626601540311877/8707675081
         displayName: Rewarded Interstitial ID
         required: 1
       idOpenApp:
@@ -88,10 +89,11 @@ MonoBehaviour:
         required: 1
       testMode: 0
       testDevice: 
-  - advertiser: 10
+      debugGeography: 0
+  - advertiser: 30
     useSDK: 0
-    preprocessorDirective: GLEY_ADCOLONY
-    sdkLink: https://github.com/AdColony/AdColony-Unity-Plugin
+    preprocessorDirective: GLEY_APPLOVIN
+    sdkLink: https://dash.applovin.com/documentation/mediation/unity/getting-started/integration
     directedForChildrenRequired: 1
     testModeRequired: 0
     testDeviceRequired: 0
@@ -103,23 +105,23 @@ MonoBehaviour:
       enabled: 0
       appId:
         id: 
-        displayName: App ID
+        displayName: SDK key
         required: 1
       idBanner:
         id: 
-        displayName: Banner Zone ID
+        displayName: Banner ID
         required: 1
       idMRec:
         id: 
-        displayName: MRec Zone ID
+        displayName: MRec ID
         required: 1
       idInterstitial:
         id: 
-        displayName: Interstitial Zone ID
+        displayName: Interstitial ID
         required: 1
       idRewarded:
         id: 
-        displayName: Rewarded Zone ID
+        displayName: Rewarded ID
         required: 1
       idRewardedInterstitial:
         id: 
@@ -127,73 +129,31 @@ MonoBehaviour:
         required: 0
       idOpenApp:
         id: 
-        displayName: 
-        required: 0
+        displayName: App Open ID
+        required: 1
       testMode: 0
       testDevice: 
+      debugGeography: 0
     - platform: 1
       enabled: 0
       appId:
         id: 
-        displayName: App ID
-        required: 1
-      idBanner:
-        id: 
-        displayName: Banner Zone ID
-        required: 1
-      idMRec:
-        id: 
-        displayName: MRec Zone ID
-        required: 1
-      idInterstitial:
-        id: 
-        displayName: Interstitial Zone ID
-        required: 1
-      idRewarded:
-        id: 
-        displayName: Rewarded Zone ID
-        required: 1
-      idRewardedInterstitial:
-        id: 
-        displayName: 
-        required: 0
-      idOpenApp:
-        id: 
-        displayName: 
-        required: 0
-      testMode: 0
-      testDevice: 
-  - advertiser: 30
-    useSDK: 1
-    preprocessorDirective: GLEY_APPLOVIN
-    sdkLink: https://dash.applovin.com/documentation/mediation/unity/getting-started/integration
-    directedForChildrenRequired: 1
-    testModeRequired: 0
-    testDeviceRequired: 0
-    directedForChildren: 0
-    consentPopupRequired: 1
-    showConsentPopup: 1
-    platformSettings:
-    - platform: 0
-      enabled: 1
-      appId:
-        id: ArdMxTOMzAagq3L8EhwTHlyMVhRMlyfJfVb8ELTSoA9rVIx9psanq8Oy48H3iukzHBTU6eIC_RyHeDp6bsLEO3
         displayName: SDK key
         required: 1
       idBanner:
-        id: 463690cbffda09d5
+        id: 
         displayName: Banner ID
         required: 1
       idMRec:
-        id: 463690cbffda09d5
+        id: 
         displayName: MRec ID
         required: 1
       idInterstitial:
-        id: 463690cbffda09d5
+        id: 
         displayName: Interstitial ID
         required: 1
       idRewarded:
-        id: 463690cbffda09d5
+        id: 
         displayName: Rewarded ID
         required: 1
       idRewardedInterstitial:
@@ -201,47 +161,16 @@ MonoBehaviour:
         displayName: 
         required: 0
       idOpenApp:
-        id: 463690cbffda09d5
-        displayName: App Open ID
-        required: 1
-      testMode: 0
-      testDevice: 
-    - platform: 1
-      enabled: 1
-      appId:
-        id: ArdMxTOMzAagq3L8EhwTHlyMVhRMlyfJfVb8ELTSoA9rVIx9psanq8Oy48H3iukzHBTU6eIC_RyHeDp6bsLEO3
-        displayName: SDK key
-        required: 1
-      idBanner:
-        id: 4855f5971b91933a
-        displayName: Banner ID
-        required: 1
-      idMRec:
-        id: 4855f5971b91933a
-        displayName: MRec ID
-        required: 1
-      idInterstitial:
-        id: 4855f5971b91933a
-        displayName: Interstitial ID
-        required: 1
-      idRewarded:
-        id: 4855f5971b91933a
-        displayName: Rewarded ID
-        required: 1
-      idRewardedInterstitial:
         id: 
-        displayName: 
-        required: 0
-      idOpenApp:
-        id: 4855f5971b91933a
         displayName: App Open ID
         required: 1
       testMode: 0
       testDevice: 
+      debugGeography: 0
   - advertiser: 60
     useSDK: 0
     preprocessorDirective: GLEY_VUNGLE
-    sdkLink: https://publisher.vungle.com/sdk_/plugins
+    sdkLink: https://support.vungle.com/hc/en-us/articles/360003455452-Integrate-Vungle-SDK-for-Unity#download-the-plugin-0-2
     directedForChildrenRequired: 0
     testModeRequired: 0
     testDeviceRequired: 0
@@ -281,6 +210,7 @@ MonoBehaviour:
         required: 0
       testMode: 0
       testDevice: 
+      debugGeography: 0
     - platform: 1
       enabled: 0
       appId:
@@ -313,6 +243,7 @@ MonoBehaviour:
         required: 0
       testMode: 0
       testDevice: 
+      debugGeography: 0
   - advertiser: 40
     useSDK: 0
     preprocessorDirective: GLEY_LEVELPLAY
@@ -356,6 +287,7 @@ MonoBehaviour:
         required: 0
       testMode: 0
       testDevice: 
+      debugGeography: 0
     - platform: 1
       enabled: 0
       appId:
@@ -388,6 +320,7 @@ MonoBehaviour:
         required: 0
       testMode: 0
       testDevice: 
+      debugGeography: 0
   - advertiser: 50
     useSDK: 0
     preprocessorDirective: GLEY_UNITYADS
@@ -431,6 +364,7 @@ MonoBehaviour:
         required: 0
       testMode: 0
       testDevice: 
+      debugGeography: 0
     - platform: 1
       enabled: 0
       appId:
@@ -463,11 +397,12 @@ MonoBehaviour:
         required: 0
       testMode: 0
       testDevice: 
+      debugGeography: 0
   debugMode: 0
   usePlaymaker: 0
   useUnityVisualScripting: 0
-  enableATT: 1
+  enableATT: 0
   nativePopupText: We will use your data to provide a better and personalized ad
     experience.
-  selectedAndroidAdvertiser: 30
-  selectediOSAdvertiser: 30
+  selectedAndroidAdvertiser: 0
+  selectediOSAdvertiser: 20

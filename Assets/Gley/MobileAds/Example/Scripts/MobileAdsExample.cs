@@ -5,10 +5,10 @@ namespace Gley.MobileAds.Internal
 {
     public class MobileAdsExample : MonoBehaviour
     {
-        int coins = 0;
-        public Text coinsText;
-        public Button intersttialButton;
-        public Button rewardedButton;
+        //int coins = 0;
+        //public Text coinsText;
+        //public Button intersttialButton;
+        //public Button rewardedButton;
 
         /// <summary>
         /// Initialize the ads
@@ -18,10 +18,10 @@ namespace Gley.MobileAds.Internal
             Gley.MobileAds.API.Initialize();
         }
 
-        void Start()
-        {
-            coinsText.text = coins.ToString();
-        }
+        //void Start()
+        //{
+        //    coinsText.text = coins.ToString();
+        //}
 
         /// <summary>
         /// Show banner, assigned from inspector
@@ -51,48 +51,48 @@ namespace Gley.MobileAds.Internal
         /// <summary>
         /// Show rewarded video, assigned from inspector
         /// </summary>
-        public void ShowRewardedVideo()
-        {
-            Gley.MobileAds.API.ShowRewardedVideo(CompleteMethod);
-        }
+        //public void ShowRewardedVideo()
+        //{
+        //    Gley.MobileAds.API.ShowRewardedVideo(CompleteMethod);
+        //}
 
 
         /// <summary>
         /// This is for testing purpose
         /// </summary>
-        void Update()
-        {
-            if (Gley.MobileAds.API.IsInterstitialAvailable())
-            {
-                intersttialButton.interactable = true;
-            }
-            else
-            {
-                intersttialButton.interactable = false;
-            }
+        //void Update()
+        //{
+        //    if (Gley.MobileAds.API.IsInterstitialAvailable())
+        //    {
+        //        intersttialButton.interactable = true;
+        //    }
+        //    else
+        //    {
+        //        intersttialButton.interactable = false;
+        //    }
 
-            if (Gley.MobileAds.API.IsRewardedVideoAvailable())
-            {
-                rewardedButton.interactable = true;
-            }
-            else
-            {
-                rewardedButton.interactable = false;
-            }
-        }
+        //    if (Gley.MobileAds.API.IsRewardedVideoAvailable())
+        //    {
+        //        rewardedButton.interactable = true;
+        //    }
+        //    else
+        //    {
+        //        rewardedButton.interactable = false;
+        //    }
+        //}
 
-        /// <summary>
-        /// Complete method called every time a rewarded video is closed
-        /// </summary>
-        /// <param name="completed">if true, the video was watched until the end</param>
-        private void CompleteMethod(bool completed)
-        {
-            if (completed)
-            {
-                coins += 100;
-            }
+        ///// <summary>
+        ///// Complete method called every time a rewarded video is closed
+        ///// </summary>
+        ///// <param name="completed">if true, the video was watched until the end</param>
+        //private void CompleteMethod(bool completed)
+        //{
+        //    if (completed)
+        //    {
+        //        coins += 100;
+        //    }
 
-            coinsText.text = coins.ToString();
-        }
+        //    coinsText.text = coins.ToString();
+        //}
     }
 }

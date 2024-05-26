@@ -34,11 +34,6 @@ namespace Gley.MobileAds.Internal
             //hide buttons
             switch (selectedAdvertiser)
             {
-                case SupportedAdvertisers.AdColony:
-                    openDebug.SetActive(false);
-                    rewardedInterstitialButton.gameObject.SetActive(false);
-                    appOpenButton.gameObject.SetActive(false);
-                    break;
                 case SupportedAdvertisers.Admob:
                     break;
                 case SupportedAdvertisers.AppLovin:

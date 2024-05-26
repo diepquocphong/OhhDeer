@@ -523,17 +523,6 @@ namespace Gley.MobileAds.Editor
                 advertiser?.UpdateSettings(new AdmobSettings());
             }
 
-            //AdColony
-            advertiser = advertiserSettings.Find(cond => cond.advertiser == SupportedAdvertisers.AdColony);
-            if (advertiser == null)
-            {
-                advertiserSettings.Add(new AdvertiserSettings(new AdColonySettings()));
-            }
-            else
-            {
-                advertiser?.UpdateSettings(new AdColonySettings());
-            }
-
 
             //AppLovin
             advertiser = advertiserSettings.Find(cond => cond.advertiser == SupportedAdvertisers.AppLovin);

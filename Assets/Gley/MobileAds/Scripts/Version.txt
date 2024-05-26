@@ -1,5 +1,5 @@
 {
     "folderName": "MobileAds",
-    "longVersion": "2.0.6",
-    "shortVersion": 206
+    "longVersion": "2.0.8",
+    "shortVersion": 208
 }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028353, g: 0.22571383, b: 0.30692253, a: 1}
+  m_IndirectSpecularColor: {r: 0.18025829, g: 0.22567949, b: 0.30687967, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -909,7 +909,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 721551685}
-  - component: {fileID: 721551684}
+  - component: {fileID: 721551686}
   m_Layer: 0
   m_Name: AdsManager
   m_TagString: Untagged
@@ -917,21 +917,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &721551684
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 721551683}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cebd4a3a3088349af803923b0e1120c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onRewardedVideoCompleted:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!4 &721551685
 Transform:
   m_ObjectHideFlags: 0
@@ -947,6 +932,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &721551686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721551683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7603af8e479ae4db07d80211a44ddf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinsText: {fileID: 0}
+  intersttialButton: {fileID: 0}
+  rewardedButton: {fileID: 0}
 --- !u!1 &740536053
 GameObject:
   m_ObjectHideFlags: 0
@@ -1438,8 +1438,9 @@ MonoBehaviour:
         m_Method:
           m_PersistentCalls:
             m_Calls:
-            - m_Target: {fileID: 721551684}
-              m_TargetAssemblyTypeName: AdsManager, Assembly-CSharp
+            - m_Target: {fileID: 721551686}
+              m_TargetAssemblyTypeName: Gley.MobileAds.Internal.MobileAdsExample,
+                Assembly-CSharp
               m_MethodName: ShowInterstitial
               m_Mode: 1
               m_Arguments:
@@ -2299,8 +2300,9 @@ MonoBehaviour:
         m_Method:
           m_PersistentCalls:
             m_Calls:
-            - m_Target: {fileID: 721551684}
-              m_TargetAssemblyTypeName: AdsManager, Assembly-CSharp
+            - m_Target: {fileID: 721551686}
+              m_TargetAssemblyTypeName: Gley.MobileAds.Internal.MobileAdsExample,
+                Assembly-CSharp
               m_MethodName: ShowInterstitial
               m_Mode: 1
               m_Arguments:

@@ -8,7 +8,7 @@ namespace Gley.MobileAds.Editor
 
         public string preprocessorDirective => SettingsWindowProperties.GLEY_VUNGLE;
 
-        public string sdkLink => "https://publisher.vungle.com/sdk_/plugins";
+        public string sdkLink => "https://support.vungle.com/hc/en-us/articles/360003455452-Integrate-Vungle-SDK-for-Unity#download-the-plugin-0-2";
 
         public SupportedPlatforms[] supportedPlatforms => new SupportedPlatforms[] { SupportedPlatforms.Android, SupportedPlatforms.iOS };
 
