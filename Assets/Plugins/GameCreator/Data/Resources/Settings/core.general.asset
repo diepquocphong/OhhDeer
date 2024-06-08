@@ -17,6 +17,13 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
+    - rid: 6584873076631273523
+      type: {class: GetSceneAsset, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Scene:
+          m_Scene: {fileID: 0}
+          m_SceneName: 
+          m_SceneIndex: -1
     - rid: 7546138958612135937
       type: {class: GeneralRepository, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
@@ -25,10 +32,10 @@ MonoBehaviour:
             rid: 7546138958612135938
           m_Storage:
             rid: 7546138958612135939
-          m_Load: 0
+          m_Load: 2
           m_Scene:
             m_Property:
-              rid: 7546138958612135940
+              rid: 6584873076631273523
         m_Audio:
           soundEffectsMixer: {fileID: 0}
           ambientMixer: {fileID: 0}
@@ -41,7 +48,4 @@ MonoBehaviour:
     - rid: 7546138958612135939
       type: {class: StoragePlayerPrefs, ns: GameCreator.Runtime.Common.SaveSystem,
         asm: GameCreator.Runtime.Core}
-      data: 
-    - rid: 7546138958612135940
-      type: {class: GetSceneActive, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data: 

@@ -39912,10 +39912,42 @@ MonoBehaviour:
     - rid: 7546138998094692383
     - rid: 7546139104626869165
     - rid: 7546139104626869166
+    - rid: 6584873076631273492
+    - rid: 6584873076631273496
     - rid: 7546138998094692463
   references:
     version: 2
     RefIds:
+    - rid: 6584873076631273492
+      type: {class: InstructionCommonTimeWait, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Seconds:
+          m_Property:
+            rid: 6584873076631273493
+        m_Mode:
+          m_UpdateTime: 0
+    - rid: 6584873076631273493
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 1
+    - rid: 6584873076631273496
+      type: {class: InstructionCommonTimeScale, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_TimeScale:
+          m_Property:
+            rid: 6584873076631273497
+        m_TransitionDuration: 0.25
+        m_Layer: 0
+    - rid: 6584873076631273497
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 1
     - rid: 7546138998094692383
       type: {class: InstructionCommonDebugText, ns: GameCreator.Runtime.VisualScripting,
         asm: GameCreator.Runtime.Core}
@@ -106599,10 +106631,42 @@ MonoBehaviour:
     - rid: 7546139006975083317
     - rid: 7546139104626869159
     - rid: 7546139104626869160
+    - rid: 6584873076631273498
+    - rid: 6584873076631273500
     - rid: 7546139006975083319
   references:
     version: 2
     RefIds:
+    - rid: 6584873076631273498
+      type: {class: InstructionCommonTimeWait, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Seconds:
+          m_Property:
+            rid: 6584873076631273499
+        m_Mode:
+          m_UpdateTime: 0
+    - rid: 6584873076631273499
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 1
+    - rid: 6584873076631273500
+      type: {class: InstructionCommonTimeScale, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_TimeScale:
+          m_Property:
+            rid: 6584873076631273501
+        m_TransitionDuration: 0.25
+        m_Layer: 0
+    - rid: 6584873076631273501
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 1
     - rid: 7546139006975083317
       type: {class: InstructionCommonDebugText, ns: GameCreator.Runtime.VisualScripting,
         asm: GameCreator.Runtime.Core}
@@ -106990,12 +107054,44 @@ MonoBehaviour:
   m_Instructions:
     m_Instructions:
     - rid: 7546138998094692496
-    - rid: 7546138998094692498
     - rid: 7546138998094692501
+    - rid: 6584873076631273502
+    - rid: 6584873076631273504
     - rid: 7546139104626869149
+    - rid: 7546138998094692498
   references:
     version: 2
     RefIds:
+    - rid: 6584873076631273502
+      type: {class: InstructionCommonTimeWait, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Seconds:
+          m_Property:
+            rid: 6584873076631273503
+        m_Mode:
+          m_UpdateTime: 0
+    - rid: 6584873076631273503
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 1
+    - rid: 6584873076631273504
+      type: {class: InstructionCommonTimeScale, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_TimeScale:
+          m_Property:
+            rid: 6584873076631273505
+        m_TransitionDuration: 0.25
+        m_Layer: 0
+    - rid: 6584873076631273505
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 1
     - rid: 7546138998094692496
       type: {class: InstructionCommonDebugText, ns: GameCreator.Runtime.VisualScripting,
         asm: GameCreator.Runtime.Core}
@@ -107122,10 +107218,42 @@ MonoBehaviour:
     - rid: 7546138998094692496
     - rid: 7546139104626869151
     - rid: 7546139104626869154
+    - rid: 6584873076631273511
+    - rid: 6584873076631273513
     - rid: 7546139104626869152
   references:
     version: 2
     RefIds:
+    - rid: 6584873076631273511
+      type: {class: InstructionCommonTimeWait, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Seconds:
+          m_Property:
+            rid: 6584873076631273512
+        m_Mode:
+          m_UpdateTime: 0
+    - rid: 6584873076631273512
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 1
+    - rid: 6584873076631273513
+      type: {class: InstructionCommonTimeScale, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_TimeScale:
+          m_Property:
+            rid: 6584873076631273514
+        m_TransitionDuration: 0.25
+        m_Layer: 0
+    - rid: 6584873076631273514
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 1
     - rid: 7546138998094692496
       type: {class: InstructionCommonDebugText, ns: GameCreator.Runtime.VisualScripting,
         asm: GameCreator.Runtime.Core}
@@ -112153,7 +112281,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -303, y: 388.8}
+  m_AnchoredPosition: {x: -303, y: 307.17}
   m_SizeDelta: {x: 192, y: 206}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7126414760259412501
@@ -127903,12 +128031,44 @@ MonoBehaviour:
   m_Instructions:
     m_Instructions:
     - rid: 7546138998094692503
-    - rid: 7546138998094692505
     - rid: 7546139104626869150
+    - rid: 7546138998094692505
+    - rid: 6584873076631273506
+    - rid: 6584873076631273509
     - rid: 7546138998094692507
   references:
     version: 2
     RefIds:
+    - rid: 6584873076631273506
+      type: {class: InstructionCommonTimeWait, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Seconds:
+          m_Property:
+            rid: 6584873076631273507
+        m_Mode:
+          m_UpdateTime: 0
+    - rid: 6584873076631273507
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 1
+    - rid: 6584873076631273509
+      type: {class: InstructionCommonTimeScale, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_TimeScale:
+          m_Property:
+            rid: 6584873076631273510
+        m_TransitionDuration: 0.25
+        m_Layer: 0
+    - rid: 6584873076631273510
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 1
     - rid: 7546138998094692503
       type: {class: InstructionCommonDebugText, ns: GameCreator.Runtime.VisualScripting,
         asm: GameCreator.Runtime.Core}
@@ -128118,10 +128278,42 @@ MonoBehaviour:
     - rid: 7546138998094692385
     - rid: 7546139104626869162
     - rid: 7546139104626869163
+    - rid: 6584873076631273490
+    - rid: 6584873076631273494
     - rid: 7546138998094692461
   references:
     version: 2
     RefIds:
+    - rid: 6584873076631273490
+      type: {class: InstructionCommonTimeWait, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Seconds:
+          m_Property:
+            rid: 6584873076631273491
+        m_Mode:
+          m_UpdateTime: 0
+    - rid: 6584873076631273491
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 1
+    - rid: 6584873076631273494
+      type: {class: InstructionCommonTimeScale, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_TimeScale:
+          m_Property:
+            rid: 6584873076631273495
+        m_TransitionDuration: 0.25
+        m_Layer: 0
+    - rid: 6584873076631273495
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 1
     - rid: 7546138998094692385
       type: {class: InstructionCommonDebugText, ns: GameCreator.Runtime.VisualScripting,
         asm: GameCreator.Runtime.Core}

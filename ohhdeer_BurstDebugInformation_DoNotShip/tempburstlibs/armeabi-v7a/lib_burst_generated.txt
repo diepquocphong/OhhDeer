@@ -23,7 +23,6 @@ Library: /Users/macbook/Documents/OhhDeer/Temp/BurstOutput/tempburstlibs/armeabi
 --assembly-defines=GoogleMobileAds;
 --assembly-defines=GoogleMobileAds.Ump.Android;
 --assembly-defines=GoogleMobileAds.Ump;
---assembly-defines=MaxSdk.Scripts;
 --assembly-defines=Mono.Security;
 --assembly-defines=mscorlib;
 --assembly-defines=NinjutsuGames.StateMachine.Runtime;

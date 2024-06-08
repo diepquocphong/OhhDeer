@@ -39,9 +39,7 @@ public class AdsManager : MonoBehaviour
         Gley.MobileAds.Events.onInitialized -= OnInitialized;
         Gley.MobileAds.Events.onInterstitialLoadSucces -= onInterstitialLoadSucces;
         Gley.MobileAds.Events.onBannerLoadSucces -= OnBannerAdsShow;
-        MaxSdkCallbacks.Rewarded.OnAdRevenuePaidEvent -= OnAdRevenuePaidEvent;
-        MaxSdkCallbacks.Interstitial.OnAdRevenuePaidEvent -= OnAdRevenuePaidEvent;
-        MaxSdkCallbacks.Banner.OnAdRevenuePaidEvent -= OnAdRevenuePaidEvent;
+       
     }
 
     public void ShowBanner()
@@ -97,7 +95,7 @@ public class AdsManager : MonoBehaviour
         if (!rewardedVideoShown)
         {
             Gley.MobileAds.API.ShowRewardedVideo(CompleteMethod);
-            MaxSdkCallbacks.Rewarded.OnAdRevenuePaidEvent += OnAdRevenuePaidEvent;
+            
             StartCoroutine(RewardedVideoCooldown());
         }
     }
@@ -126,12 +124,12 @@ public class AdsManager : MonoBehaviour
 
     private void onInterstitialLoadSucces()
     {
-        MaxSdkCallbacks.Interstitial.OnAdRevenuePaidEvent += OnAdRevenuePaidEvent;
+      
     }
 
     private void OnBannerAdsShow()
     {
-        MaxSdkCallbacks.Banner.OnAdRevenuePaidEvent += OnAdRevenuePaidEvent;
+       
     }
 
     private void OnAdShown(string adType)
@@ -143,17 +141,5 @@ public class AdsManager : MonoBehaviour
         Firebase.Analytics.FirebaseAnalytics.LogEvent("ad_shown", adEventParameters);
     }
 
-    private void OnAdRevenuePaidEvent(string adUnitId, MaxSdkBase.AdInfo impressionData)
-    {
-        double revenue = impressionData.Revenue;
-        var impressionParameters = new[] {
-            new Firebase.Analytics.Parameter("ad_platform", "AppLovin"),
-            new Firebase.Analytics.Parameter("ad_source", impressionData.NetworkName),
-            new Firebase.Analytics.Parameter("ad_unit_name", impressionData.AdUnitIdentifier),
-            new Firebase.Analytics.Parameter("ad_format", impressionData.AdFormat),
-            new Firebase.Analytics.Parameter("value", revenue),
-            new Firebase.Analytics.Parameter("currency", "USD")
-        };
-        Firebase.Analytics.FirebaseAnalytics.LogEvent("ad_impression", impressionParameters);
-    }
+   
 }
