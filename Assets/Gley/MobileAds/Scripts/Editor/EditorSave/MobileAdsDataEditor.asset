@@ -25,21 +25,21 @@ MonoBehaviour:
     showConsentPopup: 0
     platformSettings:
     - platform: 0
-      enabled: 0
+      enabled: 1
       appId:
-        id: 
+        id: ca-app-pub-3940256099942544~3347511713
         displayName: App ID
         required: 1
       idBanner:
-        id: 
+        id: ca-app-pub-3940256099942544/6300978111
         displayName: Banner ID
         required: 1
       idMRec:
-        id: 
+        id: ca-app-pub-3940256099942544/6300978111
         displayName: MRec ID
         required: 1
       idInterstitial:
-        id: 
+        id: ca-app-pub-3940256099942544/8691691433
         displayName: Interstitial ID
         required: 1
       idRewarded:
@@ -51,11 +51,11 @@ MonoBehaviour:
         displayName: Rewarded Interstitial ID
         required: 1
       idOpenApp:
-        id: 
+        id: ca-app-pub-3940256099942544/9257395921
         displayName: App Open ID
         required: 1
-      testMode: 0
-      testDevice: 
+      testMode: 1
+      testDevice: 2b55ede7-e26c-46ec-8e08-75cdf9469e8c
       debugGeography: 0
     - platform: 1
       enabled: 1
@@ -104,23 +104,23 @@ MonoBehaviour:
     - platform: 0
       enabled: 0
       appId:
-        id: 
+        id: ArdMxTOMzAagq3L8EhwTHlyMVhRMlyfJfVb8ELTSoA9rVIx9psanq8Oy48H3iukzHBTU6eIC_RyHeDp6bsLEO3
         displayName: SDK key
         required: 1
       idBanner:
-        id: 
+        id: eef782656f3fd251
         displayName: Banner ID
         required: 1
       idMRec:
-        id: 
+        id: eef782656f3fd251
         displayName: MRec ID
         required: 1
       idInterstitial:
-        id: 
+        id: eef782656f3fd251
         displayName: Interstitial ID
         required: 1
       idRewarded:
-        id: 
+        id: eef782656f3fd251
         displayName: Rewarded ID
         required: 1
       idRewardedInterstitial:
@@ -128,7 +128,7 @@ MonoBehaviour:
         displayName: 
         required: 0
       idOpenApp:
-        id: 
+        id: eef782656f3fd251
         displayName: App Open ID
         required: 1
       testMode: 0
@@ -404,5 +404,5 @@ MonoBehaviour:
   enableATT: 0
   nativePopupText: We will use your data to provide a better and personalized ad
     experience.
-  selectedAndroidAdvertiser: 0
+  selectedAndroidAdvertiser: 20
   selectediOSAdvertiser: 20

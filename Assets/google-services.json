@@ -7,9 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:77044232329:android:ba9ecdb3a757a1bc465658",
+        "mobilesdk_app_id": "1:77044232329:android:b91d574e87b7dce2465658",
         "android_client_info": {
-          "package_name": "com.DSStudio.Game03"
+          "package_name": "com.callyou.Vy"
         }
       },
       "oauth_client": [],

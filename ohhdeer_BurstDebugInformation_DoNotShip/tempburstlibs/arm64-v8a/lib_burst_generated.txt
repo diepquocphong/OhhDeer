@@ -9,6 +9,10 @@ Library: /Users/macbook/Documents/OhhDeer/Temp/BurstOutput/tempburstlibs/arm64-v
 --target-framework=NetFramework
 --assembly-defines=Assembly-CSharp-firstpass;
 --assembly-defines=Assembly-CSharp;
+--assembly-defines=Firebase.Analytics;
+--assembly-defines=Firebase.App;
+--assembly-defines=Firebase.Platform;
+--assembly-defines=Firebase.TaskExtension;
 --assembly-defines=GameCreator.Runtime.Behavior;
 --assembly-defines=GameCreator.Runtime.Core;
 --assembly-defines=GameCreator.Runtime.Perception;
@@ -19,6 +23,7 @@ Library: /Users/macbook/Documents/OhhDeer/Temp/BurstOutput/tempburstlibs/arm64-v
 --assembly-defines=GoogleMobileAds;
 --assembly-defines=GoogleMobileAds.Ump.Android;
 --assembly-defines=GoogleMobileAds.Ump;
+--assembly-defines=MaxSdk.Scripts;
 --assembly-defines=Mono.Security;
 --assembly-defines=mscorlib;
 --assembly-defines=NinjutsuGames.StateMachine.Runtime;

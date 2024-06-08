@@ -15,40 +15,40 @@ MonoBehaviour:
   consentCanvas: {fileID: 0}
   consentPopup: {fileID: 0}
   androidAdvertiser:
-    advertiser: 0
+    advertiser: 20
     platformSettings:
       platform: 0
-      enabled: 0
+      enabled: 1
       appId:
-        id: 
-        displayName: 
-        required: 0
+        id: ca-app-pub-3940256099942544~3347511713
+        displayName: App ID
+        required: 1
       idBanner:
-        id: 
-        displayName: 
-        required: 0
+        id: ca-app-pub-3940256099942544/6300978111
+        displayName: Banner ID
+        required: 1
       idMRec:
-        id: 
-        displayName: 
-        required: 0
+        id: ca-app-pub-3940256099942544/6300978111
+        displayName: MRec ID
+        required: 1
       idInterstitial:
-        id: 
-        displayName: 
-        required: 0
+        id: ca-app-pub-3940256099942544/8691691433
+        displayName: Interstitial ID
+        required: 1
       idRewarded:
         id: 
-        displayName: 
-        required: 0
+        displayName: Rewarded Video ID
+        required: 1
       idRewardedInterstitial:
         id: 
-        displayName: 
-        required: 0
+        displayName: Rewarded Interstitial ID
+        required: 1
       idOpenApp:
-        id: 
-        displayName: 
-        required: 0
-      testMode: 0
-      testDevice: 
+        id: ca-app-pub-3940256099942544/9257395921
+        displayName: App Open ID
+        required: 1
+      testMode: 1
+      testDevice: 2b55ede7-e26c-46ec-8e08-75cdf9469e8c
       debugGeography: 0
     directedForChildren: 0
   iOSAdvertiser:

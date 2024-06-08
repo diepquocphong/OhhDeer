@@ -2,7 +2,7 @@ fileFormatVersion: 2
 guid: 76d0a5f5ee7f4a72a3d2de688e3bd51a
 labels:
 - gvh
-- gvh_version-12.0.0
+- gvh_version-1.2.179
 - gvhp_exportpath-ExternalDependencyManager/Editor/1.2.179/Google.VersionHandlerImpl.dll
 - gvhp_targets-editor
 PluginImporter:
@@ -16,6 +16,18 @@ PluginImporter:
   isExplicitlyReferenced: 0
   validateReferences: 1
   platformData:
+  - first:
+      : Any
+    second:
+      enabled: 0
+      settings:
+        Exclude Android: 1
+        Exclude Editor: 0
+        Exclude Linux64: 1
+        Exclude OSXUniversal: 1
+        Exclude Win: 1
+        Exclude Win64: 1
+        Exclude iOS: 1
   - first:
       Any: 
     second:

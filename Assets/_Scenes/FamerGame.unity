@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1434535746}
-  m_IndirectSpecularColor: {r: 0.18075465, g: 1.0691277, b: 1.5515423, a: 1}
+  m_IndirectSpecularColor: {r: 0.18108875, g: 1.0695807, b: 1.5530194, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -38979,53 +38979,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1824f33fc7a45d41a1ea0e44836de2c, type: 3}
---- !u!1 &1346349092
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1346349094}
-  - component: {fileID: 1346349095}
-  m_Layer: 0
-  m_Name: AdsManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1346349094
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1346349092}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 33.31979, y: 13.418286, z: 16.5084}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1346349095
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1346349092}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7603af8e479ae4db07d80211a44ddf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coinsText: {fileID: 0}
-  intersttialButton: {fileID: 0}
-  rewardedButton: {fileID: 0}
 --- !u!1001 &1346858331
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40005,9 +39958,8 @@ MonoBehaviour:
         m_Method:
           m_PersistentCalls:
             m_Calls:
-            - m_Target: {fileID: 1346349095}
-              m_TargetAssemblyTypeName: Gley.MobileAds.Internal.MobileAdsExample,
-                Assembly-CSharp
+            - m_Target: {fileID: 1729329165}
+              m_TargetAssemblyTypeName: AdsManager, Assembly-CSharp
               m_MethodName: ShowInterstitial
               m_Mode: 1
               m_Arguments:
@@ -50716,6 +50668,86 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5576f2bad02826439127bca899cbbdd, type: 3}
+--- !u!1001 &1729329164
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 479788841492159091, guid: ab110c6c290a14484b576f14afa078b9,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.190707
+      objectReference: {fileID: 0}
+    - target: {fileID: 479788841492159091, guid: ab110c6c290a14484b576f14afa078b9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.303877
+      objectReference: {fileID: 0}
+    - target: {fileID: 479788841492159091, guid: ab110c6c290a14484b576f14afa078b9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.7534013
+      objectReference: {fileID: 0}
+    - target: {fileID: 479788841492159091, guid: ab110c6c290a14484b576f14afa078b9,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 479788841492159091, guid: ab110c6c290a14484b576f14afa078b9,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 479788841492159091, guid: ab110c6c290a14484b576f14afa078b9,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 479788841492159091, guid: ab110c6c290a14484b576f14afa078b9,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 479788841492159091, guid: ab110c6c290a14484b576f14afa078b9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 479788841492159091, guid: ab110c6c290a14484b576f14afa078b9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 479788841492159091, guid: ab110c6c290a14484b576f14afa078b9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 844788468351713770, guid: ab110c6c290a14484b576f14afa078b9,
+        type: 3}
+      propertyPath: m_Name
+      value: AdsMNG
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ab110c6c290a14484b576f14afa078b9, type: 3}
+--- !u!114 &1729329165 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 683339335294769493, guid: ab110c6c290a14484b576f14afa078b9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1729329164}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d510481112e1400dba75decbfccffae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1730556429 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4743275976050912, guid: d5576f2bad02826439127bca899cbbdd,
@@ -106613,9 +106645,8 @@ MonoBehaviour:
         m_Method:
           m_PersistentCalls:
             m_Calls:
-            - m_Target: {fileID: 1346349095}
-              m_TargetAssemblyTypeName: Gley.MobileAds.Internal.MobileAdsExample,
-                Assembly-CSharp
+            - m_Target: {fileID: 1729329165}
+              m_TargetAssemblyTypeName: AdsManager, Assembly-CSharp
               m_MethodName: ShowInterstitial
               m_Mode: 1
               m_Arguments:
@@ -107022,9 +107053,8 @@ MonoBehaviour:
         m_Method:
           m_PersistentCalls:
             m_Calls:
-            - m_Target: {fileID: 1346349095}
-              m_TargetAssemblyTypeName: Gley.MobileAds.Internal.MobileAdsExample,
-                Assembly-CSharp
+            - m_Target: {fileID: 1729329165}
+              m_TargetAssemblyTypeName: AdsManager, Assembly-CSharp
               m_MethodName: ShowInterstitial
               m_Mode: 1
               m_Arguments:
@@ -107118,9 +107148,8 @@ MonoBehaviour:
         m_Method:
           m_PersistentCalls:
             m_Calls:
-            - m_Target: {fileID: 1346349095}
-              m_TargetAssemblyTypeName: Gley.MobileAds.Internal.MobileAdsExample,
-                Assembly-CSharp
+            - m_Target: {fileID: 1729329165}
+              m_TargetAssemblyTypeName: AdsManager, Assembly-CSharp
               m_MethodName: ShowInterstitial
               m_Mode: 1
               m_Arguments:
@@ -112124,7 +112153,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -303, y: 290}
+  m_AnchoredPosition: {x: -303, y: 388.8}
   m_SizeDelta: {x: 192, y: 206}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7126414760259412501
@@ -122738,9 +122767,8 @@ MonoBehaviour:
         m_Method:
           m_PersistentCalls:
             m_Calls:
-            - m_Target: {fileID: 1346349095}
-              m_TargetAssemblyTypeName: Gley.MobileAds.Internal.MobileAdsExample,
-                Assembly-CSharp
+            - m_Target: {fileID: 1729329165}
+              m_TargetAssemblyTypeName: AdsManager, Assembly-CSharp
               m_MethodName: ShowInterstitial
               m_Mode: 1
               m_Arguments:
@@ -127938,9 +127966,8 @@ MonoBehaviour:
         m_Method:
           m_PersistentCalls:
             m_Calls:
-            - m_Target: {fileID: 1346349095}
-              m_TargetAssemblyTypeName: Gley.MobileAds.Internal.MobileAdsExample,
-                Assembly-CSharp
+            - m_Target: {fileID: 1729329165}
+              m_TargetAssemblyTypeName: AdsManager, Assembly-CSharp
               m_MethodName: ShowInterstitial
               m_Mode: 1
               m_Arguments:
@@ -128137,9 +128164,8 @@ MonoBehaviour:
         m_Method:
           m_PersistentCalls:
             m_Calls:
-            - m_Target: {fileID: 1346349095}
-              m_TargetAssemblyTypeName: Gley.MobileAds.Internal.MobileAdsExample,
-                Assembly-CSharp
+            - m_Target: {fileID: 1729329165}
+              m_TargetAssemblyTypeName: AdsManager, Assembly-CSharp
               m_MethodName: ShowInterstitial
               m_Mode: 1
               m_Arguments:
@@ -128555,5 +128581,5 @@ SceneRoots:
   - {fileID: 518361601}
   - {fileID: 1042127292}
   - {fileID: 302730594}
-  - {fileID: 1346349094}
+  - {fileID: 1729329164}
   - {fileID: 721572160}
