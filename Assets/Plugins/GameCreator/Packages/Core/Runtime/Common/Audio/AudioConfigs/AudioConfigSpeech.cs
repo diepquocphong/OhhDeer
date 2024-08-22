@@ -19,7 +19,7 @@ namespace GameCreator.Runtime.Common.Audio
 
         [SerializeField]
         private PropertyGetGameObject m_Target = GetGameObjectPlayer.Create();
-
+        
         // PROPERTIES: ----------------------------------------------------------------------------
 
         public override float SpatialBlend => m_SpatialBlend == SpatialBlending.None ? 0f : 1f;
@@ -38,15 +38,7 @@ namespace GameCreator.Runtime.Common.Audio
 
         public static GameObject GetSpeechSource(GameObject target)
         {
-            if (target == null) return null;
-            
-            Animator animator = target.GetComponentInChildren<Animator>();
-            if (animator != null && animator.isHuman)
-            {
-                target = animator.GetBoneTransform(HumanBodyBones.Head).gameObject;
-            }
-
-            return target;
+            return target == null ? null : target;
         }
         
         // STATIC CONSTRUCTOR: --------------------------------------------------------------------

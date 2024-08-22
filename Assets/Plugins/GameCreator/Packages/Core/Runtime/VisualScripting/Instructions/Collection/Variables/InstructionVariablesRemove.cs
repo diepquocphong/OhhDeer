@@ -7,7 +7,7 @@ using UnityEngine;
 namespace GameCreator.Runtime.VisualScripting
 {
     [Title("Remove from List")]
-    [Description("Deletes an elements from a given Local or Global List Variables")]
+    [Description("Deletes an element from a given Local or Global List Variables")]
     
     [Image(typeof(IconTrashOutline), ColorTheme.Type.Teal)]
     

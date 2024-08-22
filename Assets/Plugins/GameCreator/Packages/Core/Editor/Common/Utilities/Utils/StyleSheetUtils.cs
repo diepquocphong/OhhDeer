@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 using System.Collections.Generic;
 using UnityEngine.UIElements;
@@ -41,6 +42,7 @@ namespace GameCreator.Editor.Common
 
         public static StyleSheet[] Load(params string[] paths)
         {
+            
             List<StyleSheet> styleSheets = new List<StyleSheet>();
             styleSheets.AddRange(LoadShared());
 

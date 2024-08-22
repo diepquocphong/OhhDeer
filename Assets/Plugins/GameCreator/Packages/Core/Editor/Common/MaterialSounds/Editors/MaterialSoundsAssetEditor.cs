@@ -14,7 +14,12 @@ namespace GameCreator.Editor.Common
         {
             VisualElement root = new VisualElement();
 
+            SerializedProperty textureName = this.serializedObject.FindProperty("m_TextureName");
             SerializedProperty materialSounds = this.serializedObject.FindProperty("m_MaterialSounds");
+            
+            root.Add(new SpaceSmaller());
+            root.Add(new PropertyField(textureName));
+            root.Add(new SpaceSmaller());
             root.Add(new PropertyField(materialSounds));
             
             return root;

@@ -49,7 +49,7 @@ namespace GameCreator.Runtime.Cameras
         // EXPOSED MEMBERS: -----------------------------------------------------------------------
         
         [SerializeField] private PropertyGetGameObject m_Pivot = GetGameObjectPlayer.Create();
-        [SerializeField] private PropertyGetDecimal m_Shoulder = GetDecimalDecimal.Create(0f);
+        [SerializeField] private PropertyGetDecimal m_Shoulder = GetDecimalDecimal.Create(0.5f);
         [SerializeField] private PropertyGetDecimal m_Lift = GetDecimalDecimal.Create(0.5f);
         [SerializeField] private PropertyGetDecimal m_Radius = GetDecimalDecimal.Create(5f);
         
@@ -62,7 +62,7 @@ namespace GameCreator.Runtime.Cameras
         [SerializeField]
         private PropertyGetDecimal m_SensitivityY = GetDecimalDecimal.Create(5f);
         
-        [SerializeField, Range(1f, 179f)] private float m_MaxPitch = 60f;
+        [SerializeField, Range(1f, 179f)] private float m_MaxPitch = 150f;
         [SerializeField] private EnablerAngle180 m_MaxYaw = new EnablerAngle180(false, 120f);
 
         [SerializeField]

@@ -77,5 +77,28 @@ namespace GameCreator.Runtime.Common
 		
             return new Quaternion(result.x, result.y, result.z, result.w);
         }
+        
+        /// <summary>
+        /// Projects a rotation onto a plane defined by a normal direction
+        /// </summary>
+        /// <param name="rotation"></param>
+        /// <param name="normal"></param>
+        /// <returns></returns>
+        public static Quaternion ProjectToPlane(Quaternion rotation, Vector3 normal)
+        {
+            return ProjectToPlane(rotation * Vector3.forward, normal);
+        }
+        
+        /// <summary>
+        /// Projects a direction vector onto a plane defined by a normal direction
+        /// </summary>
+        /// <param name="direction"></param>
+        /// <param name="normal"></param>
+        /// <returns></returns>
+        public static Quaternion ProjectToPlane(Vector3 direction, Vector3 normal)
+        {
+            Vector3 projectionAxis = Vector3.ProjectOnPlane(direction, normal.normalized).normalized;
+            return Quaternion.LookRotation(projectionAxis); 
+        }
     }
 }

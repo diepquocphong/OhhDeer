@@ -36,8 +36,12 @@ namespace GameCreator.Editor.Core
 
             this.m_Skin = this.target as Skin;
             if (this.m_Skin == null) return;
-            
-            if (!string.IsNullOrEmpty(this.m_Skin.Description))
+
+            if (string.IsNullOrEmpty(this.m_Skin.Description))
+            {
+                this.m_Head.Add(new SpaceSmaller());
+            }
+            else
             {
                 this.m_Head.Add(new InfoMessage(this.m_Skin.Description));
             }
@@ -52,7 +56,7 @@ namespace GameCreator.Editor.Core
         private void PaintBody()
         {
             SerializedProperty value = this.serializedObject.FindProperty("m_Value");
-            PropertyField fieldValue = new PropertyField(value);
+            PropertyField fieldValue = new PropertyField(value, "Prefab");
             
             fieldValue.RegisterValueChangeCallback(_ => this.PaintHead());
             this.m_Body.Add(fieldValue);

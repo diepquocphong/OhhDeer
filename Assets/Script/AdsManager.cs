@@ -1,110 +1,44 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using Firebase;
-using Firebase.Analytics;
-using Firebase.Extensions;
 
 public class AdsManager : MonoBehaviour
 {
-    public UnityEvent onRewardedVideoCompleted;
-    private bool interstitialShown = false;
-    private bool rewardedVideoShown = false;
+    // Start is called before the first frame update
 
+
+    public UnityEvent onRewardedVideoCompleted;
     void Start()
     {
-        if (onRewardedVideoCompleted == null)
-        {
-            onRewardedVideoCompleted = new UnityEvent();
-        }
-
-        FirebaseApp.CheckAndFixDependenciesAsync().ContinueWithOnMainThread(task => {
-            if (task.Result == DependencyStatus.Available)
-            {
-                FirebaseAnalytics.SetAnalyticsCollectionEnabled(true);
-                Debug.Log("Firebase Initialized");
-            }
-            else
-            {
-                Debug.LogError("Could not resolve all Firebase dependencies: " + task.Result);
-            }
-        });
-
-        Gley.MobileAds.API.Initialize();
+    Gley.MobileAds.API.Initialize();
         Gley.MobileAds.Events.onInitialized += OnInitialized;
     }
 
-    void OnDestroy()
-    {
-        Gley.MobileAds.Events.onInitialized -= OnInitialized;
-        Gley.MobileAds.Events.onInterstitialLoadSucces -= onInterstitialLoadSucces;
-        Gley.MobileAds.Events.onBannerLoadSucces -= OnBannerAdsShow;
-       
-    }
 
     public void ShowBanner()
     {
-        Gley.MobileAds.API.ShowBanner(Gley.MobileAds.BannerPosition.Bottom, Gley.MobileAds.BannerType.Adaptive);
-        OnAdShown("Banner");
-    }
-
-    public void HideBanner()
-    {
-        Gley.MobileAds.API.HideBanner();
+        Gley.MobileAds.API.ShowBanner(Gley.MobileAds.BannerPosition.Top, Gley.MobileAds.BannerType.Adaptive);
+        
+        
     }
 
     public void ShowInterstitial()
     {
-        if (Gley.MobileAds.API.IsInterstitialAvailable() && !interstitialShown)
-        {
-            Gley.MobileAds.API.ShowInterstitial();
-            OnAdShown("Interstitial");
-            StartCoroutine(InterstitialCooldown());
-        }
-    }
-
-    public void ShowMRec()
-    {
-        Gley.MobileAds.API.ShowMRec(Gley.MobileAds.BannerPosition.BottomRight);
-        OnAdShown("MRec");
-    }
-
-    public void HideMRec()
-    {
-        Gley.MobileAds.API.HideMRec();
-    }
-
-    private IEnumerator InterstitialCooldown()
-    {
-        interstitialShown = true;
-        yield return new WaitForSeconds(2f); // 2 seconds cooldown
-        interstitialShown = false;
+        Gley.MobileAds.API.ShowInterstitial();
+        
     }
 
     public void ShowAppOpen()
     {
-        if (!interstitialShown && !rewardedVideoShown)
-        {
-            Gley.MobileAds.API.ShowAppOpen();
-            OnAdShown("AppOpen");
-        }
+        Gley.MobileAds.API.ShowAppOpen();
+        MaxSdkCallbacks.Interstitial.OnAdRevenuePaidEvent += OnAdRevenuePaidEvent;
     }
 
-    public void ShowRewardedVideo()
+      public void ShowRewardedVideo()
     {
-        if (!rewardedVideoShown)
-        {
-            Gley.MobileAds.API.ShowRewardedVideo(CompleteMethod);
-            
-            StartCoroutine(RewardedVideoCooldown());
-        }
-    }
-
-    private IEnumerator RewardedVideoCooldown()
-    {
-        rewardedVideoShown = true;
-        yield return new WaitForSeconds(2f); // 2 seconds cooldown
-        rewardedVideoShown = false;
+        Gley.MobileAds.API.ShowRewardedVideo(CompleteMethod);
+        MaxSdkCallbacks.Rewarded.OnAdRevenuePaidEvent += OnAdRevenuePaidEvent;
     }
 
     private void CompleteMethod(bool completed)
@@ -112,34 +46,59 @@ public class AdsManager : MonoBehaviour
         if (completed)
         {
             onRewardedVideoCompleted.Invoke();
-            OnAdShown("RewardedVideo");
+
+
         }
     }
+    public void ShowMRec()
+    {
+        Gley.MobileAds.API.ShowMRec(Gley.MobileAds.BannerPosition.BottomRight);
+        MaxSdkCallbacks.MRec.OnAdRevenuePaidEvent += OnAdRevenuePaidEvent; // Đăng ký sự kiện cho MRec
+        
+    }
 
+
+    public void HideMRec()
+    {
+        Gley.MobileAds.API.HideMRec();
+    }
     private void OnInitialized()
     {
+       
         Gley.MobileAds.Events.onInterstitialLoadSucces += onInterstitialLoadSucces;
         Gley.MobileAds.Events.onBannerLoadSucces += OnBannerAdsShow;
     }
 
     private void onInterstitialLoadSucces()
     {
-      
+        //do something
+        MaxSdkCallbacks.Interstitial.OnAdRevenuePaidEvent += OnAdRevenuePaidEvent;
     }
-
     private void OnBannerAdsShow()
     {
-       
+        //do something
+        MaxSdkCallbacks.Banner.OnAdRevenuePaidEvent += OnAdRevenuePaidEvent;
     }
 
-    private void OnAdShown(string adType)
+    
+
+
+    //MaxSdkCallbacks.Interstitial.OnAdRevenuePaidEvent += OnAdRevenuePaidEvent;
+    //    MaxSdkCallbacks.Rewarded.OnAdRevenuePaidEvent += OnAdRevenuePaidEvent;
+    //    MaxSdkCallbacks.Banner.OnAdRevenuePaidEvent += OnAdRevenuePaidEvent;
+    //    MaxSdkCallbacks.MRec.OnAdRevenuePaidEvent += OnAdRevenuePaidEvent;
+    private void OnAdRevenuePaidEvent(string adUnitId, MaxSdkBase.AdInfo impressionData)
     {
-        var adEventParameters = new[] {
-            new Firebase.Analytics.Parameter("ad_type", adType),
-            new Firebase.Analytics.Parameter("timestamp", System.DateTime.UtcNow.ToString())
-        };
-        Firebase.Analytics.FirebaseAnalytics.LogEvent("ad_shown", adEventParameters);
+        double revenue = impressionData.Revenue;
+        var impressionParameters = new[] {
+      new Firebase.Analytics.Parameter("ad_platform", "AppLovin"),
+      new Firebase.Analytics.Parameter("ad_source", impressionData.NetworkName),
+      new Firebase.Analytics.Parameter("ad_unit_name", impressionData.AdUnitIdentifier),
+      new Firebase.Analytics.Parameter("ad_format", impressionData.AdFormat),
+      new Firebase.Analytics.Parameter("value", revenue),
+      new Firebase.Analytics.Parameter("currency", "USD"), // All AppLovin revenue is sent in USD
+    };
+        Firebase.Analytics.FirebaseAnalytics.LogEvent("ad_impression", impressionParameters);
     }
 
-   
 }

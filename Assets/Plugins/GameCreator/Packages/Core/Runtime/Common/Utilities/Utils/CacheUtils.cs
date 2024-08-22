@@ -36,7 +36,7 @@ namespace GameCreator.Runtime.Common
 
         /// <summary>
         /// Returns the requested component (null if it does not exist) and caches its value
-        /// so retrieving the same value afterwards is faster. 
+        /// so retrieving the same value afterward is faster. 
         /// </summary>
         /// <param name="component"></param>
         /// <typeparam name="T"></typeparam>
@@ -48,7 +48,7 @@ namespace GameCreator.Runtime.Common
         
         /// <summary>
         /// Returns the requested component (null if it does not exist) and caches its value
-        /// so retrieving the same value afterwards is faster. 
+        /// so retrieving the same value afterward is faster. 
         /// </summary>
         /// <param name="gameObject"></param>
         /// <typeparam name="T"></typeparam>
@@ -60,7 +60,7 @@ namespace GameCreator.Runtime.Common
 
         /// <summary>
         /// Returns the requested component (null if it does not exist) and caches its value
-        /// so retrieving the same value afterwards is faster. 
+        /// so retrieving the same value afterward is faster. 
         /// </summary>
         /// <param name="component"></param>
         /// <param name="type"></param>
@@ -72,7 +72,7 @@ namespace GameCreator.Runtime.Common
         
         /// <summary>
         /// Returns the requested component (null if it does not exist) and caches its value
-        /// so retrieving the same value afterwards is faster. 
+        /// so retrieving the same value afterward is faster. 
         /// </summary>
         /// <param name="gameObject"></param>
         /// <param name="type"></param>
@@ -104,7 +104,7 @@ namespace GameCreator.Runtime.Common
         // ADD: -----------------------------------------------------------------------------------
 
         /// <summary>
-        /// Adds a component and caches its value so retrieving the same value afterwards
+        /// Adds a component and caches its value so retrieving the same value afterward
         /// is faster.
         /// </summary>
         /// <param name="component"></param>
@@ -116,7 +116,7 @@ namespace GameCreator.Runtime.Common
         }
         
         /// <summary>
-        /// Adds a component and caches its value so retrieving the same value afterwards
+        /// Adds a component and caches its value so retrieving the same value afterward
         /// is faster.
         /// </summary>
         /// <param name="gameObject"></param>
@@ -128,7 +128,7 @@ namespace GameCreator.Runtime.Common
         }
 
         /// <summary>
-        /// Adds a component and caches its value so retrieving the same value afterwards
+        /// Adds a component and caches its value so retrieving the same value afterward
         /// is faster.
         /// </summary>
         /// <param name="component"></param>
@@ -140,7 +140,7 @@ namespace GameCreator.Runtime.Common
         }
 
         /// <summary>
-        /// Adds a component and caches its value so retrieving the same value afterwards
+        /// Adds a component and caches its value so retrieving the same value afterward
         /// is faster.
         /// </summary>
         /// <param name="gameObject"></param>

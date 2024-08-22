@@ -128,7 +128,7 @@ namespace GameCreator.Runtime.Characters
             Args args = new Args(this.m_Character.gameObject, hit.collider.gameObject);
             float yaw = this.m_Character.transform.localRotation.eulerAngles.y;
             
-            MaterialSounds.Play(args, hit, materialSoundsAsset, yaw);
+            MaterialSounds.Play(args, hit.point, hit.normal, hit.collider.gameObject, materialSoundsAsset, yaw);
         }
 
         // PRIVATE METHODS: -----------------------------------------------------------------------

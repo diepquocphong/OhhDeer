@@ -23,7 +23,7 @@ namespace GameCreator.Runtime.Common
             
             #if UNITY_EDITOR
 
-            if (UnityEditor.EditorPrefs.GetBool(KEY_RUNNER_SHOW_CONTAINER, false))
+            if (UnityEditor.EditorPrefs.GetBool(KEY_RUNNER_SHOW_HIERARCHY, false))
             {
                 containerHideFlags = HideFlags.None;
             }

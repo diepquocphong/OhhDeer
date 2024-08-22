@@ -49,7 +49,7 @@ namespace GameCreator.Runtime.VisualScripting
                 m_Transition.EasingType,
                 m_Transition.Time
             );
-
+            
             Tween.To(args.Self, tween);
             if (this.m_Transition.WaitToComplete) await this.Until(() => tween.IsFinished);
         }

@@ -88,6 +88,11 @@ namespace GameCreator.Editor.Common
                 if (m_Property?.FindPropertyRelative("m_IsEnabled") == null) return;
                 this.m_Property.FindPropertyRelative("m_IsEnabled").boolValue = value;
                 SerializationUtils.ApplyUnregisteredSerialization(this.m_Property.serializedObject);
+
+                ChangeEvent<bool> changeEvent = ChangeEvent<bool>.GetPooled(!value, value);
+                changeEvent.target = this.m_HeadDisabled;
+                
+                this.SendEvent(changeEvent);
             }
         }
         
@@ -103,6 +108,11 @@ namespace GameCreator.Editor.Common
                 if (m_Property?.FindPropertyRelative("m_Breakpoint") == null) return;
                 this.m_Property.FindPropertyRelative("m_Breakpoint").boolValue = value;
                 SerializationUtils.ApplyUnregisteredSerialization(this.m_Property.serializedObject);
+
+                ChangeEvent<bool> changeEvent = ChangeEvent<bool>.GetPooled(!value, value);
+                changeEvent.target = this.m_HeadBreakpoint;
+                
+                this.SendEvent(changeEvent);
             }
         }
 

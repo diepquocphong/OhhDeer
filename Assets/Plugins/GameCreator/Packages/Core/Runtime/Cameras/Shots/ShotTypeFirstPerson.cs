@@ -121,7 +121,6 @@ namespace GameCreator.Runtime.Cameras
             base.OnBeforeUpdate();
             
              this.m_Recoil.Update(out float pitch, out float yaw);
-            Debug.Log($"X = {pitch}, Y = {yaw}");
             this.AddRotation(pitch, yaw);
             
             this.m_FirstPerson?.OnUpdate(this);

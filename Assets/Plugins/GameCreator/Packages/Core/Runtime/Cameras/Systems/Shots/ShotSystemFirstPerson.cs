@@ -24,7 +24,7 @@ namespace GameCreator.Runtime.Cameras
         [SerializeField]
         private PropertyGetDecimal m_SensitivityY = GetDecimalDecimal.Create(5f);
 
-        [SerializeField, Range(1f, 179f)] private float m_MaxPitch = 60f;
+        [SerializeField, Range(1f, 179f)] private float m_MaxPitch = 150f;
         [SerializeField] private EnablerAngle180 m_MaxYaw = new EnablerAngle180(false, 120f);
         
         [SerializeField] private float m_SmoothTime = 0.1f;

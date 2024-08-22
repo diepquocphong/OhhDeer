@@ -18,14 +18,24 @@ namespace GameCreator.Runtime.VisualScripting
     [Serializable]
     public class InstructionRendererChangeMaterialTexture : TInstructionRenderer
     {
+        private enum MaterialType
+        {
+            Shared,
+            Instance
+        }
+        
         // MEMBERS: -------------------------------------------------------------------------------
 
+        [SerializeField] private MaterialType m_Material = MaterialType.Instance;
+        [SerializeField] private PropertyGetString m_TextureName = new PropertyGetString("_MainTex");
+        
         [SerializeField] private PropertyGetTexture m_Texture = new PropertyGetTexture();
 
         // PROPERTIES: ----------------------------------------------------------------------------
 
-        public override string Title => $"Change Texture of {this.m_Renderer} to {this.m_Texture}";
-
+        public override string Title =>
+            $"Change Texture of {this.m_Renderer}[{this.m_TextureName}] to {this.m_Texture}";
+        
         // RUN METHOD: ----------------------------------------------------------------------------
         
         protected override Task Run(Args args)
@@ -34,9 +44,21 @@ namespace GameCreator.Runtime.VisualScripting
             if (gameObject == null) return DefaultResult;
 
             Renderer renderer = gameObject.Get<Renderer>();
-            if (renderer == null || renderer.material == null) return DefaultResult;
+            if (renderer == null) return DefaultResult;
 
-            renderer.material.mainTexture = this.m_Texture.Get(args);
+            Material material = this.m_Material switch
+            {
+                MaterialType.Shared => renderer.sharedMaterial,
+                MaterialType.Instance => renderer.material,
+                _ => throw new ArgumentOutOfRangeException()
+            };
+            
+            if (material == null) return DefaultResult;
+
+            string textureName = this.m_TextureName.Get(args);
+            if (material.HasTexture(textureName) == false) return DefaultResult;
+            
+            material.SetTexture(textureName, this.m_Texture.Get(args));
             return DefaultResult;
         }
     }

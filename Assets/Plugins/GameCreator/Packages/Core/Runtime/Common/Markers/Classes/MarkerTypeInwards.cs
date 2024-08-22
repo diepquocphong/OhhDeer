@@ -50,7 +50,6 @@ namespace GameCreator.Runtime.Common
             {
                 Vector3 direction = marker.transform.position - point;
                 direction.y = 0f;
-                Debug.DrawLine(marker.transform.position, marker.transform.TransformPoint(direction), Color.magenta);
                 return direction.normalized;
             }
             

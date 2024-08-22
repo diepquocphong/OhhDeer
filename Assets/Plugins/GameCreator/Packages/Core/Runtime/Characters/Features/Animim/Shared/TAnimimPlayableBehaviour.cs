@@ -40,6 +40,8 @@ namespace GameCreator.Runtime.Characters.Animim
         [field: NonSerialized] public bool IsComplete { get; private set; }
         [field: NonSerialized] public bool IsInDelay { get; private set; }
 
+        public float CurrentWeight => this.Weight.Current;
+        
         public float RootMotion => this.m_Config?.RootMotion ?? false 
             ? this.Weight.Current 
             : 0f;
@@ -84,10 +86,6 @@ namespace GameCreator.Runtime.Characters.Animim
             {
                 this.Duration.IsEnabled = true;
                 this.Duration.Value = this.m_Config.Duration;
-
-                // double delay = this.m_Config.DelayIn / this.m_Config.Speed;
-                // float totalDuration = this.m_Config.DelayIn + this.m_Config.Duration;
-                // playable.SetDuration(totalDuration);
             }
         }
 

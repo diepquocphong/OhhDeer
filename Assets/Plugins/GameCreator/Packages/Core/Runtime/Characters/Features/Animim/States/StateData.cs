@@ -33,6 +33,32 @@ namespace GameCreator.Runtime.Characters
 
         public AvatarMask AvatarMask => this.m_AvatarMask;
 
+        public float EntryDuration
+        {
+            get
+            {
+                if (this.Type != StateType.State) return 0f;
+                if (this.m_State == null) return 0f;
+                
+                return this.m_State.HasEntryClip
+                    ? this.m_State.EntryClip.length
+                    : 0f;
+            }
+        }
+        
+        public float ExitDuration
+        {
+            get
+            {
+                if (this.Type != StateType.State) return 0f;
+                if (this.m_State == null) return 0f;
+                
+                return this.m_State.HasExitClip
+                    ? this.m_State.ExitClip.length
+                    : 0f;
+            }
+        }
+
         // CONSTRUCTORS: --------------------------------------------------------------------------
 
         public StateData(StateType stateType)

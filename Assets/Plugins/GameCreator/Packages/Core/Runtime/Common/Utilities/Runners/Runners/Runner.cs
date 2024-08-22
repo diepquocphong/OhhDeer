@@ -17,7 +17,7 @@ namespace GameCreator.Runtime.Common
         
         #endif
 
-        public const string KEY_RUNNER_SHOW_CONTAINER = "gc:runner-show-conainer";
+        public const string KEY_RUNNER_SHOW_HIERARCHY = "gc:runner-show-hierarchy";
         
         protected static Dictionary<int, RunnerPool> Pool = new Dictionary<int, RunnerPool>();
 

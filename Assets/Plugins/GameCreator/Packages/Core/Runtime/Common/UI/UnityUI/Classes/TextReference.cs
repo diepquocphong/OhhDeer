@@ -149,7 +149,7 @@ namespace GameCreator.Runtime.Common.UnityUI
         private void RefreshTMPCharactersVisible()
         {
             int visibleCount = this.CharactersVisible;
-            if (this.m_TMP.maxVisibleCharacters != visibleCount)
+            if (this.m_TMP != null && this.m_TMP.maxVisibleCharacters != visibleCount)
             {
                 this.m_TMP.maxVisibleCharacters = visibleCount;
             }

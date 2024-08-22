@@ -4,6 +4,8 @@ using UnityEngine;
 
 namespace GameCreator.Runtime.Characters
 {
+    [Title("Player")]
+    
     [Serializable]
     public abstract class TUnitPlayer : TUnit, IUnitPlayer
     {

@@ -35,7 +35,7 @@ namespace GameCreator.Runtime.Behavior
                 TNode subNode = graph.GetFromPortId(output.Connections[index]);
 
                 Status subNodeStatus = subNode.GetStatus(processor);
-                if (subNodeStatus == Status.Success || subNodeStatus == Status.Failure) continue;
+                if (subNodeStatus == Status.Failure) continue;
                 
                 if (abortNextNodes)
                 {

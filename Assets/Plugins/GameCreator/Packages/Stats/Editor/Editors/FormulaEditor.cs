@@ -80,11 +80,11 @@ namespace GameCreator.Editor.Stats
             this.m_Root.Add(labelTitle);
             this.m_Root.Add(fieldFormula);
             this.m_Root.Add(this.m_Message);
+            this.m_Root.Add(fieldTable);
 
             this.RefreshValidation();
             this.PrintDocumentation();
-
-            this.m_Root.Add(fieldTable);
+            
             return this.m_Root;
         }
 

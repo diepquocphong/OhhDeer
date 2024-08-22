@@ -55,11 +55,11 @@ namespace GameCreator.Runtime.VisualScripting
 
         // CLIP INTERFACE METHODS: ----------------------------------------------------------------
         
-        void IClip.Reset()
+        void IClip.Reset(ITrack track, Args args)
         {
             this.m_IsStart = false;
             this.m_IsComplete = false;
-            this.OnReset();
+            this.OnReset(track, args);
         }
 
         void IClip.Start(ITrack track, Args args)
@@ -111,7 +111,7 @@ namespace GameCreator.Runtime.VisualScripting
         
         // PROTECTED METHODS: ---------------------------------------------------------------------
 
-        protected virtual void OnReset()
+        protected virtual void OnReset(ITrack track, Args args)
         { }
         
         protected virtual void OnStart(ITrack track, Args args)

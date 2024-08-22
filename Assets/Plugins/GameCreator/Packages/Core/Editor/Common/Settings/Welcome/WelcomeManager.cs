@@ -164,6 +164,11 @@ namespace GameCreator.Editor.Common
             return sb.ToString();
         }
 
+        public static void ForceFetchData()
+        {
+            UpdateWelcomeData();
+        }
+
         // WELCOME DATA: --------------------------------------------------------------------------
         
         private static void UpdateWelcomeData()

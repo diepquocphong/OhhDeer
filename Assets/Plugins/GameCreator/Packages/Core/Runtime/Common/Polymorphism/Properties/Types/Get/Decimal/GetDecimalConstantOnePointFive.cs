@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace GameCreator.Runtime.Common
 {
-    [Title("One point Five")]
+    [Title("1.5")]
     [Category("Constant/One point Five")]
     
     [Image(typeof(IconOnePointFive), ColorTheme.Type.TextNormal)]

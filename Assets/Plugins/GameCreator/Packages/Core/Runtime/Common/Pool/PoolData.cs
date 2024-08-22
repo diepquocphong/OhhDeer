@@ -10,6 +10,7 @@ namespace GameCreator.Runtime.Common
 
         // MEMBERS: -------------------------------------------------------------------------------
 
+        [NonSerialized] private readonly int m_CollectionId;
         [NonSerialized] private readonly GameObject m_Prefab;
         [NonSerialized] private readonly Transform m_Container;
 
@@ -26,6 +27,7 @@ namespace GameCreator.Runtime.Common
 
         public PoolData(GameObject prefab, int count)
         {
+            this.m_CollectionId = prefab.GetInstanceID();
             this.m_Prefab = prefab;
             this.m_Container = new GameObject(string.Format(CONTAINER_NAME, prefab.name)).transform;
             
@@ -36,6 +38,21 @@ namespace GameCreator.Runtime.Common
             this.m_RunningInstances = new Dictionary<int, PoolInstance>();
 
             this.Prewarm(count);
+        }
+
+        public PoolData(int collectionId, int count)
+        {
+            this.m_CollectionId = collectionId;
+            this.m_Prefab = null;
+            this.m_Container = new GameObject(string.Format(CONTAINER_NAME, collectionId)).transform;
+            
+            this.m_Container.SetParent(PoolManager.Instance.transform);
+            this.m_Container.SetPositionAndRotation(Vector3.zero, Quaternion.identity);
+            
+            this.m_ReadyInstances = new List<PoolInstance>(count);
+            this.m_RunningInstances = new Dictionary<int, PoolInstance>();
+            
+            this.Prewarm(collectionId, count);
         }
 
         // PUBLIC METHODS: ------------------------------------------------------------------------
@@ -63,15 +80,7 @@ namespace GameCreator.Runtime.Common
         
         public void Prewarm(int count)
         {
-            int prefabId = this.m_Prefab.GetInstanceID();
-            
-            for (int i = 0; i < count; ++i)
-            {
-                PoolInstance instance = this.CreateInstance();
-                instance.OnCreate(prefabId);
-                
-                this.m_ReadyInstances.Add(instance);
-            }
+            this.Prewarm(this.m_CollectionId, count);
         }
 
         public void Dispose()
@@ -88,16 +97,42 @@ namespace GameCreator.Runtime.Common
         
         private PoolInstance CreateInstance()
         {
-            bool prevState = this.m_Prefab.activeSelf;
-            this.m_Prefab.SetActive(false);
+            GameObject instance = null;
+            bool prefabPrevState = false;
 
-            GameObject instance = UnityEngine.Object.Instantiate(this.m_Prefab, this.m_Container);
+            if (this.m_Prefab != null)
+            {
+                prefabPrevState = this.m_Prefab.activeSelf;
+                this.m_Prefab.SetActive(false);
+
+                instance = UnityEngine.Object.Instantiate(this.m_Prefab, this.m_Container);
+            }
+            else
+            {
+                instance = new GameObject("");
+                instance.transform.SetParent(this.m_Container);
+            }
             
             PoolInstance poolInstance = instance.GetComponent<PoolInstance>();
             if (poolInstance == null) poolInstance = instance.AddComponent<PoolInstance>();
 
-            this.m_Prefab.gameObject.SetActive(prevState);
+            if (this.m_Prefab != null)
+            {
+                this.m_Prefab.gameObject.SetActive(prefabPrevState);
+            }
+            
             return poolInstance;
+        }
+        
+        public void Prewarm(int collectionId, int count)
+        {
+            for (int i = 0; i < count; ++i)
+            {
+                PoolInstance instance = this.CreateInstance();
+                instance.OnCreate(collectionId);
+                
+                this.m_ReadyInstances.Add(instance);
+            }
         }
 
         // INTERNAL CALLBACKS: --------------------------------------------------------------------

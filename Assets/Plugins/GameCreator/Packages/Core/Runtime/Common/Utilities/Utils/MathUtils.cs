@@ -28,6 +28,16 @@ namespace GameCreator.Runtime.Common
         
         // MAX: -----------------------------------------------------------------------------------
 
+        public static int Max(int a, int b, int c)
+        {
+            return Math.Max(Math.Max(a, b), c);
+        }
+        
+        public static int Max(int a, int b, int c, int d)
+        {
+            return Math.Max(Math.Max(a, b), Math.Max(c, d));
+        }
+        
         public static float Max(float a, float b, float c)
         {
             return Math.Max(Math.Max(a, b), c);
@@ -40,6 +50,16 @@ namespace GameCreator.Runtime.Common
         
         // MIN: -----------------------------------------------------------------------------------
 
+        public static int Min(int a, int b, int c)
+        {
+            return Math.Min(Math.Min(a, b), c);
+        }
+        
+        public static int Min(int a, int b, int c, int d)
+        {
+            return Math.Min(Math.Min(a, b), Math.Min(c, d));
+        }
+        
         public static float Min(float a, float b, float c)
         {
             return Math.Min(Math.Min(a, b), c);

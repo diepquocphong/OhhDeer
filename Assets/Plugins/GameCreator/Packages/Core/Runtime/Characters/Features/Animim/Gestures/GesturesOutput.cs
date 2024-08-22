@@ -29,6 +29,10 @@ namespace GameCreator.Runtime.Characters.Animim
 
         public bool IsPlaying => this.m_ActiveList.Count > 0;
 
+        public float CurrentWeight => this.IsPlaying
+            ? this.m_ActiveList[0].CurrentWeight
+            : 0f;
+
         // CONSTRUCTORS: --------------------------------------------------------------------------
 
         public GesturesOutput(AnimimGraph animimGraph) : base(animimGraph)

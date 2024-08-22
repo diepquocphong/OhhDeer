@@ -45,8 +45,8 @@ namespace GameCreator.Runtime.Cameras
             {
                 if (hasRecoil)
                 {
-                    pitch = this.m_Recoil.x;
-                    yaw = this.m_Recoil.y;
+                    pitch = this.m_Recoil.y;
+                    yaw = this.m_Recoil.x;
                 }
                 
                 return;
@@ -54,9 +54,9 @@ namespace GameCreator.Runtime.Cameras
 
             float elapsedTime = this.m_ShotCamera.TimeMode.Time - this.m_StartTime;
             if (elapsedTime > this.m_Duration) return;
-
-            pitch = this.m_Recoil.x * this.m_ShotCamera.TimeMode.DeltaTime;
-            yaw = this.m_Recoil.y * this.m_ShotCamera.TimeMode.DeltaTime;
+            
+            pitch = this.m_Recoil.y * this.m_ShotCamera.TimeMode.DeltaTime;
+            yaw = this.m_Recoil.x * this.m_ShotCamera.TimeMode.DeltaTime;
         }
     }
 }

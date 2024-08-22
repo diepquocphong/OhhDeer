@@ -28,16 +28,6 @@ namespace GameCreator.Runtime.Characters
 
         public const float BIG_EPSILON = 0.01f;
         
-        // STATIC: --------------------------------------------------------------------------------
-
-        private static Dictionary<IdString, Character> Characters;
-
-        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
-        private static void OnSubsystemsInit()
-        {
-            Characters = new Dictionary<IdString, Character>();
-        }
-        
         // EXPOSED MEMBERS: -----------------------------------------------------------------------
         
         [SerializeField] protected bool m_IsPlayer;
@@ -56,8 +46,6 @@ namespace GameCreator.Runtime.Characters
         [SerializeField] protected Combat m_Combat = new Combat();
         [SerializeField] protected Jump m_Jump = new Jump();
         [SerializeField] protected Dash m_Dash = new Dash();
-
-        [SerializeField] protected UniqueID m_UniqueID = new UniqueID();
         
         // MEMBERS: -------------------------------------------------------------------------------
         
@@ -72,8 +60,6 @@ namespace GameCreator.Runtime.Characters
             get => this.m_Time;
             set => this.m_Time = value;
         }
-
-        public IdString ID => this.m_UniqueID.Get;
         
         [field: NonSerialized] public Args Args { get; private set; }
 
@@ -203,7 +189,6 @@ namespace GameCreator.Runtime.Characters
             this.m_Dash?.OnStartup(this);
             
             SpatialHashCharacters.Insert(this);
-            Characters[this.m_UniqueID.Get] = this;
         }
 
         protected void Start()
@@ -233,7 +218,6 @@ namespace GameCreator.Runtime.Characters
             this.m_Dash?.OnDispose(this);
             
             SpatialHashCharacters.Remove(this);
-            Characters.Remove(this.m_UniqueID.Get);
             
             this.EventDestroy?.Invoke();
         }
@@ -399,30 +383,6 @@ namespace GameCreator.Runtime.Characters
             
             this.EventAfterChangeModel?.Invoke();
             return model;
-        }
-
-        public void ChangeId(IdString nextId)
-        {
-            IdString prevId = this.m_UniqueID.Get;
-            this.m_UniqueID.Set = nextId;
-            
-            Characters.Remove(prevId);
-            Characters[nextId] = this;
-        }
-        
-        // PUBLIC STATIC METHODS: -----------------------------------------------------------------
-
-        public static Character GetCharacterByID(string characterID)
-        {
-            IdString id = new IdString(characterID);
-            return GetCharacterByID(id);
-        }
-        
-        public static Character GetCharacterByID(IdString characterID)
-        {
-            return Characters.TryGetValue(characterID, out Character character)
-                ? character
-                : null;
         }
         
         // VALIDATION: ----------------------------------------------------------------------------

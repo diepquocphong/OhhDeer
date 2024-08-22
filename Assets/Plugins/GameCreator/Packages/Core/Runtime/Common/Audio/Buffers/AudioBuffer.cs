@@ -1,4 +1,6 @@
+using System;
 using System.Threading.Tasks;
+using GameCreator.Runtime.Characters;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -8,12 +10,11 @@ namespace GameCreator.Runtime.Common.Audio
     {
         // MEMBERS: -------------------------------------------------------------------------------
 
-        private IAudioConfig m_AudioConfig;
-        private float m_Pitch;
+        [NonSerialized] private IAudioConfig m_AudioConfig;
 
-        private Args m_Args;
+        [NonSerialized] private Args m_Args;
 
-        private readonly AnimFloat m_Volume = new AnimFloat(1f);
+        [NonSerialized] private readonly AnimFloat m_Volume = new AnimFloat(1f);
         
         // PROPERTIES: ----------------------------------------------------------------------------
 
@@ -23,6 +24,8 @@ namespace GameCreator.Runtime.Common.Audio
         
         internal AudioSource AudioSource { get; }
         internal Transform Transform { get; }
+        
+        public float Pitch { get; set; }
 
         // CONSTRUCTOR: ---------------------------------------------------------------------------
 
@@ -49,13 +52,20 @@ namespace GameCreator.Runtime.Common.Audio
             this.AudioSource.volume = Rescale(volume);
 
             GameObject target = this.m_AudioConfig?.GetTrackTarget(this.m_Args);
+            
+            Character character = target.Get<Character>();
+            if (character != null && character.Animim.Animator.isHuman)
+            {
+                target = character.Animim.Animator.GetBoneTransform(HumanBodyBones.Head).gameObject;
+            }
+            
             if (target != null) this.Transform.position = target.transform.position;
             
             float timeScale = this.m_AudioConfig?.UpdateMode == TimeMode.UpdateMode.GameTime
                 ? Time.timeScale
                 : 1f;
             
-            this.AudioSource.pitch = this.m_Pitch * timeScale; 
+            this.AudioSource.pitch = this.Pitch * timeScale; 
 
             return this.AudioSource.isPlaying;
         }
@@ -74,7 +84,7 @@ namespace GameCreator.Runtime.Common.Audio
             this.AudioSource.Stop();
             this.AudioSource.Play();
 
-            while (this.AudioSource.isPlaying && !ApplicationManager.IsExiting)
+            while (!ApplicationManager.IsExiting && this.AudioSource.isPlaying)
             {
                 await Task.Yield();
             }
@@ -86,7 +96,7 @@ namespace GameCreator.Runtime.Common.Audio
             this.m_Volume.Smooth = transition;
             
             this.AudioSource.SetScheduledEndTime(AudioSettings.dspTime + transition);
-            while (this.AudioSource.isPlaying && !ApplicationManager.IsExiting)
+            while (!ApplicationManager.IsExiting && this.AudioSource.isPlaying)
             {
                 await Task.Yield();
             }
@@ -100,13 +110,13 @@ namespace GameCreator.Runtime.Common.Audio
                 ? this.m_AudioConfig.Volume
                 : 0f;
 
-            this.m_Pitch = this.m_AudioConfig.Pitch;
+            this.Pitch = this.m_AudioConfig.Pitch;
             this.m_Volume.Current = startVolume;
             this.m_Volume.Target = this.m_AudioConfig.Volume;
             this.m_Volume.Smooth = this.m_AudioConfig.TransitionIn;
             
             this.AudioSource.volume = Rescale(startVolume);
-            this.AudioSource.pitch = this.m_Pitch;
+            this.AudioSource.pitch = this.Pitch;
             this.AudioSource.spatialBlend = this.m_AudioConfig.SpatialBlend;
 
             this.Target = this.m_AudioConfig.GetTrackTarget(this.m_Args);

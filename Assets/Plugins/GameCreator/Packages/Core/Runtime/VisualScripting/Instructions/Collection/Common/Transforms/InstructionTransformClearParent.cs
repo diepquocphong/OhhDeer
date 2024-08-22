@@ -16,6 +16,8 @@ namespace GameCreator.Runtime.VisualScripting
     [Serializable]
     public class InstructionTransformClearParent : TInstructionTransform
     {
+        [SerializeField] private bool m_KeepPosition;
+        
         // PROPERTIES: ----------------------------------------------------------------------------
 
         public override string Title => $"Clear Parent of {this.m_Transform}";
@@ -26,8 +28,8 @@ namespace GameCreator.Runtime.VisualScripting
         {
             GameObject gameObject = this.m_Transform.Get(args);
             if (gameObject == null) return DefaultResult;
-
-            gameObject.transform.SetParent(null);
+            
+            gameObject.transform.SetParent(null, this.m_KeepPosition);
             return DefaultResult;
         }
     }

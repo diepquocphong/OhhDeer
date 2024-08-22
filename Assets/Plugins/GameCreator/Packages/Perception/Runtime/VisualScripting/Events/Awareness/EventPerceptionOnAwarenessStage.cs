@@ -19,8 +19,8 @@ namespace GameCreator.Runtime.Perception
         [Flags]
         private enum When
         {
-            OnIncrease,
-            OnDecrease
+            OnIncrease = 0x01,
+            OnDecrease = 0x10
         }
         
         // EXPOSED MEMBERS: -----------------------------------------------------------------------

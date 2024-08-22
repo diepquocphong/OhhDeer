@@ -295,7 +295,7 @@ namespace GameCreator.Runtime.Characters
                 : null;
         }
 
-        public IShield GetBlock(ShieldInput input, Args args, out ShieldOutput output)
+        public IShield GetBlock(ShieldInput input, Args args, bool canBlock, bool canParry, out ShieldOutput output)
         {
             if (this.m_Block.Shield == null)
             {
@@ -306,6 +306,26 @@ namespace GameCreator.Runtime.Characters
             this.m_Block.BlockHitTime = this.m_Character.Time.Time;
             ShieldOutput weaponOutput = this.m_Block.Shield.CanDefend(this.m_Character, args, input);
 
+            if (weaponOutput.Type == BlockType.Block && !canBlock)
+            {
+                weaponOutput = new ShieldOutput(
+                    weaponOutput.IsBlocked,
+                    weaponOutput.Point,
+                    weaponOutput.ElapsedTime,
+                    BlockType.Break
+                );
+            }
+            
+            if (weaponOutput.Type == BlockType.Parry && !canParry)
+            {
+                weaponOutput = new ShieldOutput(
+                    weaponOutput.IsBlocked,
+                    weaponOutput.Point,
+                    weaponOutput.ElapsedTime,
+                    BlockType.Break
+                );
+            }
+            
             switch (weaponOutput.Type)
             {
                 case BlockType.None: break;

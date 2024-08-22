@@ -29,27 +29,33 @@ namespace GameCreator.Runtime.Common
         
         // PUBLIC STATIC METHODS: -----------------------------------------------------------------
 
-        public static void Play(Args args, RaycastHit hit, MaterialSoundsAsset materialSounds, float yaw)
+        public static void Play(Args args, Vector3 point, Vector3 normal, GameObject hit, MaterialSoundsAsset materialSounds, float yaw)
         {
             if (materialSounds == null) return;
-            if (hit.collider == null) return;
+            if (hit == null) return;
             
-            switch (hit.collider is TerrainCollider)
+            switch (hit.Get<Collider>() is TerrainCollider)
             {
-                case true: PlayTerrain(args, hit, materialSounds, yaw); break;
-                case false: PlayMesh(args, hit, materialSounds, yaw); break;
+                case true: PlayTerrain(args, point, normal, hit, materialSounds, yaw); break;
+                case false: PlayMesh(args, point, normal, hit, materialSounds, yaw); break;
             }
         }
         
         // PRIVATE STATIC METHODS: ----------------------------------------------------------------
 
-        private static void PlayTerrain(Args args, RaycastHit hit, MaterialSoundsAsset materialSounds, float yaw)
+        private static void PlayTerrain(
+            Args args,
+            Vector3 point,
+            Vector3 normal,
+            GameObject hit,
+            MaterialSoundsAsset materialSounds,
+            float yaw)
         {
-            Terrain terrain = hit.collider.Get<Terrain>();
+            Terrain terrain = hit.Get<Terrain>();
             TerrainData terrainData = terrain.terrainData;
 
             float[] mixture = GetTerrainWeights(
-                hit.point, 
+                point, 
                 terrainData, 
                 terrain.GetPosition()
             );
@@ -73,18 +79,24 @@ namespace GameCreator.Runtime.Common
 
             if (maxTexture != null)
             {
-                PlayImpact(hit, maxTexture, materialSounds, yaw);
+                PlayImpact(point, normal, maxTexture, materialSounds, yaw);
             }
         }
 
-        private static void PlayMesh(Args args, RaycastHit hit, MaterialSoundsAsset materialSounds, float yaw)
+        private static void PlayMesh(
+            Args args,
+            Vector3 point,
+            Vector3 normal,
+            GameObject hit,
+            MaterialSoundsAsset materialSounds,
+            float yaw)
         {
             int renderersCount = 1;
-            RENDERERS[0] = hit.collider.Get<Renderer>();
+            RENDERERS[0] = hit.Get<Renderer>();
             
             if (RENDERERS[0] == null)
             {
-                LODGroup lodGroup = hit.collider.Get<LODGroup>();
+                LODGroup lodGroup = hit.Get<LODGroup>();
                 if (lodGroup != null && lodGroup.lodCount > 0)
                 {
                     Renderer[] renderers = lodGroup.GetLODs()[0].renderers;
@@ -103,11 +115,13 @@ namespace GameCreator.Runtime.Common
 
                 foreach (Material material in renderer.sharedMaterials)
                 {
-                    Texture texture = material.mainTexture;
+                    if (material.HasTexture(materialSounds.TextureID) == false) continue;
+                    
+                    Texture texture = material.GetTexture(materialSounds.TextureID);
                     if (texture == null) continue;
                     
                     PlaySound(args, texture, materialSounds);
-                    PlayImpact(hit, texture, materialSounds, yaw);
+                    PlayImpact(point, normal, texture, materialSounds, yaw);
                 }
             }
         }
@@ -133,14 +147,19 @@ namespace GameCreator.Runtime.Common
 
             switch (hit.collider is TerrainCollider)
             {
-                case true: this.PlayTerrain(transform, hit, speed, args, yaw); break;
-                case false: this.PlayMesh(transform, hit, speed, args, yaw); break;
+                case true: this.PlayTerrain(transform, args, hit, speed, yaw); break;
+                case false: this.PlayMesh(transform, args, hit, this.m_SoundsAsset, speed, yaw); break;
             }
         }
 
         // MATERIAL GROUND TYPE: ------------------------------------------------------------------
 
-        private void PlayTerrain(Transform transform, RaycastHit hit, float speed, Args args, float yaw)
+        private void PlayTerrain(
+            Transform transform,
+            Args args,
+            RaycastHit hit,
+            float speed,
+            float yaw)
         {
             Terrain terrain = hit.collider.Get<Terrain>();
             TerrainData terrainData = terrain.terrainData;
@@ -174,7 +193,13 @@ namespace GameCreator.Runtime.Common
             }
         }
 
-        private void PlayMesh(Transform transform, RaycastHit hit, float speed, Args args, float yaw)
+        private void PlayMesh(
+            Transform transform,
+            Args args,
+            RaycastHit hit,
+            MaterialSoundsAsset materialSounds,
+            float speed,
+            float yaw)
         {
             int renderersCount = 1;
             RENDERERS[0] = hit.collider.Get<Renderer>();
@@ -200,7 +225,11 @@ namespace GameCreator.Runtime.Common
 
                 foreach (Material material in renderer.sharedMaterials)
                 {
-                    Texture texture = material.mainTexture;
+                    if (material.HasTexture(materialSounds.TextureID) == false) continue;
+                    
+                    Texture texture = material.GetTexture(materialSounds.TextureID);
+                    if (texture == null) continue;
+                    
                     this.PlaySound(texture, 1f, speed, transform, args);
                     this.PlayImpact(texture, transform, hit, yaw);
                 }
@@ -298,14 +327,14 @@ namespace GameCreator.Runtime.Common
             int mapX = (int)(positionX / data.size.x * data.alphamapWidth);
             int mapZ = (int)(positionZ / data.size.z * data.alphamapHeight);
             
-            float[,,] alphamaps = data.GetAlphamaps(mapX, mapZ, 1, 1);
+            float[,,] alphaMaps = data.GetAlphamaps(mapX, mapZ, 1, 1);
 
-            int textureCount = alphamaps.GetUpperBound(2);
+            int textureCount = alphaMaps.GetUpperBound(2);
             float[] mixture = new float[textureCount + 1];
 
             for(int i = 0; i < mixture.Length; ++i) 
             {
-                mixture[i] = alphamaps[0, 0, i];
+                mixture[i] = alphaMaps[0, 0, i];
             }
 
             return mixture;
@@ -348,7 +377,7 @@ namespace GameCreator.Runtime.Common
             );
         }
         
-        private static void PlayImpact(RaycastHit hit, Texture texture, MaterialSoundsAsset materialSounds, float yaw)
+        private static void PlayImpact(Vector3 point, Vector3 normal, Texture texture, MaterialSoundsAsset materialSounds, float yaw)
         {
             if (texture == null) return;
 
@@ -358,8 +387,8 @@ namespace GameCreator.Runtime.Common
                 if (audioClip == null) return;
                 
                 material.Impact.Create(
-                    hit.point,
-                    Quaternion.FromToRotation(Vector3.up, hit.normal), 
+                    point,
+                    Quaternion.FromToRotation(Vector3.up, normal), 
                     null
                 );
                 
@@ -367,8 +396,8 @@ namespace GameCreator.Runtime.Common
             }
             
             GameObject impact = materialSounds.MaterialSounds.DefaultSounds?.Impact?.Create(
-                hit.point,
-                Quaternion.FromToRotation(Vector3.up, hit.normal), 
+                point,
+                Quaternion.FromToRotation(Vector3.up, normal), 
                 null
             );
 

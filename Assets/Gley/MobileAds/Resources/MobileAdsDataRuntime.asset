@@ -47,7 +47,7 @@ MonoBehaviour:
         id: ca-app-pub-3940256099942544/9257395921
         displayName: App Open ID
         required: 1
-      testMode: 1
+      testMode: 0
       testDevice: 2b55ede7-e26c-46ec-8e08-75cdf9469e8c
       debugGeography: 0
     directedForChildren: 0
@@ -61,11 +61,11 @@ MonoBehaviour:
         displayName: App ID
         required: 1
       idBanner:
-        id: ca-app-pub-6626601540311877/8707675081
+        id: ca-app-pub-6626601540311877/3787346277
         displayName: Banner ID
         required: 1
       idMRec:
-        id: ca-app-pub-6626601540311877/8707675081
+        id: ca-app-pub-6626601540311877/3787346277
         displayName: MRec ID
         required: 1
       idInterstitial:
@@ -81,7 +81,7 @@ MonoBehaviour:
         displayName: Rewarded Interstitial ID
         required: 1
       idOpenApp:
-        id: 
+        id: ca-app-pub-6626601540311877/8309330624
         displayName: App Open ID
         required: 1
       testMode: 0

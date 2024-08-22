@@ -48,6 +48,12 @@ namespace GameCreator.Runtime.Common
             return this.Collection[instanceID].Get(position, rotation, duration);
         }
 
+        public GameObject Pick(int collectionId, Vector3 position, Quaternion rotation, int count, float duration = -1f)
+        {
+            if (!this.Collection.ContainsKey(collectionId)) this.CreatePool(collectionId, count);
+            return this.Collection[collectionId].Get(position, rotation, duration);
+        }
+
         public void Prewarm(GameObject prefab, int count)
         {
             if (prefab == null) return;
@@ -94,6 +100,11 @@ namespace GameCreator.Runtime.Common
         {
             int instanceID = prefab.GetInstanceID();
             this.Collection.Add(instanceID, new PoolData(prefab, count));
+        }
+        
+        private void CreatePool(int collectionId, int count)
+        {
+            this.Collection.Add(collectionId, new PoolData(collectionId, count));
         }
         
         // INTERNAL CALLBACKS: --------------------------------------------------------------------

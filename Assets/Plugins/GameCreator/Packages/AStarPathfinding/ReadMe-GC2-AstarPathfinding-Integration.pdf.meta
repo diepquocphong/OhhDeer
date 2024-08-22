@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 54e4e4fb2550a894e97d2fec63d3f804
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 253752
+  packageName: Integration of A* Pathfinding Pro into Game Creator 2
+  packageVersion: 1.0.3
+  assetPath: Assets/Plugins/GameCreator/Packages/AStarPathfinding/ReadMe-GC2-AstarPathfinding-Integration.pdf
+  uploadId: 624853

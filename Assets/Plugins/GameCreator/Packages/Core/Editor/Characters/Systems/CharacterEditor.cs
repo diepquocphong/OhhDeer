@@ -103,20 +103,16 @@ namespace GameCreator.Editor.Characters
             SerializedProperty propertyIK = this.serializedObject.FindProperty("m_InverseKinematics");
             SerializedProperty propertyFootsteps = this.serializedObject.FindProperty("m_Footsteps");
             SerializedProperty propertyRagdoll = this.serializedObject.FindProperty("m_Ragdoll");
-            SerializedProperty propertyUniqueID = this.serializedObject.FindProperty("m_UniqueID");
             
             PropertyField fieldIK = new PropertyField(propertyIK);
             PropertyField fieldFootsteps = new PropertyField(propertyFootsteps);
             PropertyField fieldRagdoll = new PropertyField(propertyRagdoll);
-            PropertyField fieldUniqueID = new PropertyField(propertyUniqueID);
             ToolCombat toolCombat = new ToolCombat(this.target as Character);
             
             root.Add(fieldIK);
             root.Add(fieldFootsteps);
             root.Add(fieldRagdoll);
             root.Add(toolCombat);
-            root.Add(new SpaceSmallest());
-            root.Add(fieldUniqueID);
 
             return root;
         }

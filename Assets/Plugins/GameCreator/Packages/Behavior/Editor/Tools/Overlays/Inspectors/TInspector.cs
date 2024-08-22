@@ -4,6 +4,7 @@ using GameCreator.Runtime.Common;
 using UnityEditor;
 using UnityEditor.Overlays;
 using UnityEditor.UIElements;
+using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace GameCreator.Editor.Behavior
@@ -182,6 +183,7 @@ namespace GameCreator.Editor.Behavior
             fieldNode.Bind(selected.Property.serializedObject);
             
             this.m_ActiveSelection = selected;
+            
             fieldNode.RegisterValueChangeCallback(this.OnChangeValue);
             
             this.m_Body.SetEnabled(!EditorApplication.isPlayingOrWillChangePlaymode);

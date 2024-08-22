@@ -13,6 +13,10 @@ namespace GameCreator.Runtime.Common
 		{
 			get
 			{
+				#if UNITY_EDITOR
+				if (Application.isPlaying == false) return null;
+				#endif
+				
 				if (_Instance == null)
 				{
 					if (ApplicationManager.IsExiting) return null;

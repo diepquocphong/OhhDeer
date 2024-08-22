@@ -86,9 +86,6 @@ namespace GameCreator.Runtime.Characters.IK
             float feetRangeDown = this.Rig.Character.Motion.Height * COEFFICIENT_RANGE_FEET_DOWN;
             
             Vector3 bonePosition = animator.GetIKPosition(this.AvatarIK);
-            // Vector3 parentPosition = this.BoneTransform.parent.position;
-
-            // Vector3 castDirection = (bonePosition - parentPosition).normalized;
             Vector3 castDirection = Vector3.down;
             Vector3 castPosition = bonePosition - castDirection * feetRangeUp;
 

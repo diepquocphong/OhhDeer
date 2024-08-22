@@ -127,7 +127,11 @@ namespace GameCreator.Runtime.Stats
         /// </summary>
         public void ClearModifiers()
         {
-            this.m_Modifiers.Clear();
+            if (this.m_Modifiers.Count > 0)
+            {
+                this.m_Modifiers.Clear();
+                this.EventChange?.Invoke(this.m_Stat.ID, 0f);
+            }
         }
         
         // INTERNAL METHODS: ----------------------------------------------------------------------

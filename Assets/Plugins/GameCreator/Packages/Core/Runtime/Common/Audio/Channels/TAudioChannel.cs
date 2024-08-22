@@ -71,6 +71,34 @@ namespace GameCreator.Runtime.Common.Audio
             return false;
         }
         
+        public bool IsPlaying(AudioClip audioClip, GameObject target)
+        {
+            if (target == null) return false;
+            if (audioClip == null) return false;
+            
+            foreach (AudioBuffer activeBuffer in this.m_ActiveBuffers)
+            {
+                if (activeBuffer.Target == target && activeBuffer.AudioClip == audioClip)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        public void ChangePitch(AudioClip audioClip, GameObject target, float pitch)
+        {
+            if (target == null) return;
+            if (audioClip == null) return;
+            
+            foreach (AudioBuffer activeBuffer in this.m_ActiveBuffers)
+            {
+                if (activeBuffer.Target != target || activeBuffer.AudioClip != audioClip) continue;
+                activeBuffer.Pitch = pitch;
+            }
+        }
+        
         public async Task Play(AudioClip audioClip, IAudioConfig audioConfig, Args args)
         {
             if (audioClip == null) return;
@@ -110,6 +138,22 @@ namespace GameCreator.Runtime.Common.Audio
             foreach (AudioBuffer activeBuffer in this.m_ActiveBuffers)
             {
                 if (activeBuffer.Target != target) continue;
+                tasks.Add(activeBuffer.Stop(transitionOut));
+            }
+
+            await Task.WhenAll(tasks);
+        }
+        
+        public async Task Stop(AudioClip audioClip, GameObject target, float transitionOut)
+        {
+            if (audioClip == null) return;
+            if (target == null) return;
+            
+            List<Task> tasks = new List<Task>();
+            foreach (AudioBuffer activeBuffer in this.m_ActiveBuffers)
+            {
+                if (activeBuffer.Target != target) continue;
+                if (activeBuffer.AudioClip != audioClip) continue;
                 tasks.Add(activeBuffer.Stop(transitionOut));
             }
 

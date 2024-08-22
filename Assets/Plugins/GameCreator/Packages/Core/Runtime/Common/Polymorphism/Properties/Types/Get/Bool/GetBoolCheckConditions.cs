@@ -1,4 +1,5 @@
 using System;
+using GameCreator.Runtime.VisualScripting;
 using UnityEngine;
 
 namespace GameCreator.Runtime.Common
@@ -17,9 +18,27 @@ namespace GameCreator.Runtime.Common
         
         public override bool Get(Args args) => this.m_Conditions.Check(args);
 
-        public static PropertyGetBool Create => new PropertyGetBool(
-            new GetBoolCheckConditions()
-        );
+        public GetBoolCheckConditions()
+        { }
+
+        public GetBoolCheckConditions(params Condition[] conditions)
+        {
+            this.m_Conditions = new RunConditionsList(conditions);
+        }
+
+        public static PropertyGetBool Create()
+        {
+            return new PropertyGetBool(
+                new GetBoolCheckConditions()
+            );
+        }
+        
+        public static PropertyGetBool Create(params Condition[] conditions)
+        {
+            return new PropertyGetBool(
+                new GetBoolCheckConditions(conditions)
+            );
+        }
 
         public override string String => this.m_Conditions.ToString();
     }

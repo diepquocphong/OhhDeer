@@ -144,7 +144,10 @@ namespace GameCreator.Runtime.Common
             {
                 if (item.Value.IsInDelay) continue;
 
-                scale = firstEntrySet ? item.Value.Get : Math.Min(scale, item.Value.Get);
+                scale = firstEntrySet
+                    ? Math.Min(scale, item.Value.Get)
+                    : item.Value.Get;
+                
                 firstEntrySet = true;
 
                 if (item.Value.TimeRanOut)
@@ -152,7 +155,7 @@ namespace GameCreator.Runtime.Common
                     this.m_RemoveCandidates.Add(item.Key);
                 }
             }
-
+            
             Time.timeScale = scale;
             Time.fixedDeltaTime = PHYSICS_TIME_STEP * scale;
 

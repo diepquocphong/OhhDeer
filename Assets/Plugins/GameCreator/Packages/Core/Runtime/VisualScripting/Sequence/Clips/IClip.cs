@@ -13,7 +13,7 @@ namespace GameCreator.Runtime.VisualScripting
 
         // METHODS: -------------------------------------------------------------------------------
 
-        void Reset();
+        void Reset(ITrack track, Args args);
         void Start(ITrack track, Args args);
         void Complete(ITrack track, Args args);
         void Cancel(ITrack track, Args args);

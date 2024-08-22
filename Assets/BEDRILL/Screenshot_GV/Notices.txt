@@ -1,1 +1,0 @@
-Asset uses Editor Coroutines under Licensed under the Unity Companion License for Unity-dependent projects.

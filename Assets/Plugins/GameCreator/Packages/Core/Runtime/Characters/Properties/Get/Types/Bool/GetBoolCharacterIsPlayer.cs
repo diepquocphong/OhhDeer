@@ -15,7 +15,7 @@ namespace GameCreator.Runtime.Characters
     public class GetBoolCharacterIsPlayer : PropertyTypeGetBool
     {
         [SerializeField]
-        protected PropertyGetGameObject m_Character = GetGameObjectPlayer.Create();
+        protected PropertyGetGameObject m_Character = GetGameObjectSelf.Create();
 
         public override bool Get(Args args) => this.m_Character.Get<Character>(args)?.IsPlayer ?? false;
 

@@ -13,6 +13,13 @@ namespace GameCreator.Editor.Common
         {
             InfoMessage message = new InfoMessage(MSG);
             root.Add(message);
+
+            Button buttonFetchData = new Button(WelcomeManager.ForceFetchData)
+            {
+                text = "Fetch and Update"
+            };
+            
+            root.Add(buttonFetchData);
         }
     }
 }

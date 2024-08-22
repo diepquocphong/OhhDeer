@@ -23,10 +23,10 @@ namespace GameCreator.Editor.Common
             set => EditorPrefs.SetFloat(Marker.KEY_MARKER_CAPSULE_RADIUS, value);
         }
 
-        private static bool RunnersShowRunnerContainer
+        private static bool RunnersShowRunnerHierarchy
         {
-            get => EditorPrefs.GetBool(Runner.KEY_RUNNER_SHOW_CONTAINER, false);
-            set => EditorPrefs.SetBool(Runner.KEY_RUNNER_SHOW_CONTAINER, value);
+            get => EditorPrefs.GetBool(Runner.KEY_RUNNER_SHOW_HIERARCHY, false);
+            set => EditorPrefs.SetBool(Runner.KEY_RUNNER_SHOW_HIERARCHY, value);
         }
         
         // REGISTRATION METHODS: ------------------------------------------------------------------
@@ -65,8 +65,8 @@ namespace GameCreator.Editor.Common
             content.Add(new SpaceSmall());
             content.Add(new LabelTitle("Runners:"));
             
-            Toggle fieldRunnerShow = new Toggle("Show Runners") { value = RunnersShowRunnerContainer };
-            fieldRunnerShow.RegisterValueChangedCallback(changeEvent => RunnersShowRunnerContainer = changeEvent.newValue);
+            Toggle fieldRunnerShow = new Toggle("Show Runners") { value = RunnersShowRunnerHierarchy };
+            fieldRunnerShow.RegisterValueChangedCallback(changeEvent => RunnersShowRunnerHierarchy = changeEvent.newValue);
             
             content.Add(fieldRunnerShow);
         }

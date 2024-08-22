@@ -43,7 +43,7 @@ namespace GameCreator.Runtime.VisualScripting
         {
             foreach (IClip clip in this.Clips)
             {
-                clip?.Reset();
+                clip?.Reset(this, args);
             }
         }
 

@@ -74,7 +74,7 @@ namespace GameCreator.Runtime.Characters
             IUnitDriver driver = this.Character.Driver;
             IUnitFacing facing = this.Character.Facing;
 
-            Vector3 movementDirection = motion.LinearSpeed > 0f
+            Vector3 movementDirection = motion.LinearSpeed > 0.1f
                 ? driver.LocalMoveDirection / motion.LinearSpeed
                 : Vector3.zero;
             

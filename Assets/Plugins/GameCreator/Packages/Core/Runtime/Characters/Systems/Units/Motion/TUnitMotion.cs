@@ -4,6 +4,8 @@ using GameCreator.Runtime.Common;
 
 namespace GameCreator.Runtime.Characters
 {
+    [Title("Motion")]
+    
     [Serializable]
     public abstract class TUnitMotion : TUnit, IUnitMotion
     {

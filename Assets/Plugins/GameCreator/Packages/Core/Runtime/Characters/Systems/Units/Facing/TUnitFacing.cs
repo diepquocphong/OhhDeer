@@ -5,6 +5,8 @@ using GameCreator.Runtime.Common;
 
 namespace GameCreator.Runtime.Characters
 {
+    [Title("Rotation")]
+    
     [Serializable]
     public abstract class TUnitFacing : TUnit, IUnitFacing
     {

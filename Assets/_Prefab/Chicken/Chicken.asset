@@ -478,7 +478,7 @@ MonoBehaviour:
         enabledForExecution: 1
         instructions:
           m_Instructions:
-          - rid: 7546138958612136200
+          - rid: -2
           - rid: 7546138977741570909
           - rid: 7546138958612136193
           - rid: 7546139060943192242
@@ -560,34 +560,6 @@ MonoBehaviour:
     - rid: 7546138958612136195
       type: {class: GetGameObjectTarget, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data: 
-    - rid: 7546138958612136200
-      type: {class: InstructionStatsChangeAttribute, ns: GameCreator.Runtime.Stats,
-        asm: GameCreator.Runtime.Stats}
-      data:
-        m_Breakpoint: 0
-        m_IsEnabled: 1
-        m_Target:
-          m_Property:
-            rid: 7546138958612136201
-        m_Attribute:
-          m_Property:
-            rid: 7546138958612136202
-        m_Change:
-          m_Operation: 2
-          m_Value:
-            m_Property:
-              rid: 7546138958612136203
-    - rid: 7546138958612136201
-      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
-      data: 
-    - rid: 7546138958612136202
-      type: {class: GetAttributeInstance, ns: GameCreator.Runtime.Stats, asm: GameCreator.Runtime.Stats}
-      data:
-        m_Attribute: {fileID: 11400000, guid: 4cf7ae5caa4804d0ea2548dceac15ffb, type: 2}
-    - rid: 7546138958612136203
-      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_Value: 15
     - rid: 7546138958612136265
       type: {class: InstructionUIChangeImage, ns: GameCreator.Runtime.VisualScripting,
         asm: GameCreator.Runtime.Core}

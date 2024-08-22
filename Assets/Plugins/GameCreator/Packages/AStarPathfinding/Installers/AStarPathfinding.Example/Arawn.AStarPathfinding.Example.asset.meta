@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5d1096f8279a29543829acdd6adca71b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 253752
+  packageName: Integration of A* Pathfinding Pro into Game Creator 2
+  packageVersion: 1.0.3
+  assetPath: Assets/Plugins/GameCreator/Packages/AStarPathfinding/Installers/AStarPathfinding.Example/Arawn.AStarPathfinding.Example.asset
+  uploadId: 624853

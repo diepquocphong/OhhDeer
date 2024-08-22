@@ -5,11 +5,11 @@ using UnityEngine;
 
 namespace GameCreator.Runtime.Characters.IK
 {
-    [Title("Aim Pitch")]
-    [Category("Aim Pitch")]
-    [Image(typeof(IconAimTarget), ColorTheme.Type.Green)]
+    [Title("Aim Pitch (Obsolete)")]
+    [Category("Aim Pitch (Obsolete)")]
+    [Image(typeof(IconAimTarget), ColorTheme.Type.Red)]
     
-    [Description("Aims with the bone upwards and downwards based on the rotation of an object")]
+    [Description("Obsolete: Use Shooter IK. Aims with the bone upwards and downwards based on the rotation of an object")]
     
     [Serializable]
     public class RigAimTowards : TRigAnimatorIK

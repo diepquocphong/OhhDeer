@@ -5,6 +5,8 @@ namespace GameCreator.Runtime.Common
 {
     public static class TransformUtils
     {
+        // POINT: ---------------------------------------------------------------------------------
+        
         /// <summary>
         /// Converts a point from local to world space, using the position, rotation and scale
         /// values, instead of a Transform reference.
@@ -20,12 +22,7 @@ namespace GameCreator.Runtime.Common
             Quaternion rotation,
             Vector3 scale)
         {
-            Matrix4x4 localToWorldMatrix = Matrix4x4.TRS(
-                position,
-                rotation,
-                scale
-            );
-            
+            Matrix4x4 localToWorldMatrix = Matrix4x4.TRS(position, rotation, scale);
             return localToWorldMatrix.MultiplyPoint3x4(point);
         }
         
@@ -44,14 +41,55 @@ namespace GameCreator.Runtime.Common
             Quaternion rotation,
             Vector3 scale)
         {
-            Matrix4x4 localToWorldMatrix = Matrix4x4.TRS(
-                position, 
-                rotation,
-                scale
-            );
-            
+            Matrix4x4 localToWorldMatrix = Matrix4x4.TRS(position, rotation, scale);
             return localToWorldMatrix.inverse.MultiplyPoint3x4(point);
         }
+        
+        // ROTATIONS: -----------------------------------------------------------------------------
+        
+        /// <summary>
+        /// Converts a rotation from local to world space, using the position, rotation and scale
+        /// values, instead of a Transform reference.
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="position"></param>
+        /// <param name="rotation"></param>
+        /// <param name="scale"></param>
+        /// <returns></returns>
+        public static Quaternion TransformRotation(Quaternion value, Vector3 position, Quaternion rotation, Vector3 scale)
+        {
+            Matrix4x4 transformationMatrix = Matrix4x4.TRS(position, rotation, scale);
+            Vector3 transformedDirection = transformationMatrix.MultiplyVector(value * Vector3.forward);  
+            Vector3 transformedUp = transformationMatrix.MultiplyVector(value * Vector3.up);
+            
+            return Quaternion.LookRotation(transformedDirection, transformedUp); 
+        }
+
+        
+        /// <summary>
+        /// Converts a rotation from world space to local space, using the position, rotation and
+        /// scale values, instead of the Transform reference.
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="position"></param>
+        /// <param name="rotation"></param>
+        /// <param name="scale"></param>
+        /// <returns></returns>
+        public static Quaternion InverseTransformRotation(
+            Quaternion value,
+            Vector3 position,
+            Quaternion rotation,
+            Vector3 scale)
+        {
+            Matrix4x4 transformationMatrix = Matrix4x4.TRS(position, rotation, scale);
+            Matrix4x4 inverseMatrix = Matrix4x4.Inverse(transformationMatrix);
+            Vector3 transformedDirection = inverseMatrix.MultiplyVector(value * Vector3.forward);  
+            Vector3 transformedUp = inverseMatrix.MultiplyVector(value * Vector3.up); 
+            
+            return Quaternion.LookRotation(transformedDirection, transformedUp);
+        }
+        
+        // PATHS: ---------------------------------------------------------------------------------
         
         /// <summary>
         /// Returns the path from the top-most ancestor (or parent if specified) up until the

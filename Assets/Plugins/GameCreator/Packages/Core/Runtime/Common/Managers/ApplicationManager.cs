@@ -1,8 +1,6 @@
 using System;
 using UnityEngine;
-using UnityEngine.Scripting;
 
-[assembly: Preserve]
 namespace GameCreator.Runtime.Common
 {
     [AddComponentMenu("")]

@@ -16,10 +16,20 @@ namespace GameCreator.Runtime.Characters
         public abstract int Id { get; }
         public abstract Character Character { get; set; }
 
+        [field: NonSerialized] protected bool IsEnabled { get; private set; }
+
         // PUBLIC METHODS: ------------------------------------------------------------------------
+
+        public virtual void OnEnable(Character character)
+        {
+            this.IsEnabled = true;
+        }
+
+        public virtual void OnDisable(Character character)
+        {
+            this.IsEnabled = false;
+        }
         
-        public abstract void OnEnable(Character character);
-        public abstract void OnDisable(Character character);
         public abstract void OnUpdate();
     }
 }

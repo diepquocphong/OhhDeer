@@ -4,8 +4,8 @@ using UnityEngine.InputSystem;
 
 namespace GameCreator.Runtime.Common
 {
-    [Title("Cursor Screen Position")]
-    [Category("Input/Cursor Screen Position")]
+    [Title("Finger Screen Position")]
+    [Category("Input/Finger Screen Position")]
     
     [Image(typeof(IconFinger), ColorTheme.Type.Yellow)]
     [Description("Returns the raw position of the Finger in Screen-space")]

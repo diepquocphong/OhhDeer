@@ -4,6 +4,8 @@ using UnityEngine;
 
 namespace GameCreator.Runtime.Characters
 {
+    [Title("Animation")]
+    
     [Serializable]
     public abstract class TUnitAnimim : TUnit, IUnitAnimim
     {

@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using GameCreator.Runtime.Common;
 using UnityEngine;
 
 namespace GameCreator.Runtime.Characters
 {
+    [Title("Driver")]
+    
     [Serializable]
     public abstract class TUnitDriver : TUnit, IUnitDriver
     {

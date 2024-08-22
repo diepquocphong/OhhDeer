@@ -34,7 +34,7 @@ namespace GameCreator.Runtime.VisualScripting
         // PROPERTIES: ----------------------------------------------------------------------------
 
         public override string Title => 
-            $"Change Blend-Shape {this.m_BlendShape} on {this.m_SkinnedMesh}";
+            $"Morph {this.m_BlendShape} on {this.m_SkinnedMesh} {this.m_Value}";
 
         // RUN METHOD: ----------------------------------------------------------------------------
         

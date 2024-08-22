@@ -5,6 +5,7 @@ using GameCreator.Editor.Common;
 using GameCreator.Runtime.Common;
 using GameCreator.Runtime.VisualScripting;
 using UnityEditor;
+using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -12,10 +13,14 @@ namespace GameCreator.Editor.Behavior
 {
     internal class NodeInstructionTool : VisualElement
     {
+        private static readonly IIcon ICON_BREAKPOINT = new IconBreakpoint(ColorTheme.Type.Red);
+        
         // MEMBERS: -------------------------------------------------------------------------------
         
         private readonly Image m_Icon;
         private readonly Label m_Text;
+
+        private readonly Image m_Breakpoint;
         
         // CONSTRUCTOR: ---------------------------------------------------------------------------
         
@@ -23,9 +28,11 @@ namespace GameCreator.Editor.Behavior
         {
             this.m_Icon = new Image();
             this.m_Text = new Label();
+            this.m_Breakpoint = new Image { image = ICON_BREAKPOINT.Texture };
             
             this.Add(this.m_Icon);
             this.Add(this.m_Text);
+            this.Add(this.m_Breakpoint);
         }
         
         // PUBLIC METHODS: ------------------------------------------------------------------------
@@ -40,6 +47,15 @@ namespace GameCreator.Editor.Behavior
 
             this.m_Icon.image = icon != null ? icon : Texture2D.whiteTexture; 
             this.m_Text.text = instance?.Title;
+
+            bool isEnabled = propertyInstruction.FindPropertyRelative("m_IsEnabled").boolValue;
+            
+            this.m_Icon.style.opacity = isEnabled ? 1f: 0.35f;
+            this.m_Text.style.opacity = isEnabled ? 1f: 0.35f;
+            
+            this.m_Breakpoint.style.display = propertyInstruction.FindPropertyRelative("m_Breakpoint").boolValue
+                ? DisplayStyle.Flex
+                : DisplayStyle.None;
         }
     }
 }
