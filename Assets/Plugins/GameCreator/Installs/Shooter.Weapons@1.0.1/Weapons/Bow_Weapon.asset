@@ -313,7 +313,7 @@ MonoBehaviour:
             rid: 3428531799317020773
         m_LayerMask:
           serializedVersion: 2
-          m_Bits: 195
+          m_Bits: 451
         m_MaxDistance:
           m_Property:
             rid: 3428531799317020774
@@ -364,7 +364,7 @@ MonoBehaviour:
     - rid: 3428531799317020778
       type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
-        m_Value: 20
+        m_Value: 40
     - rid: 3428531799317020779
       type: {class: GetDecimalChargeRatio, ns: GameCreator.Runtime.Shooter, asm: GameCreator.Runtime.Shooter}
       data:
