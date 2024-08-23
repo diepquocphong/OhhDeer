@@ -9,12 +9,10 @@ TagManager:
   - PositionPlayer
   - Canvas
   - FakeDeer
-  - DamageArrow
-  - DamageFakeDeer
   - RealDeer
-  - DamageHumanDeer
   - JoystickRotate
   - Raycast
+  - DeerMarker
   layers:
   - Default
   - TransparentFX
@@ -23,7 +21,7 @@ TagManager:
   - Water
   - UI
   - Tree
-  - 
+  - Deer
   - 
   - 
   - 

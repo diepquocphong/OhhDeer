@@ -24,7 +24,7 @@ MonoBehaviour:
   m_Color:
     m_Property:
       rid: 8814677141419721332
-  m_Animation: {fileID: 7400000, guid: b050b4e2b447f41a78958bcf7eaf54ba, type: 2}
+  m_Animation: {fileID: 7400000, guid: fa02fed255f1e43a787ea84f42f6b359, type: 2}
   m_Mask: {fileID: 31900000, guid: a9a4646b99dc14b6ea4d6a98c1f91e08, type: 2}
   m_TransitionIn: 0.25
   m_TransitionOut: 0.25
@@ -37,7 +37,7 @@ MonoBehaviour:
       - rid: 8814677141419721335
   m_Speed:
     m_Property:
-      rid: 8814677141419721336
+      rid: 4702992173365985540
   m_DiscardMagazineAmmo:
     m_Property:
       rid: 8814677141419721337
@@ -47,8 +47,7 @@ MonoBehaviour:
       rid: 8814677141419721338
   m_OnStart:
     m_Instructions:
-      m_Instructions:
-      - rid: 1903938894052459328
+      m_Instructions: []
   m_OnFinish:
     m_Instructions:
       m_Instructions: []
@@ -60,31 +59,10 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 1903938894052459328
-      type: {class: InstructionCommonAudioSFXPlay, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+    - rid: 4702992173365985540
+      type: {class: GetDecimalInteger, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
-        m_Breakpoint: 0
-        m_IsEnabled: 1
-        m_AudioClip:
-          m_Property:
-            rid: 1903938894052459329
-        m_WaitToComplete: 0
-        m_Config:
-          m_Volume: 1
-          m_Pitch: {x: 1, y: 1}
-          m_TransitionIn: 0
-          m_UpdateMode: 0
-          m_SpatialBlend: 1
-          m_Target:
-            m_Property:
-              rid: 1903938894052459330
-    - rid: 1903938894052459329
-      type: {class: GetAudioClip, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_Value: {fileID: 8300000, guid: 9bb6f28c59abb452e976a4446b3c7ec4, type: 3}
-    - rid: 1903938894052459330
-      type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data: 
+        m_Value: 5
     - rid: 8814677141419721329
       type: {class: GetStringString, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
@@ -111,9 +89,6 @@ MonoBehaviour:
       type: {class: TrackDefault, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
         m_Clips: []
-    - rid: 8814677141419721336
-      type: {class: GetDecimalConstantOne, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data: 
     - rid: 8814677141419721337
       type: {class: GetBoolFalse, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data: 
@@ -146,7 +121,8 @@ MonoBehaviour:
     - rid: 8814677141419721340
       type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
-        m_GameObject: {fileID: 2967442607341954768, guid: cd3add59be4684feaaae959808e0ba39, type: 3}
+        m_GameObject: {fileID: 2967442607341954768, guid: cd3add59be4684feaaae959808e0ba39,
+          type: 3}
     - rid: 8814677185152155654
       type: {class: GetGameObjectLocalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
       data:

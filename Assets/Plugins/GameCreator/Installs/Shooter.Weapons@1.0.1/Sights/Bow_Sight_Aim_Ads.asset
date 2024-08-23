@@ -73,7 +73,7 @@ MonoBehaviour:
         rid: 8814677141419721177
     m_CornerVertices:
       m_Property:
-        rid: 4702992169300394988
+        rid: 4702992173365985680
     m_CapVertices:
       m_Property:
         rid: 8814677141419721179
@@ -252,9 +252,10 @@ MonoBehaviour:
       type: {class: GetWeaponShooterInstance, ns: GameCreator.Runtime.Shooter, asm: GameCreator.Runtime.Shooter}
       data:
         m_Weapon: {fileID: 11400000, guid: dc7de63e262a74fe48a0f94e12ade017, type: 2}
-    - rid: 4702992169300394988
-      type: {class: GetDecimalConstantOne, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data: 
+    - rid: 4702992173365985680
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 0.2
     - rid: 8814677141419721166
       type: {class: GetBoolTrue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data: 
@@ -290,7 +291,7 @@ MonoBehaviour:
     - rid: 8814677141419721175
       type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
-        m_Value: 30
+        m_Value: 60
     - rid: 8814677141419721176
       type: {class: GetMaterialInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
