@@ -37,6 +37,8 @@ MonoBehaviour:
         - rid: 4702992173365986236
         - rid: 4702992212999799458
         - rid: 4702992216860393613
+        - rid: 4702992252116402573
+        - rid: 4702992252116402571
         - rid: 4702992210421088894
     - rid: 4702992169300394751
       type: {class: NameVariable, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
@@ -203,3 +205,33 @@ MonoBehaviour:
         m_Breakpoint: 0
         m_IsEnabled: 1
         m_Value: 1
+    - rid: 4702992252116402571
+      type: {class: NameVariable, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Value:
+          rid: 4702992252116402572
+        m_Name:
+          m_String: NightMode
+    - rid: 4702992252116402572
+      type: {class: ValueBool, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Value: 0
+    - rid: 4702992252116402573
+      type: {class: NameVariable, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Value:
+          rid: 4702992252116402574
+        m_Name:
+          m_String: DeerMode
+    - rid: 4702992252116402574
+      type: {class: ValueBool, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Value: 0
