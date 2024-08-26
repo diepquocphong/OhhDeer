@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/_Scenes/FisrtOpen.unity
+    guid: f166c7d04c83843f0928ef6f62e544ca
+  - enabled: 1
     path: Assets/_Scenes/MenuGame.unity
     guid: c850ee8c3b14cc8459e7e186857cf567
   - enabled: 1
