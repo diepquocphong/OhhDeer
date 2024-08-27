@@ -56,6 +56,7 @@ MonoBehaviour:
             m_Conditions:
             - rid: 4702992262245122281
             - rid: 4702992263755072248
+            - rid: 4702992283536195684
         m_Instructions:
           m_Instructions:
             m_Instructions:
@@ -333,6 +334,7 @@ MonoBehaviour:
           m_Conditions:
             m_Conditions:
             - rid: 4702992263755072243
+            - rid: 4702992283536195689
         m_Instructions:
           m_Instructions:
             m_Instructions:
@@ -725,4 +727,58 @@ MonoBehaviour:
       data: 
     - rid: 4702992277768504284
       type: {class: GetPickFirst, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 4702992283536195684
+      type: {class: ConditionMathCompareBooleans, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Sign: 1
+        m_Value:
+          m_Property:
+            rid: 4702992283536195687
+        m_Comparison: 0
+        m_CompareTo:
+          m_Property:
+            rid: 4702992283536195688
+    - rid: 4702992283536195687
+      type: {class: GetBoolGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: boolean
+          m_Variable: {fileID: 11400000, guid: dc266a9613b9543698ec09823f75d51e, type: 2}
+          m_Name:
+            m_String: NightMode
+            m_ID: -1884948111
+    - rid: 4702992283536195688
+      type: {class: GetBoolFalse, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 4702992283536195689
+      type: {class: ConditionMathCompareBooleans, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Sign: 1
+        m_Value:
+          m_Property:
+            rid: 4702992283536195690
+        m_Comparison: 0
+        m_CompareTo:
+          m_Property:
+            rid: 4702992283536195691
+    - rid: 4702992283536195690
+      type: {class: GetBoolGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: boolean
+          m_Variable: {fileID: 11400000, guid: dc266a9613b9543698ec09823f75d51e, type: 2}
+          m_Name:
+            m_String: NightMode
+            m_ID: -1884948111
+    - rid: 4702992283536195691
+      type: {class: GetBoolFalse, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data: 
