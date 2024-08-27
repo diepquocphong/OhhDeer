@@ -11,27 +11,31 @@ public class ButtonMoveHandle : MonoBehaviour, IPointerDownHandler, IPointerUpHa
     public enum SmoothingMode
     {
         Linear,
-        QuadEaseInOut
+        QuadEaseInOut,
+        StrongToGentle,   // Mạnh xong chuyển dần về nhẹ
+        GentleToStrong    // Nhẹ xong chuyển dần về mạnh
     }
 
     private bool isTouching = false;
     private Vector2 previousPosition;
     private float timeSinceLastMove = 0f;
-    private float currentForce = 0f; // Biến để lưu giá trị lực kéo hiện tại
-    private float smoothForce = 0f; // Biến để lưu giá trị lực kéo được làm mượt
-    private string previousForceText = "0.00"; // Lưu giá trị trước đó của dragForceText
+    private float currentForce = 0f;
+    private float smoothForce = 0f;
+    private string previousForceText = "0.00";
 
-    public SmoothingMode smoothingMode = SmoothingMode.QuadEaseInOut; // Chế độ làm mượt
-    public float holdThreshold = 0.25f; // Thời gian kiểm tra giữ nguyên vị trí, bạn có thể điều chỉnh
-    public float maxForceConvert = 10f; // Giá trị tối đa sau khi chuyển đổi
-    public float maxDragDistance = 200f; // Khoảng cách kéo tối đa để đạt lực kéo lớn nhất
-    public float smoothTime = 0.1f; // Thời gian làm mượt lực kéo
-    public UnityEvent onHoldPosition; // Sự kiện được kích hoạt khi vị trí không thay đổi
-    public UnityEvent onPositionChange; // Sự kiện được kích hoạt khi vị trí thay đổi
-    public UnityEvent onForceTextChange; // Sự kiện được kích hoạt khi dragForceText thay đổi
+    public SmoothingMode smoothingMode = SmoothingMode.QuadEaseInOut;
+    public float holdThreshold = 0.25f;
+    public float maxForceConvert = 10f;
+    public float maxDragDistance = 200f;
+    public float smoothTime = 0.1f;
+    public UnityEvent onHoldPosition;
+    public UnityEvent onPositionChange;
+    public UnityEvent onForceTextChange;
     public UnityEvent PoniterDown;
     public UnityEvent PoniterUp;
-    public TMP_Text dragForceText; // TextMeshPro component để hiển thị lực kéo
+    public TMP_Text dragForceText;
+
+    
 
     void Update()
     {
@@ -48,16 +52,11 @@ public class ButtonMoveHandle : MonoBehaviour, IPointerDownHandler, IPointerUpHa
             stick = Surface.transform.GetComponent<GameCreator.Runtime.Common.TouchStick>();
         }
 
-        // Kiểm tra khi người dùng đang chạm và kéo
         if (isTouching)
         {
-            // Tính lực kéo hiện tại dựa trên khoảng cách giữa vị trí hiện tại và trước đó
             currentForce = Vector2.Distance(Handle.position, previousPosition);
-
-            // Chuyển hóa lực kéo về giá trị từ 0 đến maxForceConvert
             float convertedForce = Mathf.Clamp(currentForce / maxDragDistance * maxForceConvert, 0, maxForceConvert);
 
-            // Làm mượt giá trị lực kéo theo kiểu đã chọn
             switch (smoothingMode)
             {
                 case SmoothingMode.QuadEaseInOut:
@@ -66,37 +65,43 @@ public class ButtonMoveHandle : MonoBehaviour, IPointerDownHandler, IPointerUpHa
                 case SmoothingMode.Linear:
                     smoothForce = Mathf.Lerp(smoothForce, convertedForce, Time.deltaTime / smoothTime);
                     break;
+                case SmoothingMode.StrongToGentle:
+                    smoothForce = StrongToGentle(smoothForce, convertedForce, Time.deltaTime / smoothTime);
+                    break;
+                case SmoothingMode.GentleToStrong:
+                    smoothForce = GentleToStrong(smoothForce, convertedForce, Time.deltaTime / smoothTime);
+                    break;
             }
 
-            // Xuất giá trị lực kéo ra TextMeshPro component
             dragForceText.text = smoothForce.ToString("F2");
 
-            // Kiểm tra nếu giá trị dragForceText thay đổi so với giá trị trước đó
             if (dragForceText.text != previousForceText)
             {
-                onForceTextChange.Invoke(); // Kích hoạt sự kiện onForceTextChange
-                previousForceText = dragForceText.text; // Cập nhật giá trị trước đó
+                onForceTextChange.Invoke();
+                previousForceText = dragForceText.text;
+
+                float calculatedSensitivity = Mathf.Lerp(2f, 5f, smoothForce / maxForceConvert);
+                float calculatedSmoothTime = Mathf.Lerp(0.1f, 0.01f, smoothForce / maxForceConvert);
+
+                
             }
 
             if (previousPosition == (Vector2)Handle.position)
             {
                 timeSinceLastMove += Time.deltaTime;
-
-                // Nếu thời gian giữ nguyên vị trí vượt qua ngưỡng, kích hoạt sự kiện
                 if (timeSinceLastMove >= holdThreshold)
                 {
                     onHoldPosition.Invoke();
-                    timeSinceLastMove = 0f; // Đặt lại thời gian để không kích hoạt liên tục
+                    timeSinceLastMove = 0f;
                 }
             }
             else
             {
-                // Nếu vị trí thay đổi, gọi sự kiện onPositionChange
                 onPositionChange.Invoke();
-                timeSinceLastMove = 0f; // Đặt lại thời gian nếu vị trí thay đổi
+                timeSinceLastMove = 0f;
             }
 
-            previousPosition = Handle.position; // Cập nhật vị trí trước đó
+            previousPosition = Handle.position;
         }
     }
 
@@ -110,7 +115,7 @@ public class ButtonMoveHandle : MonoBehaviour, IPointerDownHandler, IPointerUpHa
         stick.OnPointerDown(eventData);
         PoniterDown.Invoke();
 
-        previousPosition = eventData.position; // Lưu vị trí ban đầu
+        previousPosition = eventData.position;
     }
 
     public void OnPointerUp(PointerEventData eventData)
@@ -121,10 +126,9 @@ public class ButtonMoveHandle : MonoBehaviour, IPointerDownHandler, IPointerUpHa
         stick.OnPointerUp(eventData);
         PoniterUp.Invoke();
 
-        // Đặt lại giá trị lực kéo khi ngừng chạm
         smoothForce = 0f;
         dragForceText.text = "0.00";
-        previousForceText = "0.00"; // Đặt lại giá trị trước đó
+        previousForceText = "0.00";
     }
 
     public GameCreator.Runtime.Common.TouchStick stick;
@@ -168,5 +172,15 @@ public class ButtonMoveHandle : MonoBehaviour, IPointerDownHandler, IPointerUpHa
         if (value < 1) return (end - start) / 2 * value * value + start;
         value--;
         return -(end - start) / 2 * (value * (value - 2) - 1) + start;
+    }
+
+    float StrongToGentle(float start, float end, float value)
+    {
+        return (end - start) * Mathf.Sqrt(1 - (value - 1) * (value - 1)) + start;
+    }
+
+    float GentleToStrong(float start, float end, float value)
+    {
+        return (end - start) * (value * value) + start;
     }
 }

@@ -170,6 +170,8 @@ MonoBehaviour:
   m_Instructions:
     m_Instructions:
     - rid: 4702992259278176509
+    - rid: 4702992275549192360
+    - rid: 4702992275549192198
   m_TriggerEvent:
     rid: 4702992164517839219
   references:
@@ -186,13 +188,61 @@ MonoBehaviour:
         m_IsEnabled: 1
         m_Seconds:
           m_Property:
-            rid: 4702992259278176510
+            rid: 4702992275549192199
         m_Mode:
           m_UpdateTime: 0
-    - rid: 4702992259278176510
-      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+    - rid: 4702992275549192198
+      type: {class: InstructionLogicCallMethod, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
       data:
-        m_Value: 1
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Method:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 138783290}
+              m_TargetAssemblyTypeName: AdsManager, Assembly-CSharp
+              m_MethodName: ShowAppOpen
+              m_Mode: 1
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
+    - rid: 4702992275549192199
+      type: {class: GetDecimalRandomRange, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_MinValue:
+          m_Property:
+            rid: 4702992275549192200
+        m_MaxValue:
+          m_Property:
+            rid: 4702992275549192201
+    - rid: 4702992275549192200
+      type: {class: GetDecimalConstantZero, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 4702992275549192201
+      type: {class: GetDecimalConstantTwo, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 4702992275549192360
+      type: {class: InstructionLogicCheckConditions, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Conditions:
+          m_Conditions:
+          - rid: 4702992275549192361
+    - rid: 4702992275549192361
+      type: {class: ConditionPlatformIsMobile, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Sign: 1
 --- !u!114 &138783290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -683,7 +733,7 @@ MonoBehaviour:
         m_Scene:
           m_Scene: {fileID: 102900000, guid: c850ee8c3b14cc8459e7e186857cf567, type: 3}
           m_SceneName: MenuGame
-          m_SceneIndex: 1
+          m_SceneIndex: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

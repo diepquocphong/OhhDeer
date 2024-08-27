@@ -44,7 +44,7 @@ MonoBehaviour:
       data:
         m_Breakpoint: 0
         m_IsEnabled: 1
-        m_Value: {fileID: 21300000, guid: af004f61730cd47b98497a25e281b3d2, type: 3}
+        m_Value: {fileID: 21300000, guid: f7274a6ecbd694902aef3cc32e17f8aa, type: 3}
     - rid: 1850707906796978475
       type: {class: IndexVariable, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
       data:
@@ -57,7 +57,7 @@ MonoBehaviour:
       data:
         m_Breakpoint: 0
         m_IsEnabled: 1
-        m_Value: {fileID: 21300000, guid: 08f8925d14ffe4ce48350fe7b1f89b46, type: 3}
+        m_Value: {fileID: 21300000, guid: c0859e639e6034589a98967473df4524, type: 3}
     - rid: 1850707906796978477
       type: {class: IndexVariable, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
       data:
@@ -70,4 +70,4 @@ MonoBehaviour:
       data:
         m_Breakpoint: 0
         m_IsEnabled: 1
-        m_Value: {fileID: 21300000, guid: 71c7ffc45e7f94b229a8be651de9004b, type: 3}
+        m_Value: {fileID: 21300000, guid: 0756093ed0fa34954bfa4bf4c4577ade, type: 3}

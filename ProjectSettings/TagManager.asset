@@ -14,8 +14,7 @@ TagManager:
   - Raycast
   - DeerMarker
   - ChickenMarker
-  - DamageFakeDeer
-  - DamageHumanDeer
+  - CameraSeconds
   layers:
   - Default
   - TransparentFX

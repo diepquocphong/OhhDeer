@@ -135,7 +135,6 @@ GameObject:
   - component: {fileID: 150414313}
   - component: {fileID: 150414312}
   - component: {fileID: 150414316}
-  - component: {fileID: 150414317}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -242,62 +241,6 @@ MonoBehaviour:
   onRewardedVideoCompleted:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &150414317
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 150414311}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ecd922218e245e2b85d51f9f08338c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Instructions:
-    m_Instructions:
-    - rid: 4702992259278176483
-  m_TriggerEvent:
-    rid: 4702992259278176482
-  references:
-    version: 2
-    RefIds:
-    - rid: 4702992259278176482
-      type: {class: EventOnStart, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
-      data: 
-    - rid: 4702992259278176483
-      type: {class: InstructionLogicCallMethod, ns: GameCreator.Runtime.VisualScripting,
-        asm: GameCreator.Runtime.Core}
-      data:
-        m_Breakpoint: 0
-        m_IsEnabled: 1
-        m_Method:
-          m_PersistentCalls:
-            m_Calls:
-            - m_Target: {fileID: 150414316}
-              m_TargetAssemblyTypeName: AdsManager, Assembly-CSharp
-              m_MethodName: ShowBanner
-              m_Mode: 1
-              m_Arguments:
-                m_ObjectArgument: {fileID: 0}
-                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-                m_IntArgument: 0
-                m_FloatArgument: 0
-                m_StringArgument: 
-                m_BoolArgument: 0
-              m_CallState: 2
-            - m_Target: {fileID: 150414316}
-              m_TargetAssemblyTypeName: AdsManager, Assembly-CSharp
-              m_MethodName: ShowAppOpen
-              m_Mode: 1
-              m_Arguments:
-                m_ObjectArgument: {fileID: 0}
-                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-                m_IntArgument: 0
-                m_FloatArgument: 0
-                m_StringArgument: 
-                m_BoolArgument: 0
-              m_CallState: 2
 --- !u!1 &194757672
 GameObject:
   m_ObjectHideFlags: 0
@@ -1054,7 +997,7 @@ MonoBehaviour:
         m_Scene:
           m_Scene: {fileID: 102900000, guid: 0d640e645b5e847e3aedc4027f5da311, type: 3}
           m_SceneName: FakeDeerGame
-          m_SceneIndex: 3
+          m_SceneIndex: 4
     - rid: 4702992259278176541
       type: {class: InstructionArithmeticSetNumber, ns: GameCreator.Runtime.VisualScripting,
         asm: GameCreator.Runtime.Core}
@@ -2146,7 +2089,7 @@ MonoBehaviour:
         m_Scene:
           m_Scene: {fileID: 102900000, guid: 5e2f2c7e15e1e4b08a4b0a146295842d, type: 3}
           m_SceneName: FamerGame
-          m_SceneIndex: 2
+          m_SceneIndex: 3
     - rid: 4702992259278176532
       type: {class: InstructionArithmeticSetNumber, ns: GameCreator.Runtime.VisualScripting,
         asm: GameCreator.Runtime.Core}
