@@ -36,7 +36,7 @@ MonoBehaviour:
         displayName: Interstitial ID
         required: 1
       idRewarded:
-        id: 
+        id: a-app-pub-3940256099942544/5224354917
         displayName: Rewarded Video ID
         required: 1
       idRewardedInterstitial:

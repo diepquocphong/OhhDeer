@@ -44,4 +44,4 @@ MonoBehaviour:
       type: {class: GetRotationConstantEulerVector, ns: GameCreator.Runtime.Common,
         asm: GameCreator.Runtime.Core}
       data:
-        m_Angles: {x: 300.88495, y: 186.19998, z: 265.27213}
+        m_Angles: {x: 305.95877, y: 182.15012, z: 269.74896}
