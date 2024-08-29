@@ -285,7 +285,8 @@ MonoBehaviour:
       type: {class: GetDecimalConstantPointOne, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data: 
     - rid: 1903938647143743707
-      type: {class: InstructionCommonDebugText, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      type: {class: InstructionCommonDebugText, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
       data:
         m_Breakpoint: 0
         m_IsEnabled: 1
@@ -319,7 +320,8 @@ MonoBehaviour:
       data:
         m_Value: 0.75
     - rid: 1903938647143743724
-      type: {class: InstructionShooterEjectShell, ns: GameCreator.Runtime.Shooter, asm: GameCreator.Runtime.Shooter}
+      type: {class: InstructionShooterEjectShell, ns: GameCreator.Runtime.Shooter,
+        asm: GameCreator.Runtime.Shooter}
       data:
         m_Breakpoint: 0
         m_IsEnabled: 1
@@ -337,7 +339,8 @@ MonoBehaviour:
       data:
         m_Weapon: {fileID: 11400000}
     - rid: 1903938668075942900
-      type: {class: InstructionAnimatorBlendShape, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      type: {class: InstructionAnimatorBlendShape, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
       data:
         m_Breakpoint: 0
         m_IsEnabled: 1
@@ -382,7 +385,8 @@ MonoBehaviour:
       data:
         m_Value: Sniper_Weapon
     - rid: 1903938668075942906
-      type: {class: InstructionCommonTimeWait, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      type: {class: InstructionCommonTimeWait, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
       data:
         m_Breakpoint: 0
         m_IsEnabled: 1
@@ -396,7 +400,8 @@ MonoBehaviour:
       data:
         m_Value: 0.65
     - rid: 1903938668075942908
-      type: {class: InstructionAnimatorBlendShape, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      type: {class: InstructionAnimatorBlendShape, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
       data:
         m_Breakpoint: 0
         m_IsEnabled: 1
@@ -441,7 +446,8 @@ MonoBehaviour:
       data:
         m_Value: Sniper_Weapon
     - rid: 1903938668289327106
-      type: {class: InstructionAnimatorBlendShape, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      type: {class: InstructionAnimatorBlendShape, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
       data:
         m_Breakpoint: 0
         m_IsEnabled: 1
@@ -502,7 +508,8 @@ MonoBehaviour:
       type: {class: GetDecimalConstantOne, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data: 
     - rid: 3428531543345201252
-      type: {class: GetDecimalConstantOnePointFive, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      type: {class: GetDecimalConstantOnePointFive, ns: GameCreator.Runtime.Common,
+        asm: GameCreator.Runtime.Core}
       data: 
     - rid: 3428531543345201473
       type: {class: ShotKinematic, ns: GameCreator.Runtime.Shooter, asm: GameCreator.Runtime.Shooter}
@@ -547,13 +554,15 @@ MonoBehaviour:
     - rid: 3428531543345201474
       type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
-        m_GameObject: {fileID: 6232580452864397694, guid: 75ae0f3218f0c4e0083f0a59bae8e390, type: 3}
+        m_GameObject: {fileID: 6232580452864397694, guid: 75ae0f3218f0c4e0083f0a59bae8e390,
+          type: 3}
     - rid: 3428531543345201475
       type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
         m_Value: 100
     - rid: 3428531543345201476
-      type: {class: GetDecimalPhysicsGravityEarth, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      type: {class: GetDecimalPhysicsGravityEarth, ns: GameCreator.Runtime.Common,
+        asm: GameCreator.Runtime.Core}
       data: 
     - rid: 3428531543345201478
       type: {class: GetDecimalConstantOne, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
@@ -644,7 +653,8 @@ MonoBehaviour:
       type: {class: GetDecimalConstantPointFive, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data: 
     - rid: 8814677138683199551
-      type: {class: GetBoolCharacterIsPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      type: {class: GetBoolCharacterIsPlayer, ns: GameCreator.Runtime.Characters,
+        asm: GameCreator.Runtime.Core}
       data:
         m_Character:
           m_Property:
@@ -673,7 +683,8 @@ MonoBehaviour:
     - rid: 8814677138683199556
       type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
-        m_GameObject: {fileID: 3599771330249854657, guid: 329a3597843b745d9bb8650cabf4c716, type: 3}
+        m_GameObject: {fileID: 3599771330249854657, guid: 329a3597843b745d9bb8650cabf4c716,
+          type: 3}
     - rid: 8814677138683199557
       type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
@@ -786,7 +797,8 @@ MonoBehaviour:
     - rid: 8814677336433098940
       type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
-        m_GameObject: {fileID: 2310562118795845251, guid: 8b1f5e7ba8be14992a9eff217d053d35, type: 3}
+        m_GameObject: {fileID: 2310562118795845251, guid: 8b1f5e7ba8be14992a9eff217d053d35,
+          type: 3}
 --- !u!221 &7759106725447088132
 AnimatorOverrideController:
   m_ObjectHideFlags: 1

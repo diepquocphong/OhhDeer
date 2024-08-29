@@ -1962,6 +1962,9 @@ MonoBehaviour:
     - rid: 4702992253332750971
     - rid: 4702992253332750978
     - rid: 4702992252469772857
+    - rid: 4702992323351937747
+    - rid: 4702992323351937756
+    - rid: 4702992323351937752
   m_TriggerEvent:
     rid: 4702992277768503298
   references:
@@ -2107,6 +2110,89 @@ MonoBehaviour:
       type: {class: GetStringString, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
         m_Value: Player
+    - rid: 4702992323351937747
+      type: {class: InstructionLogicCheckConditions, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Conditions:
+          m_Conditions:
+          - rid: 4702992323351937748
+    - rid: 4702992323351937748
+      type: {class: ConditionMathCompareBooleans, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Sign: 1
+        m_Value:
+          m_Property:
+            rid: 4702992323351937751
+        m_Comparison: 0
+        m_CompareTo:
+          m_Property:
+            rid: 4702992323351937750
+    - rid: 4702992323351937750
+      type: {class: GetBoolTrue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 4702992323351937751
+      type: {class: GetBoolGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: boolean
+          m_Variable: {fileID: 11400000, guid: dc266a9613b9543698ec09823f75d51e, type: 2}
+          m_Name:
+            m_String: FamerMode
+            m_ID: 1882651116
+    - rid: 4702992323351937752
+      type: {class: InstructionCommonAudioSFXPlay, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_AudioClip:
+          m_Property:
+            rid: 4702992323351937755
+        m_WaitToComplete: 1
+        m_Config:
+          m_Volume: 1
+          m_Pitch: {x: 1, y: 1}
+          m_TransitionIn: 0
+          m_UpdateMode: 0
+          m_SpatialBlend: 0
+          m_Target:
+            m_Property:
+              rid: 4702992323351937754
+    - rid: 4702992323351937754
+      type: {class: GetGameObjectNone, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 4702992323351937755
+      type: {class: GetAudioRandomClip, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Values:
+        - {fileID: 8300000, guid: 860c63170a8fa47e0836865136f4e0e8, type: 3}
+        - {fileID: 8300000, guid: 8782d4679425646bd88839b734df3b5e, type: 3}
+    - rid: 4702992323351937756
+      type: {class: InstructionGameObjectSetActive, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_GameObject:
+          m_Property:
+            rid: 4702992323351937759
+        m_Active:
+          m_Property:
+            rid: 4702992323351937758
+    - rid: 4702992323351937758
+      type: {class: GetBoolValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 0
+    - rid: 4702992323351937759
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data: 
 --- !u!1 &5641075245204323855
 GameObject:
   m_ObjectHideFlags: 0

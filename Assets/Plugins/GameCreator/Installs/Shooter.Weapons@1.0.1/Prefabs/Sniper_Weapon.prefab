@@ -672,7 +672,8 @@ MonoBehaviour:
       type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
       data: 
     - rid: 5386062379778048014
-      type: {class: InstructionShooterFireRelease, ns: GameCreator.Runtime.Shooter, asm: GameCreator.Runtime.Shooter}
+      type: {class: InstructionShooterFireRelease, ns: GameCreator.Runtime.Shooter,
+        asm: GameCreator.Runtime.Shooter}
       data:
         m_Breakpoint: 0
         m_IsEnabled: 1
@@ -969,7 +970,8 @@ MonoBehaviour:
     version: 2
     RefIds:
     - rid: 1903938804400521616
-      type: {class: InstructionShooterCancelReload, ns: GameCreator.Runtime.Shooter, asm: GameCreator.Runtime.Shooter}
+      type: {class: InstructionShooterCancelReload, ns: GameCreator.Runtime.Shooter,
+        asm: GameCreator.Runtime.Shooter}
       data:
         m_Breakpoint: 0
         m_IsEnabled: 1
@@ -1737,7 +1739,8 @@ MonoBehaviour:
       data:
         m_Key: 41
     - rid: 1903939121972773280
-      type: {class: InstructionArithmeticSetNumber, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      type: {class: InstructionArithmeticSetNumber, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
       data:
         m_Breakpoint: 0
         m_IsEnabled: 1
@@ -1752,7 +1755,8 @@ MonoBehaviour:
       data:
         m_Value: 20
     - rid: 1903939121972773311
-      type: {class: SetNumberReflectionPropertyFloat, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      type: {class: SetNumberReflectionPropertyFloat, ns: GameCreator.Runtime.Common,
+        asm: GameCreator.Runtime.Core}
       data:
         m_Property:
           m_Component: {fileID: 5620361057336766871}
@@ -1798,7 +1802,8 @@ MonoBehaviour:
       data:
         m_Key: 42
     - rid: 1903939121972773384
-      type: {class: InstructionArithmeticSetNumber, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      type: {class: InstructionArithmeticSetNumber, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
       data:
         m_Breakpoint: 0
         m_IsEnabled: 1
@@ -1809,7 +1814,8 @@ MonoBehaviour:
           m_Property:
             rid: 1903939121972773386
     - rid: 1903939121972773385
-      type: {class: SetNumberReflectionPropertyFloat, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      type: {class: SetNumberReflectionPropertyFloat, ns: GameCreator.Runtime.Common,
+        asm: GameCreator.Runtime.Core}
       data:
         m_Property:
           m_Component: {fileID: 5620361057336766871}
@@ -1901,79 +1907,103 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4487205302024936688}
     m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: e8ed43383058647a7a5bc50709390484, type: 3}
+    - target: {fileID: -8679921383154817045, guid: e8ed43383058647a7a5bc50709390484,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: e8ed43383058647a7a5bc50709390484, type: 3}
+    - target: {fileID: -8679921383154817045, guid: e8ed43383058647a7a5bc50709390484,
+        type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: e8ed43383058647a7a5bc50709390484, type: 3}
+    - target: {fileID: -8679921383154817045, guid: e8ed43383058647a7a5bc50709390484,
+        type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: e8ed43383058647a7a5bc50709390484, type: 3}
+    - target: {fileID: -8679921383154817045, guid: e8ed43383058647a7a5bc50709390484,
+        type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.49999988
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: e8ed43383058647a7a5bc50709390484, type: 3}
+    - target: {fileID: -8679921383154817045, guid: e8ed43383058647a7a5bc50709390484,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: -0.49999973
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: e8ed43383058647a7a5bc50709390484, type: 3}
+    - target: {fileID: -8679921383154817045, guid: e8ed43383058647a7a5bc50709390484,
+        type: 3}
       propertyPath: m_LocalRotation.y
       value: 0.50000024
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: e8ed43383058647a7a5bc50709390484, type: 3}
+    - target: {fileID: -8679921383154817045, guid: e8ed43383058647a7a5bc50709390484,
+        type: 3}
       propertyPath: m_LocalRotation.z
       value: 0.5000003
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: e8ed43383058647a7a5bc50709390484, type: 3}
+    - target: {fileID: -8679921383154817045, guid: e8ed43383058647a7a5bc50709390484,
+        type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: -90
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: e8ed43383058647a7a5bc50709390484, type: 3}
+    - target: {fileID: -8679921383154817045, guid: e8ed43383058647a7a5bc50709390484,
+        type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: e8ed43383058647a7a5bc50709390484, type: 3}
+    - target: {fileID: -8679921383154817045, guid: e8ed43383058647a7a5bc50709390484,
+        type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
-    - target: {fileID: -3887185075125053422, guid: e8ed43383058647a7a5bc50709390484, type: 3}
+    - target: {fileID: -3887185075125053422, guid: e8ed43383058647a7a5bc50709390484,
+        type: 3}
       propertyPath: m_DirtyAABB
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -3887185075125053422, guid: e8ed43383058647a7a5bc50709390484, type: 3}
+    - target: {fileID: -3887185075125053422, guid: e8ed43383058647a7a5bc50709390484,
+        type: 3}
       propertyPath: m_AABB.m_Center.x
       value: -0.0028198548
       objectReference: {fileID: 0}
-    - target: {fileID: -3887185075125053422, guid: e8ed43383058647a7a5bc50709390484, type: 3}
+    - target: {fileID: -3887185075125053422, guid: e8ed43383058647a7a5bc50709390484,
+        type: 3}
       propertyPath: m_AABB.m_Center.y
       value: -0.00015502328
       objectReference: {fileID: 0}
-    - target: {fileID: -3887185075125053422, guid: e8ed43383058647a7a5bc50709390484, type: 3}
+    - target: {fileID: -3887185075125053422, guid: e8ed43383058647a7a5bc50709390484,
+        type: 3}
       propertyPath: m_AABB.m_Center.z
       value: 0.0006861744
       objectReference: {fileID: 0}
-    - target: {fileID: -3887185075125053422, guid: e8ed43383058647a7a5bc50709390484, type: 3}
+    - target: {fileID: -3887185075125053422, guid: e8ed43383058647a7a5bc50709390484,
+        type: 3}
       propertyPath: m_AABB.m_Extent.x
       value: 0.0067019956
       objectReference: {fileID: 0}
-    - target: {fileID: -3887185075125053422, guid: e8ed43383058647a7a5bc50709390484, type: 3}
+    - target: {fileID: -3887185075125053422, guid: e8ed43383058647a7a5bc50709390484,
+        type: 3}
       propertyPath: m_AABB.m_Extent.y
       value: 0.0005747686
       objectReference: {fileID: 0}
-    - target: {fileID: -3887185075125053422, guid: e8ed43383058647a7a5bc50709390484, type: 3}
+    - target: {fileID: -3887185075125053422, guid: e8ed43383058647a7a5bc50709390484,
+        type: 3}
       propertyPath: m_AABB.m_Extent.z
       value: 0.0014563143
       objectReference: {fileID: 0}
-    - target: {fileID: -3887185075125053422, guid: e8ed43383058647a7a5bc50709390484, type: 3}
+    - target: {fileID: -3887185075125053422, guid: e8ed43383058647a7a5bc50709390484,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ede963a9ef4e344538719c5aad83383e, type: 2}
+    - target: {fileID: -3887185075125053422, guid: e8ed43383058647a7a5bc50709390484,
+        type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 6ac4e9c5f77cd496b804f749f5d852d0, type: 2}
-    - target: {fileID: 919132149155446097, guid: e8ed43383058647a7a5bc50709390484, type: 3}
+    - target: {fileID: 919132149155446097, guid: e8ed43383058647a7a5bc50709390484,
+        type: 3}
       propertyPath: m_Name
       value: Sniper_Weapon
       objectReference: {fileID: 0}
@@ -1984,6 +2014,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: e8ed43383058647a7a5bc50709390484, type: 3}
 --- !u!4 &4400773460179520082 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e8ed43383058647a7a5bc50709390484, type: 3}
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e8ed43383058647a7a5bc50709390484,
+    type: 3}
   m_PrefabInstance: {fileID: 4222134925031828921}
   m_PrefabAsset: {fileID: 0}

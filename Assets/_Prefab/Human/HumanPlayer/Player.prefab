@@ -1032,6 +1032,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Instructions:
     m_Instructions:
+    - rid: 4702992306598838443
     - rid: 4702992169300394063
     - rid: 4702992169300394066
   m_TriggerEvent:
@@ -1098,6 +1099,33 @@ MonoBehaviour:
       type: {class: GetGameObjectCharactersLastPropAttached, ns: GameCreator.Runtime.Characters,
         asm: GameCreator.Runtime.Core}
       data: 
+    - rid: 4702992306598838443
+      type: {class: InstructionCharacterChangeModel, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Character:
+          m_Property:
+            rid: 4702992306598838444
+        m_Model:
+          m_Property:
+            rid: 4702992306598838446
+        m_MaterialSounds: {fileID: 0}
+        m_Offset: {x: 0, y: 0, z: 0}
+    - rid: 4702992306598838444
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 4702992306598838446
+      type: {class: GetGameObjectGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: game-object
+          m_Variable: {fileID: 11400000, guid: dc266a9613b9543698ec09823f75d51e, type: 2}
+          m_Name:
+            m_String: FarmerModel
+            m_ID: -1309264257
 --- !u!1 &3729257075659143951
 GameObject:
   m_ObjectHideFlags: 0

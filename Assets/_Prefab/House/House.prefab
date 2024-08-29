@@ -73,7 +73,9 @@ MonoBehaviour:
     m_Instructions:
     - rid: 4702992259278176298
     - rid: 4702992259278176289
+    - rid: 4702992323351937417
     - rid: 4702992252469772421
+    - rid: 4702992323351937420
     - rid: 4702992253921788074
   m_TriggerEvent:
     rid: 4702992259278176290
@@ -181,7 +183,31 @@ MonoBehaviour:
     - rid: 4702992259278176299
       type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
-        m_Value: 0.1
+        m_Value: 0.05
+    - rid: 4702992323351937417
+      type: {class: InstructionGameObjectDisableCollider, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_GameObject:
+          m_Property:
+            rid: 4702992323351937419
+    - rid: 4702992323351937419
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 4702992323351937420
+      type: {class: InstructionGameObjectEnableCollider, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_GameObject:
+          m_Property:
+            rid: 4702992323351937422
+    - rid: 4702992323351937422
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data: 
 --- !u!1 &3108996690930405571
 GameObject:
   m_ObjectHideFlags: 0

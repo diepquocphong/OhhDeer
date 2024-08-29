@@ -172,7 +172,7 @@ GameObject:
   - component: {fileID: 1370400494171816665}
   - component: {fileID: 364387455530641925}
   m_Layer: 0
-  m_Name: Famer01-2
+  m_Name: Farmer01-2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1486,6 +1486,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1978955974487272336}
+  - component: {fileID: 4519891292646707099}
   m_Layer: 0
   m_Name: Famer01
   m_TagString: Untagged
@@ -1510,6 +1511,120 @@ Transform:
   - {fileID: 5194012382378350101}
   m_Father: {fileID: 1370400494171816665}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4519891292646707099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8732025868710973941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ecd922218e245e2b85d51f9f08338c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Instructions:
+    m_Instructions:
+    - rid: 4702992323351937387
+    - rid: 4702992323351937392
+  m_TriggerEvent:
+    rid: 4702992323351937386
+  references:
+    version: 2
+    RefIds:
+    - rid: 4702992323351937386
+      type: {class: EventOnVariableGlobalNameChange, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_Variable: {fileID: 11400000, guid: dc266a9613b9543698ec09823f75d51e, type: 2}
+          m_When: 1
+          m_Name:
+            m_String: NightMode
+            m_ID: -1884948111
+    - rid: 4702992323351937387
+      type: {class: InstructionLogicCheckConditions, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Conditions:
+          m_Conditions:
+          - rid: 4702992323351937388
+          - rid: 4702992323351937399
+    - rid: 4702992323351937388
+      type: {class: ConditionMathCompareBooleans, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Sign: 1
+        m_Value:
+          m_Property:
+            rid: 4702992323351937391
+        m_Comparison: 0
+        m_CompareTo:
+          m_Property:
+            rid: 4702992323351937390
+    - rid: 4702992323351937390
+      type: {class: GetBoolTrue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 4702992323351937391
+      type: {class: GetBoolGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: boolean
+          m_Variable: {fileID: 11400000, guid: dc266a9613b9543698ec09823f75d51e, type: 2}
+          m_Name:
+            m_String: NightMode
+            m_ID: -1884948111
+    - rid: 4702992323351937392
+      type: {class: InstructionGameObjectSetActive, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_GameObject:
+          m_Property:
+            rid: 4702992323351937395
+        m_Active:
+          m_Property:
+            rid: 4702992323351937394
+    - rid: 4702992323351937394
+      type: {class: GetBoolValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 0
+    - rid: 4702992323351937395
+      type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 4702992323351937399
+      type: {class: ConditionMathCompareBooleans, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Sign: 1
+        m_Value:
+          m_Property:
+            rid: 4702992323351937400
+        m_Comparison: 0
+        m_CompareTo:
+          m_Property:
+            rid: 4702992323351937401
+    - rid: 4702992323351937400
+      type: {class: GetBoolGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: boolean
+          m_Variable: {fileID: 11400000, guid: dc266a9613b9543698ec09823f75d51e, type: 2}
+          m_Name:
+            m_String: FamerMode
+            m_ID: 1882651116
+    - rid: 4702992323351937401
+      type: {class: GetBoolTrue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
 --- !u!1 &8799359834626530611
 GameObject:
   m_ObjectHideFlags: 0

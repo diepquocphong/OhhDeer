@@ -250,6 +250,7 @@ MonoBehaviour:
     m_Instructions:
       m_Instructions:
       - rid: 3428531703245439911
+      - rid: 4702992306412192429
   m_Animations:
     m_Idle: {fileID: 0}
     m_Empty: {fileID: 0}
@@ -540,6 +541,40 @@ MonoBehaviour:
     - rid: 3428531799317020711
       type: {class: GetAudioNone, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data: 
+    - rid: 4702992306412191759
+      type: {class: GetDecimalConstantZero, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 4702992306412191760
+      type: {class: GetDecimalConstantZero, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 4702992306412192429
+      type: {class: InstructionStatsChangeAttribute, ns: GameCreator.Runtime.Stats,
+        asm: GameCreator.Runtime.Stats}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Target:
+          m_Property:
+            rid: 4702992306412192433
+        m_Attribute:
+          m_Property:
+            rid: 4702992306412192431
+        m_Change:
+          m_Operation: 2
+          m_Value:
+            m_Property:
+              rid: 4702992306412192432
+    - rid: 4702992306412192431
+      type: {class: GetAttributeInstance, ns: GameCreator.Runtime.Stats, asm: GameCreator.Runtime.Stats}
+      data:
+        m_Attribute: {fileID: 11400000, guid: 4cf7ae5caa4804d0ea2548dceac15ffb, type: 2}
+    - rid: 4702992306412192432
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 30
+    - rid: 4702992306412192433
+      type: {class: GetGameObjectTarget, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
     - rid: 8814677138683199526
       type: {class: GetStringString, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
@@ -600,7 +635,7 @@ MonoBehaviour:
       data:
         m_LayerMask:
           serializedVersion: 2
-          m_Bits: 51
+          m_Bits: 145
         m_MaxDistance:
           m_Property:
             rid: 8814677138683199566
@@ -659,10 +694,10 @@ MonoBehaviour:
       data:
         m_MinValue:
           m_Property:
-            rid: 8814677138683199569
+            rid: 4702992306412191759
         m_MaxValue:
           m_Property:
-            rid: 8814677138683199570
+            rid: 4702992306412191760
     - rid: 8814677138683199554
       type: {class: GetDecimalRandomRange, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
@@ -675,7 +710,7 @@ MonoBehaviour:
     - rid: 8814677138683199555
       type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
-        m_Value: 0.15000000596046448
+        m_Value: 0
     - rid: 8814677138683199556
       type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
@@ -738,23 +773,17 @@ MonoBehaviour:
     - rid: 8814677138683199568
       type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data: 
-    - rid: 8814677138683199569
-      type: {class: GetDecimalConstantMinusOne, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data: 
-    - rid: 8814677138683199570
-      type: {class: GetDecimalConstantOne, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data: 
     - rid: 8814677138683199701
       type: {class: GetStringEmpty, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data: 
     - rid: 8814677138683200045
       type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
-        m_Value: 2
+        m_Value: 0
     - rid: 8814677138683200046
       type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
-        m_Value: 4
+        m_Value: 0
     - rid: 8814677138683200047
       type: {class: SightItem, ns: GameCreator.Runtime.Shooter, asm: GameCreator.Runtime.Shooter}
       data:

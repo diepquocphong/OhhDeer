@@ -45,14 +45,16 @@ MonoBehaviour:
         - rid: 4702992297782149751
         - rid: 4702992297782149753
         - rid: 4702992297782149741
+        - rid: 4702992301966230000
         - rid: 4702992173365986236
         - rid: 4702992212999799458
         - rid: 4702992216860393613
         - rid: 4702992252116402573
         - rid: 4702992252116402571
         - rid: 4702992299017109960
-        - rid: 4702992301966230000
         - rid: 4702992210421088894
+        - rid: 4702992306598838432
+        - rid: 4702992306598838435
     - rid: 4702992169300394751
       type: {class: NameVariable, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
       data:
@@ -443,3 +445,34 @@ MonoBehaviour:
         m_Breakpoint: 0
         m_IsEnabled: 1
         m_Value: 0
+    - rid: 4702992306598838432
+      type: {class: NameVariable, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Value:
+          rid: 4702992306598838434
+        m_Name:
+          m_String: FarmerModel
+    - rid: 4702992306598838434
+      type: {class: ValueGameObject, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Value: {fileID: 8501172207450661915, guid: a751435b009e6469b9404f1131f9427f,
+          type: 3}
+    - rid: 4702992306598838435
+      type: {class: NameVariable, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Value:
+          rid: 4702992306598838436
+        m_Name:
+          m_String: DeerModel
+    - rid: 4702992306598838436
+      type: {class: ValueGameObject, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Value: {fileID: 0}

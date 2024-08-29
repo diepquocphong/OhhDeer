@@ -366,7 +366,8 @@ MonoBehaviour:
       data:
         m_Value: 0.75
     - rid: 1820692989843341572
-      type: {class: GetBoolCharacterIsPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      type: {class: GetBoolCharacterIsPlayer, ns: GameCreator.Runtime.Characters,
+        asm: GameCreator.Runtime.Core}
       data:
         m_Character:
           m_Property:
@@ -462,7 +463,8 @@ MonoBehaviour:
       data:
         m_Value: 10
     - rid: 1903938584782045412
-      type: {class: InstructionCommonDebugText, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      type: {class: InstructionCommonDebugText, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
       data:
         m_Breakpoint: 0
         m_IsEnabled: 1
@@ -492,7 +494,8 @@ MonoBehaviour:
       type: {class: GetGameObjectTarget, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data: 
     - rid: 1903938855789396306
-      type: {class: InstructionLogicCheckConditions, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      type: {class: InstructionLogicCheckConditions, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
       data:
         m_Breakpoint: 0
         m_IsEnabled: 1
@@ -500,7 +503,8 @@ MonoBehaviour:
           m_Conditions:
           - rid: 1903938855789396307
     - rid: 1903938855789396307
-      type: {class: ConditionCharacterIsPlayer, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      type: {class: ConditionCharacterIsPlayer, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
       data:
         m_Breakpoint: 0
         m_IsEnabled: 1
@@ -512,7 +516,8 @@ MonoBehaviour:
       type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data: 
     - rid: 1903938855789396309
-      type: {class: InstructionCameraShakeBurst, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      type: {class: InstructionCameraShakeBurst, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
       data:
         m_Breakpoint: 0
         m_IsEnabled: 1
@@ -532,7 +537,8 @@ MonoBehaviour:
       type: {class: GetGameObjectCameraMain, ns: GameCreator.Runtime.Cameras, asm: GameCreator.Runtime.Core}
       data: 
     - rid: 1903938894052459164
-      type: {class: InstructionCommonAudioSFXPlay, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      type: {class: InstructionCommonAudioSFXPlay, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
       data:
         m_Breakpoint: 0
         m_IsEnabled: 1
@@ -557,7 +563,8 @@ MonoBehaviour:
       type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data: 
     - rid: 1903938894052459168
-      type: {class: InstructionCommonAudioSFXPlay, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      type: {class: InstructionCommonAudioSFXPlay, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
       data:
         m_Breakpoint: 0
         m_IsEnabled: 1
@@ -600,7 +607,8 @@ MonoBehaviour:
       type: {class: GetDecimalConstantOne, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data: 
     - rid: 3428531543345201246
-      type: {class: GetDecimalConstantOnePointFive, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      type: {class: GetDecimalConstantOnePointFive, ns: GameCreator.Runtime.Common,
+        asm: GameCreator.Runtime.Core}
       data: 
     - rid: 3428531799317020704
       type: {class: GetAudioNone, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
@@ -663,7 +671,8 @@ MonoBehaviour:
     - rid: 8814677336433098941
       type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
-        m_GameObject: {fileID: 2310562118795845251, guid: 8b1f5e7ba8be14992a9eff217d053d35, type: 3}
+        m_GameObject: {fileID: 2310562118795845251, guid: 8b1f5e7ba8be14992a9eff217d053d35,
+          type: 3}
 --- !u!221 &3030572960381896247
 AnimatorOverrideController:
   m_ObjectHideFlags: 1
