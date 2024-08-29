@@ -24,6 +24,7 @@ MonoBehaviour:
           m_NameVariables:
           - {fileID: 11400000, guid: dc266a9613b9543698ec09823f75d51e, type: 2}
           - {fileID: 11400000, guid: f9b975f62da7347e6a51101b9874b000, type: 2}
+          - {fileID: 11400000, guid: 29bd3397c1e6b4c97bac9907b667f7e2, type: 2}
           - {fileID: 11400000, guid: 3bf3edf5e451e4a5bb39fb7ab4b022eb, type: 2}
           m_ListVariables:
           - {fileID: 11400000, guid: fc6c7d6bace04434788d4e8f2c7dca22, type: 2}
