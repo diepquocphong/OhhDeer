@@ -6,9 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_Scenes/DarkSceneLoadADS.unity
-    guid: 2f2c40feba8a042cb98077f19d63b534
-  - enabled: 1
     path: Assets/_Scenes/FisrtOpen.unity
     guid: f166c7d04c83843f0928ef6f62e544ca
   - enabled: 1
