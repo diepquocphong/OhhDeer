@@ -74,11 +74,11 @@ MonoBehaviour:
         displayName: Interstitial ID
         required: 1
       idRewarded:
-        id: ca-app-pub-6626601540311877/8707675081
+        id: ca-app-pub-6626601540311877/7090835845
         displayName: Rewarded Video ID
         required: 1
       idRewardedInterstitial:
-        id: ca-app-pub-6626601540311877/8707675081
+        id: ca-app-pub-6626601540311877/7090835845
         displayName: Rewarded Interstitial ID
         required: 1
       idOpenApp:

@@ -1,0 +1,40 @@
+[1]
+Assets/_Prefab/FarmerCharacter01/Farmer00/Materials/Farmer00.mat
+--------------------------------------------------------------------
+[old GUID: 1b4e69cc540f44fb097d4f491a9b9cae] Assets/_Prefab/FarmerCharacter01/Farmer00/Farmer00.png
+[new GUID: 1b4e69cc540f44fb097d4f491a9b9cae] Assets/_Prefab/FarmerCharacter01/Farmer00/Farmer00.png
+ 
+
+# # #
+
+
+[2]
+Assets/_Prefab/FarmerCharacter01/Farmer01/Materials/texture_0.mat
+---------------------------------------------------------------------
+[old GUID: cb66f61fa7da54e8a952e2545edd2f34] Assets/_Prefab/FarmerCharacter01/Farmer01/Textures/texture_0.png
+[new GUID: cb66f61fa7da54e8a952e2545edd2f34] Assets/_Prefab/FarmerCharacter01/Farmer01/Textures/texture_0.png
+ 
+
+# # #
+
+
+[3]
+Assets/_Prefab/FarmerCharacter01/Farmer01/Materials/texture_3.mat
+---------------------------------------------------------------------
+[old GUID: b1fcd582fd8fd4bdda8375680edc794e] Assets/_Prefab/FarmerCharacter01/Farmer01/Textures/texture_3.png
+[new GUID: b1fcd582fd8fd4bdda8375680edc794e] Assets/_Prefab/FarmerCharacter01/Farmer01/Textures/texture_3.png
+ 
+
+# # #
+
+
+[4]
+Assets/_Prefab/FarmerCharacter01/Farmer02/Materials/farmer02.mat
+--------------------------------------------------------------------
+[old GUID: af4542c818fa64577ae0042043c6ce64] Assets/_Prefab/FarmerCharacter01/Farmer02/farmer02.jpeg
+[new GUID: e31e042143bf943d392e64c429813e1b] Assets/_Prefab/FarmerCharacter01/Farmer02/farmer02.png
+ 
+
+# # #
+
+
