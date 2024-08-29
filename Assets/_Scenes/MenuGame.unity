@@ -978,6 +978,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Instructions:
     m_Instructions:
+    - rid: 4702992330704290810
     - rid: 4702992323351937820
     - rid: 4702992323351937823
     - rid: 4702992323351937826
@@ -1067,6 +1068,19 @@ MonoBehaviour:
       type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
         m_Value: 0
+    - rid: 4702992330704290810
+      type: {class: InstructionCommonLoadGame, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_SaveSlot:
+          m_Property:
+            rid: 4702992330704290811
+    - rid: 4702992330704290811
+      type: {class: GetDecimalInteger, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 1
 --- !u!4 &429991649
 Transform:
   m_ObjectHideFlags: 0
@@ -2229,7 +2243,7 @@ MonoBehaviour:
         m_Scene:
           m_Scene: {fileID: 102900000, guid: 0d640e645b5e847e3aedc4027f5da311, type: 3}
           m_SceneName: FakeDeerGame
-          m_SceneIndex: 4
+          m_SceneIndex: 3
     - rid: 4702992259278176541
       type: {class: InstructionArithmeticSetNumber, ns: GameCreator.Runtime.VisualScripting,
         asm: GameCreator.Runtime.Core}
@@ -3812,7 +3826,7 @@ MonoBehaviour:
         m_Scene:
           m_Scene: {fileID: 102900000, guid: 5e2f2c7e15e1e4b08a4b0a146295842d, type: 3}
           m_SceneName: FamerGame
-          m_SceneIndex: 3
+          m_SceneIndex: 2
     - rid: 4702992259278176532
       type: {class: InstructionArithmeticSetNumber, ns: GameCreator.Runtime.VisualScripting,
         asm: GameCreator.Runtime.Core}

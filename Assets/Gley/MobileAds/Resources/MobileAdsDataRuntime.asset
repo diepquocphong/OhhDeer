@@ -12,44 +12,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 940df1a5021160d42b896ca3c766993a, type: 3}
   m_Name: MobileAdsDataRuntime
   m_EditorClassIdentifier: 
-  consentCanvas: {fileID: 0}
-  consentPopup: {fileID: 0}
+  consentCanvas: {fileID: 8831108138657628483, guid: d934bc761efe5014ab063b64f211ae58,
+    type: 3}
+  consentPopup: {fileID: 3240109449405206250, guid: b4c3a1b7b6446d14c894d5a536ac9628,
+    type: 3}
   androidAdvertiser:
-    advertiser: 20
+    advertiser: 30
     platformSettings:
       platform: 0
       enabled: 1
       appId:
-        id: ca-app-pub-3940256099942544~3347511713
-        displayName: App ID
+        id: ArdMxTOMzAagq3L8EhwTHlyMVhRMlyfJfVb8ELTSoA9rVIx9psanq8Oy48H3iukzHBTU6eIC_RyHeDp6bsLEO3
+        displayName: SDK key
         required: 1
       idBanner:
-        id: ca-app-pub-3940256099942544/6300978111
+        id: 67fee64f180c5219
         displayName: Banner ID
         required: 1
       idMRec:
-        id: ca-app-pub-3940256099942544/6300978111
+        id: 293958cba0b4321e
         displayName: MRec ID
         required: 1
       idInterstitial:
-        id: ca-app-pub-3940256099942544/8691691433
+        id: ea01f0301f4f5963
         displayName: Interstitial ID
         required: 1
       idRewarded:
-        id: a-app-pub-3940256099942544/5224354917
-        displayName: Rewarded Video ID
+        id: 1cdd7acd0874c1ac
+        displayName: Rewarded ID
         required: 1
       idRewardedInterstitial:
         id: 
-        displayName: Rewarded Interstitial ID
-        required: 1
+        displayName: 
+        required: 0
       idOpenApp:
-        id: ca-app-pub-3940256099942544/9257395921
+        id: 718214e92f25a437
         displayName: App Open ID
         required: 1
       testMode: 0
-      testDevice: 2b55ede7-e26c-46ec-8e08-75cdf9469e8c
-      debugGeography: 0
+      testDevice: 
     directedForChildren: 0
   iOSAdvertiser:
     advertiser: 20
@@ -86,7 +87,6 @@ MonoBehaviour:
         required: 1
       testMode: 0
       testDevice: 
-      debugGeography: 0
     directedForChildren: 0
   debugMode: 0
   enableATT: 0
