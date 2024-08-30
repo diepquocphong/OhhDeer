@@ -17,6 +17,9 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
+    - rid: 4702992359406174208
+      type: {class: StorageJsonFile, ns: GameCreator.Runtime.Common.SaveSystem, asm: GameCreator.Runtime.Core}
+      data: 
     - rid: 6584873076631273523
       type: {class: GetSceneAsset, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
@@ -31,7 +34,7 @@ MonoBehaviour:
           m_Encryption:
             rid: 7546138958612135938
           m_Storage:
-            rid: 7546138958612135939
+            rid: 4702992359406174208
           m_Load: 2
           m_Scene:
             m_Property:
@@ -44,8 +47,4 @@ MonoBehaviour:
           userInterfaceMixer: {fileID: 0}
     - rid: 7546138958612135938
       type: {class: EncryptionNone, ns: GameCreator.Runtime.Common.SaveSystem, asm: GameCreator.Runtime.Core}
-      data: 
-    - rid: 7546138958612135939
-      type: {class: StoragePlayerPrefs, ns: GameCreator.Runtime.Common.SaveSystem,
-        asm: GameCreator.Runtime.Core}
       data: 

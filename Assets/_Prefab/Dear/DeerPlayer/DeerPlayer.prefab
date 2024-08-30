@@ -2650,7 +2650,6 @@ MonoBehaviour:
     - rid: 4702992173365985744
     - rid: 4702992278694658932
     - rid: 4702992279300997290
-    - rid: 4702992277072773417
     - rid: 4702992277072773193
     - rid: 4702992221382902088
     - rid: 4702992192852197677
@@ -2889,22 +2888,6 @@ MonoBehaviour:
         m_Tag:
           m_Value: Untagged
     - rid: 4702992277072773194
-      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_GameObject: {fileID: 4386458003987150933}
-    - rid: 4702992277072773417
-      type: {class: InstructionGameObjectDisableComponent, ns: GameCreator.Runtime.VisualScripting,
-        asm: GameCreator.Runtime.Core}
-      data:
-        m_Breakpoint: 0
-        m_IsEnabled: 1
-        m_GameObject:
-          m_Property:
-            rid: 4702992277072773418
-        m_Type:
-          m_TypeName: GameCreator.Runtime.VisualScripting.Trigger, GameCreator.Runtime.Core,
-            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-    - rid: 4702992277072773418
       type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
         m_GameObject: {fileID: 4386458003987150933}

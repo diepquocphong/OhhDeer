@@ -86,8 +86,8 @@ MonoBehaviour:
         id: ca-app-pub-6626601540311877/8309330624
         displayName: App Open ID
         required: 1
-      testMode: 0
-      testDevice: 
+      testMode: 1
+      testDevice: 0096890646d98418875b834865620781
   - advertiser: 30
     useSDK: 1
     preprocessorDirective: GLEY_APPLOVIN

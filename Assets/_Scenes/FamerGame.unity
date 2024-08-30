@@ -4306,6 +4306,8 @@ MonoBehaviour:
     - rid: 4702992323351937634
     - rid: 4702992346922352798
     - rid: 4702992346922352800
+    - rid: 4702992358292848848
+    - rid: 4702992358292848851
   m_TriggerEvent:
     rid: 4702992216860393616
   references:
@@ -4406,7 +4408,59 @@ MonoBehaviour:
     - rid: 4702992346922352802
       type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
-        m_Value: 5
+        m_Value: 4
+    - rid: 4702992358292848848
+      type: {class: InstructionArithmeticSetNumber, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Set:
+          m_Property:
+            rid: 4702992358292848849
+        m_From:
+          m_Property:
+            rid: 4702992358292848850
+    - rid: 4702992358292848849
+      type: {class: SetNumberGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: 29bd3397c1e6b4c97bac9907b667f7e2, type: 2}
+          m_Name:
+            m_String: SetSensitivityAim
+            m_ID: -233534572
+    - rid: 4702992358292848850
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 1.5
+    - rid: 4702992358292848851
+      type: {class: InstructionArithmeticSetNumber, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Set:
+          m_Property:
+            rid: 4702992358292848852
+        m_From:
+          m_Property:
+            rid: 4702992358292848853
+    - rid: 4702992358292848852
+      type: {class: SetNumberGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: 29bd3397c1e6b4c97bac9907b667f7e2, type: 2}
+          m_Name:
+            m_String: SetSmoothAim
+            m_ID: 1859693390
+    - rid: 4702992358292848853
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 0.05
 --- !u!4 &538089015
 Transform:
   m_ObjectHideFlags: 0
@@ -5102,7 +5156,7 @@ MonoBehaviour:
   minScaleFactor: 0.5
   maxScaleFactor: 1
   scaleFactorChangeRate: 0.1
-  referenceResolution: {x: 1152, y: 576}
+  referenceResolution: {x: 1440, y: 720}
 --- !u!1001 &746064771
 PrefabInstance:
   m_ObjectHideFlags: 0
