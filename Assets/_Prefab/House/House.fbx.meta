@@ -3,7 +3,22 @@ guid: 9f03d53633b28463ba1e181e62c0027e
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MVD_Material_01
+    second: {fileID: 2100000, guid: 0e7212f19c5c7684c9a5ddce1487b2be, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MVD_Material_Back
+    second: {fileID: 2100000, guid: 80ea474e1746b764985f11bdb4d19433, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MVD_Material_Roof_A_1a
+    second: {fileID: 2100000, guid: 41633e6f61a1d564f9b0cc6a1d41e27e, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -32,11 +47,11 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 0
+    isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1
-    meshCompression: 0
+    meshCompression: 3
     addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1

@@ -1239,10 +1239,18 @@ MonoBehaviour:
       m_SoundsAsset: {fileID: 11400000, guid: cc9a58db4035e493199624217f60c661, type: 2}
   m_Ragdoll:
     m_Ragdoll:
-      rid: 7546139060943192145
+      rid: 4702992347587150334
   references:
     version: 2
     RefIds:
+    - rid: 4702992347587150334
+      type: {class: RagdollDefault, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data:
+        m_BoneRack:
+          m_Skeleton: {fileID: 11400000, guid: 5809449d43408435db32108bd69aa82c, type: 2}
+        m_TransitionDuration: 0.2
+        m_RecoverFaceDown: {fileID: 0}
+        m_RecoverFaceUp: {fileID: 0}
     - rid: 7546139060943192142
       type: {class: CharacterKernel, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
       data:
@@ -1256,9 +1264,6 @@ MonoBehaviour:
           rid: 7546139060943192149
         m_Animim:
           rid: 7546139060943192150
-    - rid: 7546139060943192145
-      type: {class: RagdollNone, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
-      data: 
     - rid: 7546139060943192146
       type: {class: UnitPlayerDirectional, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
       data:
@@ -2650,7 +2655,7 @@ MonoBehaviour:
     - rid: 4702992221382902088
     - rid: 4702992192852197677
     - rid: 4702992173365985754
-    - rid: 4702992173365985758
+    - rid: 4702992347587150335
     - rid: 4702992173365985883
     - rid: 4702992173365985983
     - rid: 4702992173365985980
@@ -2746,45 +2751,6 @@ MonoBehaviour:
       data:
         m_Value: 0
     - rid: 4702992173365985757
-      type: {class: GetGameObjectCharactersInstance, ns: GameCreator.Runtime.Characters,
-        asm: GameCreator.Runtime.Core}
-      data:
-        m_Character: {fileID: 4951824152707227910}
-    - rid: 4702992173365985758
-      type: {class: InstructionCharacterEnterState, ns: GameCreator.Runtime.VisualScripting,
-        asm: GameCreator.Runtime.Core}
-      data:
-        m_Breakpoint: 0
-        m_IsEnabled: 1
-        m_Character:
-          m_Property:
-            rid: 4702992173365985762
-        m_State:
-          m_StateType: 0
-          m_AnimationClip:
-            m_Property:
-              rid: 4702992173365985760
-          m_RuntimeController: {fileID: 0}
-          m_State: {fileID: 0}
-          m_AvatarMask: {fileID: 0}
-        m_Layer:
-          m_Property:
-            rid: 4702992173365985761
-        m_BlendMode: 0
-        m_Delay: 0
-        m_Speed: 1
-        m_Weight: 1
-        m_Transition: 0.1
-    - rid: 4702992173365985760
-      type: {class: GetAnimationInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_Value: {fileID: 1827226128182048838, guid: 011644c7406b4f64da55823e8f7c5264,
-          type: 3}
-    - rid: 4702992173365985761
-      type: {class: GetDecimalInteger, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_Value: 10
-    - rid: 4702992173365985762
       type: {class: GetGameObjectCharactersInstance, ns: GameCreator.Runtime.Characters,
         asm: GameCreator.Runtime.Core}
       data:
@@ -3181,3 +3147,15 @@ MonoBehaviour:
       type: {class: GetStringString, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
         m_Value: Canvas
+    - rid: 4702992347587150335
+      type: {class: InstructionCharacterStartRagdoll, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Character:
+          m_Property:
+            rid: 4702992347587150336
+    - rid: 4702992347587150336
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data: 

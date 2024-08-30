@@ -1,98 +1,278 @@
 fileFormatVersion: 2
 guid: bc1597a66de68f643a266f4be9f3ff06
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: Arm_Deer
-    100002: Deer_stag_10
-    100004: ear_1.L
-    100006: ear_1.R
-    100008: eyelid_up.L
-    100010: eyelid_up.R
-    100012: head
-    100014: hip_1_f.L
-    100016: hip_1_f.R
-    100018: hip_2_f.L
-    100020: hip_2_f.R
-    100022: hip_b.L
-    100024: hip_b.R
-    100026: hoof_b.L
-    100028: hoof_b.R
-    100030: hoof_b_Helper.L
-    100032: hoof_b_Helper.R
-    100034: hoof_f.L
-    100036: hoof_f.R
-    100038: hoof_f_Helper.L
-    100040: hoof_f_Helper.R
-    100042: knee_f_Helper.L
-    100044: knee_f_Helper.R
-    100046: //RootNode
-    100048: mouth
-    100050: neck_01
-    100052: neck_02
-    100054: root_bone
-    100056: shin_b.L
-    100058: shin_b.R
-    100060: shin_f.L
-    100062: shin_f.R
-    100064: Spine_01
-    100066: Spine_02
-    100068: Spine_03
-    100070: Spine_04
-    100072: Spine_05
-    100074: Spine_base
-    100076: tail_1
-    100078: thigh_b.L
-    100080: thigh_b.R
-    100082: thigh_f.L
-    100084: thigh_f.R
-    400000: Arm_Deer
-    400002: Deer_stag_10
-    400004: ear_1.L
-    400006: ear_1.R
-    400008: eyelid_up.L
-    400010: eyelid_up.R
-    400012: head
-    400014: hip_1_f.L
-    400016: hip_1_f.R
-    400018: hip_2_f.L
-    400020: hip_2_f.R
-    400022: hip_b.L
-    400024: hip_b.R
-    400026: hoof_b.L
-    400028: hoof_b.R
-    400030: hoof_b_Helper.L
-    400032: hoof_b_Helper.R
-    400034: hoof_f.L
-    400036: hoof_f.R
-    400038: hoof_f_Helper.L
-    400040: hoof_f_Helper.R
-    400042: knee_f_Helper.L
-    400044: knee_f_Helper.R
-    400046: //RootNode
-    400048: mouth
-    400050: neck_01
-    400052: neck_02
-    400054: root_bone
-    400056: shin_b.L
-    400058: shin_b.R
-    400060: shin_f.L
-    400062: shin_f.R
-    400064: Spine_01
-    400066: Spine_02
-    400068: Spine_03
-    400070: Spine_04
-    400072: Spine_05
-    400074: Spine_base
-    400076: tail_1
-    400078: thigh_b.L
-    400080: thigh_b.R
-    400082: thigh_f.L
-    400084: thigh_f.R
-    2100000: Deer_Stag
-    4300000: Deer_stag_10
-    9500000: //RootNode
-    13700000: Deer_stag_10
+  serializedVersion: 22200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Arm_Deer
+  - first:
+      1: 100002
+    second: Deer_stag_10
+  - first:
+      1: 100004
+    second: ear_1.L
+  - first:
+      1: 100006
+    second: ear_1.R
+  - first:
+      1: 100008
+    second: eyelid_up.L
+  - first:
+      1: 100010
+    second: eyelid_up.R
+  - first:
+      1: 100012
+    second: head
+  - first:
+      1: 100014
+    second: hip_1_f.L
+  - first:
+      1: 100016
+    second: hip_1_f.R
+  - first:
+      1: 100018
+    second: hip_2_f.L
+  - first:
+      1: 100020
+    second: hip_2_f.R
+  - first:
+      1: 100022
+    second: hip_b.L
+  - first:
+      1: 100024
+    second: hip_b.R
+  - first:
+      1: 100026
+    second: hoof_b.L
+  - first:
+      1: 100028
+    second: hoof_b.R
+  - first:
+      1: 100030
+    second: hoof_b_Helper.L
+  - first:
+      1: 100032
+    second: hoof_b_Helper.R
+  - first:
+      1: 100034
+    second: hoof_f.L
+  - first:
+      1: 100036
+    second: hoof_f.R
+  - first:
+      1: 100038
+    second: hoof_f_Helper.L
+  - first:
+      1: 100040
+    second: hoof_f_Helper.R
+  - first:
+      1: 100042
+    second: knee_f_Helper.L
+  - first:
+      1: 100044
+    second: knee_f_Helper.R
+  - first:
+      1: 100046
+    second: //RootNode
+  - first:
+      1: 100048
+    second: mouth
+  - first:
+      1: 100050
+    second: neck_01
+  - first:
+      1: 100052
+    second: neck_02
+  - first:
+      1: 100054
+    second: root_bone
+  - first:
+      1: 100056
+    second: shin_b.L
+  - first:
+      1: 100058
+    second: shin_b.R
+  - first:
+      1: 100060
+    second: shin_f.L
+  - first:
+      1: 100062
+    second: shin_f.R
+  - first:
+      1: 100064
+    second: Spine_01
+  - first:
+      1: 100066
+    second: Spine_02
+  - first:
+      1: 100068
+    second: Spine_03
+  - first:
+      1: 100070
+    second: Spine_04
+  - first:
+      1: 100072
+    second: Spine_05
+  - first:
+      1: 100074
+    second: Spine_base
+  - first:
+      1: 100076
+    second: tail_1
+  - first:
+      1: 100078
+    second: thigh_b.L
+  - first:
+      1: 100080
+    second: thigh_b.R
+  - first:
+      1: 100082
+    second: thigh_f.L
+  - first:
+      1: 100084
+    second: thigh_f.R
+  - first:
+      4: 400000
+    second: Arm_Deer
+  - first:
+      4: 400002
+    second: Deer_stag_10
+  - first:
+      4: 400004
+    second: ear_1.L
+  - first:
+      4: 400006
+    second: ear_1.R
+  - first:
+      4: 400008
+    second: eyelid_up.L
+  - first:
+      4: 400010
+    second: eyelid_up.R
+  - first:
+      4: 400012
+    second: head
+  - first:
+      4: 400014
+    second: hip_1_f.L
+  - first:
+      4: 400016
+    second: hip_1_f.R
+  - first:
+      4: 400018
+    second: hip_2_f.L
+  - first:
+      4: 400020
+    second: hip_2_f.R
+  - first:
+      4: 400022
+    second: hip_b.L
+  - first:
+      4: 400024
+    second: hip_b.R
+  - first:
+      4: 400026
+    second: hoof_b.L
+  - first:
+      4: 400028
+    second: hoof_b.R
+  - first:
+      4: 400030
+    second: hoof_b_Helper.L
+  - first:
+      4: 400032
+    second: hoof_b_Helper.R
+  - first:
+      4: 400034
+    second: hoof_f.L
+  - first:
+      4: 400036
+    second: hoof_f.R
+  - first:
+      4: 400038
+    second: hoof_f_Helper.L
+  - first:
+      4: 400040
+    second: hoof_f_Helper.R
+  - first:
+      4: 400042
+    second: knee_f_Helper.L
+  - first:
+      4: 400044
+    second: knee_f_Helper.R
+  - first:
+      4: 400046
+    second: //RootNode
+  - first:
+      4: 400048
+    second: mouth
+  - first:
+      4: 400050
+    second: neck_01
+  - first:
+      4: 400052
+    second: neck_02
+  - first:
+      4: 400054
+    second: root_bone
+  - first:
+      4: 400056
+    second: shin_b.L
+  - first:
+      4: 400058
+    second: shin_b.R
+  - first:
+      4: 400060
+    second: shin_f.L
+  - first:
+      4: 400062
+    second: shin_f.R
+  - first:
+      4: 400064
+    second: Spine_01
+  - first:
+      4: 400066
+    second: Spine_02
+  - first:
+      4: 400068
+    second: Spine_03
+  - first:
+      4: 400070
+    second: Spine_04
+  - first:
+      4: 400072
+    second: Spine_05
+  - first:
+      4: 400074
+    second: Spine_base
+  - first:
+      4: 400076
+    second: tail_1
+  - first:
+      4: 400078
+    second: thigh_b.L
+  - first:
+      4: 400080
+    second: thigh_b.R
+  - first:
+      4: 400082
+    second: thigh_f.L
+  - first:
+      4: 400084
+    second: thigh_f.R
+  - first:
+      21: 2100000
+    second: Deer_Stag
+  - first:
+      43: 4300000
+    second: Deer_stag_10
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Deer_stag_10
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -100,7 +280,7 @@ ModelImporter:
       name: Deer_Stag
     second: {fileID: 2100000, guid: 7c99c15891005894787f488218485472, type: 2}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -109,6 +289,7 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -126,32 +307,43 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 0
+    isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1
-    meshCompression: 0
+    meshCompression: 3
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
     importVisibility: 0
     importBlendShapes: 0
     importCameras: 0
     importLights: 0
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 0
     keepQuads: 0
     weldVertices: 0
+    bakeAxisConversion: 0
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 1
+    strictVertexDataChecks: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -160,10 +352,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 0
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -173,13 +365,19 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: root_bone
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  importBlendShapeDeformPercent: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

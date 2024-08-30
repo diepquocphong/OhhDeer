@@ -52,6 +52,7 @@ MonoBehaviour:
         - rid: 4702992252116402573
         - rid: 4702992252116402571
         - rid: 4702992299017109960
+        - rid: 4702992352443105451
         - rid: 4702992210421088894
         - rid: 4702992306598838432
         - rid: 4702992306598838435
@@ -69,7 +70,7 @@ MonoBehaviour:
       data:
         m_Breakpoint: 0
         m_IsEnabled: 1
-        m_Value: 0.03
+        m_Value: 0.1
     - rid: 4702992169300394764
       type: {class: NameVariable, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
       data:
@@ -84,7 +85,7 @@ MonoBehaviour:
       data:
         m_Breakpoint: 0
         m_IsEnabled: 1
-        m_Value: 2
+        m_Value: 4
     - rid: 4702992173365986045
       type: {class: NameVariable, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
       data:
@@ -476,3 +477,18 @@ MonoBehaviour:
         m_Breakpoint: 0
         m_IsEnabled: 1
         m_Value: {fileID: 0}
+    - rid: 4702992352443105451
+      type: {class: NameVariable, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Value:
+          rid: 4702992352443105452
+        m_Name:
+          m_String: NPC_Seek
+    - rid: 4702992352443105452
+      type: {class: ValueBool, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Value: 0
