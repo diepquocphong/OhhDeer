@@ -1522,7 +1522,6 @@ GameObject:
   - component: {fileID: 1737927251624498073}
   - component: {fileID: 4821319630900631333}
   - component: {fileID: 493867983529101641}
-  - component: {fileID: 8717156759078663654}
   - component: {fileID: 6799641781678759471}
   m_Layer: 5
   m_Name: Name
@@ -1648,120 +1647,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &8717156759078663654
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2042413339992399422}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f594dab9693b420abe531eb3ab95d12, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameText: {fileID: 493867983529101641}
-  names:
-  - John Smith
-  - Maria Garcia
-  - Zhang Wei
-  - "Anna M\xFCller"
-  - Mohammed Khan
-  - Sophie Dubois
-  - Juan Martinez
-  - Wang Li
-  - Sarah Johnson
-  - "Carlos Rodr\xEDguez"
-  - Li Wei
-  - Emily Brown
-  - Ahmed Al-Farsi
-  - Ana Silva
-  - Kim Jong-soo
-  - Marta Gonzalez
-  - Alexei Petrov
-  - Fatima Ali
-  - Takashi Yamamoto
-  - Gabriela Costa
-  - Michael Nguyen
-  - Elena Ivanova
-  - David Garcia
-  - Mei Chen
-  - Alessandro Rossi
-  - Leila Ahmed
-  - Hiroshi Tanaka
-  - Sophie Dupont
-  - Pedro Ramirez
-  - Svetlana Ivanov
-  - Ahmed Mohamed
-  - Julia Santos
-  - Pavel Sokolov
-  - Carolina Fernandez
-  - Mohammad Ahmed
-  - Yuki Nakamura
-  - Sophie Lambert
-  - Ahmed Khan
-  - Sofia Rodriguez
-  - Ivan Petrov
-  - Mariana Oliveira
-  - Kenji Suzuki
-  - Maria Hernandez
-  - Dmitry Ivanov
-  - Isabella Rossi
-  - Ali Rahman
-  - Olga Volkova
-  - Amir Khan
-  - Luiz Silva
-  - Aya Yamamoto
-  - Patrick Murphy
-  - Mei Wong
-  - Yuri Petrov
-  - Antonia Garcia
-  - Mohammed Ali
-  - Natalia Volkova
-  - Tomasz Nowak
-  - Carmen Lopez
-  - Sergei Ivanov
-  - Nana Yamamoto
-  - Jamie Taylor
-  - Elena Popova
-  - Hasan Al-Mansoori
-  - Sofia Martinez
-  - Arjun Patel
-  - Petra Novak
-  - Ali Hussein
-  - Katya Ivanova
-  - Abdullah Al-Farsi
-  - Maria da Silva
-  - Yuri Popov
-  - "Lea M\xFCller"
-  - Yusuf Mohammed
-  - Li Na
-  - Sofia Petrova
-  - Carlos Gomez
-  - Ayumi Tanaka
-  - Sergey Petrov
-  - Claudia Costa
-  - Abdul Rahman
-  - Mei Ling
-  - Jose Gonzalez
-  - "Petra Novotn\xE1"
-  - Mohammed Rahman
-  - Yuki Sato
-  - Elena Petrova
-  - Ahmed Mahmoud
-  - Ananya Patel
-  - Mikhail Ivanov
-  - Gabriela da Silva
-  - Amir Hussein
-  - Olga Ivanova
-  - Ali Al-Farsi
-  - Maria Lopez
-  - Dimitri Petrov
-  - Lucia Martinez
-  - Ahmed Hassan
-  - Ayumi Suzuki
-  - Ivan Sokolov
-  - Mei Yamamoto
 --- !u!114 &6799641781678759471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1776,7 +1661,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Instructions:
     m_Instructions:
-    - rid: 4702992210421088888
+    - rid: 4702992368529047967
   m_TriggerEvent:
     rid: 4702992210421088887
   references:
@@ -1785,27 +1670,32 @@ MonoBehaviour:
     - rid: 4702992210421088887
       type: {class: EventOnEnable, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data: 
-    - rid: 4702992210421088888
-      type: {class: InstructionLogicCallMethod, ns: GameCreator.Runtime.VisualScripting,
+    - rid: 4702992368529047967
+      type: {class: InstructionUIChangeText, ns: GameCreator.Runtime.VisualScripting,
         asm: GameCreator.Runtime.Core}
       data:
         m_Breakpoint: 0
         m_IsEnabled: 1
-        m_Method:
-          m_PersistentCalls:
-            m_Calls:
-            - m_Target: {fileID: 8717156759078663654}
-              m_TargetAssemblyTypeName: RandomNameSelector, Assembly-CSharp
-              m_MethodName: SelectRandomName
-              m_Mode: 1
-              m_Arguments:
-                m_ObjectArgument: {fileID: 0}
-                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-                m_IntArgument: 0
-                m_FloatArgument: 0
-                m_StringArgument: 
-                m_BoolArgument: 0
-              m_CallState: 2
+        m_Text:
+          m_Property:
+            rid: 4702992368529047968
+        m_Value:
+          m_Property:
+            rid: 4702992368529047970
+    - rid: 4702992368529047968
+      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_GameObject: {fileID: 2042413339992399422}
+    - rid: 4702992368529047970
+      type: {class: GetStringGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: string
+          m_Variable: {fileID: 11400000, guid: dc266a9613b9543698ec09823f75d51e, type: 2}
+          m_Name:
+            m_String: NameFarmerNPC
+            m_ID: -1766025915
 --- !u!1 &2054414020828350755
 GameObject:
   m_ObjectHideFlags: 0
@@ -1904,6 +1794,81 @@ Transform:
   - {fileID: 6539086923895182939}
   m_Father: {fileID: 3844461771543151795}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2453178064668556131
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7755366722578155698}
+  - component: {fileID: 3736142077560063511}
+  - component: {fileID: 6652915737506875709}
+  m_Layer: 5
+  m_Name: Arrow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7755366722578155698
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2453178064668556131}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8656963269161074598}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -0.2}
+  m_SizeDelta: {x: 0.25, y: 0.25}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &3736142077560063511
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2453178064668556131}
+  m_CullTransparentMesh: 1
+--- !u!114 &6652915737506875709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2453178064668556131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.972549, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 31e954495fe8546dcb74e2502a8e9107, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &2547857566222192370
 GameObject:
   m_ObjectHideFlags: 0
@@ -2192,6 +2157,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1737927251624498073}
+  - {fileID: 7755366722578155698}
   m_Father: {fileID: 5868049039978030729}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}

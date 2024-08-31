@@ -509,7 +509,7 @@ MonoBehaviour:
     - rid: 1903939122992775835
       type: {class: GetMaterialInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
-        m_Material: {fileID: 0}
+        m_Material: {fileID: 2100000, guid: 7828dae3827fa41f3b99d0da4ddb32dd, type: 2}
     - rid: 1903939122992775836
       type: {class: GetColorColorsWhite, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data: 

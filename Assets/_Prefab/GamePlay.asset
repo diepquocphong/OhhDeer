@@ -54,6 +54,7 @@ MonoBehaviour:
         - rid: 4702992299017109960
         - rid: 4702992352443105451
         - rid: 4702992210421088894
+        - rid: 4702992368529047952
         - rid: 4702992306598838432
         - rid: 4702992306598838435
     - rid: 4702992169300394751
@@ -492,3 +493,18 @@ MonoBehaviour:
         m_Breakpoint: 0
         m_IsEnabled: 1
         m_Value: 0
+    - rid: 4702992368529047952
+      type: {class: NameVariable, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Value:
+          rid: 4702992368529047953
+        m_Name:
+          m_String: NameFarmerNPC
+    - rid: 4702992368529047953
+      type: {class: ValueString, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Value: LinhLOL

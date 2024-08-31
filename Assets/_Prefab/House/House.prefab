@@ -741,6 +741,7 @@ MonoBehaviour:
   m_Instructions:
     m_Instructions:
     - rid: 4702992173365986153
+    - rid: 4702992367966486528
     - rid: 4702992173365986147
     - rid: 4702992173365986161
   m_TriggerEvent:
@@ -871,6 +872,19 @@ MonoBehaviour:
     - rid: 4702992173365986163
       type: {class: GetGameObjectNone, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data: 
+    - rid: 4702992367966486528
+      type: {class: InstructionGameObjectDisableCollider, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_GameObject:
+          m_Property:
+            rid: 4702992367966486529
+    - rid: 4702992367966486529
+      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_GameObject: {fileID: 3197411435261348420}
 --- !u!65 &8954640819642160478
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -909,6 +923,7 @@ MonoBehaviour:
     - rid: 4702992173365986153
     - rid: 4702992173365986147
     - rid: 4702992173365986161
+    - rid: 4702992367966486530
   m_TriggerEvent:
     rid: 4702992173365986181
   references:
@@ -1037,6 +1052,19 @@ MonoBehaviour:
     - rid: 4702992173365986182
       type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
       data: 
+    - rid: 4702992367966486530
+      type: {class: InstructionGameObjectEnableCollider, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_GameObject:
+          m_Property:
+            rid: 4702992367966486531
+    - rid: 4702992367966486531
+      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_GameObject: {fileID: 3197411435261348420}
 --- !u!1 &4096499744319410201
 GameObject:
   m_ObjectHideFlags: 0
