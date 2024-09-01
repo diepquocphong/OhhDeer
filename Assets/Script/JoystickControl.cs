@@ -41,7 +41,7 @@ public class JoystickControl : MonoBehaviour, IPointerDownHandler, IPointerUpHan
     private Vector2 initialHandlePosition;
     private Vector2 lastHandlePosition;
 
-    private float noChangeTime = 0.1f;
+    public float noChangeTime = 0.05f;
     private float timer = 0f;
 
     // Previous values for comparison

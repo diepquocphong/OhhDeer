@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 339f2342b828b46c0b0c3158092cbaa1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ed22c369b45d5480d8c14be3a71eb1f6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -86,7 +86,6 @@ GameObject:
   - component: {fileID: 8350453981363581793}
   - component: {fileID: 2981656554748267188}
   - component: {fileID: 7843445183009456457}
-  - component: {fileID: 4340392936873660080}
   m_Layer: 5
   m_Name: Text_Chat
   m_TagString: Untagged
@@ -210,19 +209,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &4340392936873660080
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2046860732176186163}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2cd2b15cc0b14743919705a2de24b5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  commentText: {fileID: 7843445183009456457}
 --- !u!1 &5085715535582823343
 GameObject:
   m_ObjectHideFlags: 0
@@ -235,8 +221,9 @@ GameObject:
   - component: {fileID: 6982735086143146118}
   - component: {fileID: 1241742297922824657}
   - component: {fileID: 4880881704435535683}
+  - component: {fileID: 7850671832974719451}
   m_Layer: 5
-  m_Name: FakeDeerChat
+  m_Name: FarmerNpcChat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -339,19 +326,7 @@ MonoBehaviour:
             rid: 4702992372187792051
         m_Value:
           m_Property:
-            rid: 4702992371179323734
-    - rid: 4702992371179323734
-      type: {class: GetStringGlobalList, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
-      data:
-        m_Variable:
-          m_TypeID:
-            m_String: string
-          m_Variable: {fileID: 11400000, guid: bbbc5375f1c334860a73d71f0851396f, type: 2}
-          m_Select:
-            rid: 4702992371179323736
-    - rid: 4702992371179323736
-      type: {class: GetPickRandom, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
-      data: 
+            rid: 4702992372702380300
     - rid: 4702992372187791630
       type: {class: InstructionLogicCallMethod, ns: GameCreator.Runtime.VisualScripting,
         asm: GameCreator.Runtime.Core}
@@ -361,8 +336,8 @@ MonoBehaviour:
         m_Method:
           m_PersistentCalls:
             m_Calls:
-            - m_Target: {fileID: 4340392936873660080}
-              m_TargetAssemblyTypeName: TeamARandomChat, Assembly-CSharp
+            - m_Target: {fileID: 7850671832974719451}
+              m_TargetAssemblyTypeName: TeamBRandomChat, Assembly-CSharp
               m_MethodName: SelectRandomConmment
               m_Mode: 1
               m_Arguments:
@@ -429,6 +404,29 @@ MonoBehaviour:
       type: {class: GetScaleVector3, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
         m_Scale: {x: 1, y: 1, z: 1}
+    - rid: 4702992372702380300
+      type: {class: GetStringGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: string
+          m_Variable: {fileID: 11400000, guid: dc266a9613b9543698ec09823f75d51e, type: 2}
+          m_Name:
+            m_String: NameFarmerNPC
+            m_ID: -1766025915
+--- !u!114 &7850671832974719451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5085715535582823343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51eb8f8332a3f4a4cafaa23f1b3ceb74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  commentText: {fileID: 7843445183009456457}
 --- !u!1 &6329426581221540049
 GameObject:
   m_ObjectHideFlags: 0

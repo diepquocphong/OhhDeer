@@ -54,8 +54,9 @@ MonoBehaviour:
         id: ca-app-pub-3940256099942544/9257395921
         displayName: App Open ID
         required: 1
-      testMode: 0
-      testDevice: 2b55ede7-e26c-46ec-8e08-75cdf9469e8c
+      testMode: 1
+      testDevice: EB3C985BDFBD05D2456E68FE13DBE00E
+      debugGeography: 0
     - platform: 1
       enabled: 1
       appId:
@@ -88,6 +89,7 @@ MonoBehaviour:
         required: 1
       testMode: 1
       testDevice: 0096890646d98418875b834865620781
+      debugGeography: 0
   - advertiser: 30
     useSDK: 1
     preprocessorDirective: GLEY_APPLOVIN
@@ -131,6 +133,7 @@ MonoBehaviour:
         required: 1
       testMode: 0
       testDevice: 
+      debugGeography: 0
     - platform: 1
       enabled: 0
       appId:
@@ -163,6 +166,7 @@ MonoBehaviour:
         required: 1
       testMode: 0
       testDevice: 
+      debugGeography: 0
   - advertiser: 60
     useSDK: 0
     preprocessorDirective: GLEY_VUNGLE
@@ -206,6 +210,7 @@ MonoBehaviour:
         required: 0
       testMode: 0
       testDevice: 
+      debugGeography: 0
     - platform: 1
       enabled: 0
       appId:
@@ -238,6 +243,7 @@ MonoBehaviour:
         required: 0
       testMode: 0
       testDevice: 
+      debugGeography: 0
   - advertiser: 40
     useSDK: 0
     preprocessorDirective: GLEY_LEVELPLAY
@@ -281,6 +287,7 @@ MonoBehaviour:
         required: 0
       testMode: 0
       testDevice: 
+      debugGeography: 0
     - platform: 1
       enabled: 0
       appId:
@@ -313,6 +320,7 @@ MonoBehaviour:
         required: 0
       testMode: 0
       testDevice: 
+      debugGeography: 0
   - advertiser: 50
     useSDK: 0
     preprocessorDirective: GLEY_UNITYADS
@@ -356,6 +364,7 @@ MonoBehaviour:
         required: 0
       testMode: 0
       testDevice: 
+      debugGeography: 0
     - platform: 1
       enabled: 0
       appId:
@@ -388,6 +397,7 @@ MonoBehaviour:
         required: 0
       testMode: 0
       testDevice: 
+      debugGeography: 0
   debugMode: 0
   usePlaymaker: 0
   useUnityVisualScripting: 0

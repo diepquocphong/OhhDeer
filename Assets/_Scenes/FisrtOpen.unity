@@ -169,7 +169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Instructions:
     m_Instructions:
-    - rid: 4702992259278176509
+    - rid: 6909869853459087415
     - rid: 4702992275549192360
     - rid: 4702992275549192198
   m_TriggerEvent:
@@ -180,17 +180,6 @@ MonoBehaviour:
     - rid: 4702992164517839219
       type: {class: EventOnEnable, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data: 
-    - rid: 4702992259278176509
-      type: {class: InstructionCommonTimeWait, ns: GameCreator.Runtime.VisualScripting,
-        asm: GameCreator.Runtime.Core}
-      data:
-        m_Breakpoint: 0
-        m_IsEnabled: 1
-        m_Seconds:
-          m_Property:
-            rid: 4702992275549192199
-        m_Mode:
-          m_UpdateTime: 0
     - rid: 4702992275549192198
       type: {class: InstructionLogicCallMethod, ns: GameCreator.Runtime.VisualScripting,
         asm: GameCreator.Runtime.Core}
@@ -212,15 +201,6 @@ MonoBehaviour:
                 m_StringArgument: 
                 m_BoolArgument: 0
               m_CallState: 2
-    - rid: 4702992275549192199
-      type: {class: GetDecimalRandomRange, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_MinValue:
-          m_Property:
-            rid: 4702992323351937848
-        m_MaxValue:
-          m_Property:
-            rid: 4702992323351937849
     - rid: 4702992275549192360
       type: {class: InstructionLogicCheckConditions, ns: GameCreator.Runtime.VisualScripting,
         asm: GameCreator.Runtime.Core}
@@ -230,6 +210,7 @@ MonoBehaviour:
         m_Conditions:
           m_Conditions:
           - rid: 4702992275549192361
+          - rid: 6909869853459087442
     - rid: 4702992275549192361
       type: {class: ConditionPlatformIsMobile, ns: GameCreator.Runtime.VisualScripting,
         asm: GameCreator.Runtime.Core}
@@ -237,14 +218,40 @@ MonoBehaviour:
         m_Breakpoint: 0
         m_IsEnabled: 1
         m_Sign: 1
-    - rid: 4702992323351937848
+    - rid: 6909869853459087415
+      type: {class: InstructionCommonTimeWait, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Seconds:
+          m_Property:
+            rid: 6909869853459087420
+        m_Mode:
+          m_UpdateTime: 0
+    - rid: 6909869853459087420
+      type: {class: GetDecimalRandomRange, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_MinValue:
+          m_Property:
+            rid: 6909869853459087423
+        m_MaxValue:
+          m_Property:
+            rid: 6909869853459087424
+    - rid: 6909869853459087423
+      type: {class: GetDecimalInteger, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 5
+    - rid: 6909869853459087424
       type: {class: GetDecimalInteger, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
         m_Value: 8
-    - rid: 4702992323351937849
-      type: {class: GetDecimalInteger, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+    - rid: 6909869853459087442
+      type: {class: isAppleDevice, ns: , asm: Assembly-CSharp-firstpass}
       data:
-        m_Value: 6
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Sign: 0
 --- !u!114 &138783290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -935,6 +942,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1405872931
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1405872932}
+  m_Layer: 0
+  m_Name: Iphone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1405872932
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405872931}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.6700947, y: 1.2788514, z: -1.3182216}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1427414611
 GameObject:
   m_ObjectHideFlags: 0
@@ -1336,3 +1374,4 @@ SceneRoots:
   - {fileID: 1427414615}
   - {fileID: 1009275243}
   - {fileID: 138783288}
+  - {fileID: 1405872932}
