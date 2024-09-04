@@ -3911,6 +3911,74 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 373093942}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &379883405
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 379883407}
+  - component: {fileID: 379883406}
+  m_Layer: 0
+  m_Name: TriggerShowJoystick
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &379883406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379883405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ecd922218e245e2b85d51f9f08338c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Instructions:
+    m_Instructions:
+    - rid: 6909869853459088296
+  m_TriggerEvent:
+    rid: 6909869853459088295
+  references:
+    version: 2
+    RefIds:
+    - rid: 6909869853459088295
+      type: {class: EventOnEnable, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 6909869853459088296
+      type: {class: InstructionCursorVisibility, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_IsVisible:
+          m_Property:
+            rid: 6909869853459088297
+    - rid: 6909869853459088297
+      type: {class: GetBoolValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 1
+--- !u!4 &379883407
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379883405}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &402837646
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -95611,6 +95679,7 @@ MonoBehaviour:
   SettingSensitivity: {fileID: 2426332812453182296}
   SettingSmoothTime: {fileID: 332848036063036927}
   smoothingSpeed: 1.5
+  noChangeTime: 0.05
   stick: {fileID: 0}
   Surface: {fileID: 0}
   Handle: {fileID: 0}
@@ -96507,6 +96576,7 @@ MonoBehaviour:
   SettingSensitivity: {fileID: 98164553739087247}
   SettingSmoothTime: {fileID: 1964492635525729888}
   smoothingSpeed: 7
+  noChangeTime: 0.05
   stick: {fileID: 0}
   Surface: {fileID: 0}
   Handle: {fileID: 0}
@@ -108768,7 +108838,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: EXIT GAME
+  m_text: Back Menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5c5ee151f9307453bad78be36b51a077, type: 2}
   m_sharedMaterial: {fileID: 2517202264660172603, guid: 5c5ee151f9307453bad78be36b51a077,
@@ -111368,3 +111438,4 @@ SceneRoots:
   - {fileID: 7018604800126985305}
   - {fileID: 2013149573}
   - {fileID: 2140284734}
+  - {fileID: 379883407}

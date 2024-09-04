@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/_Scenes/FakeDeerGame.unity
     guid: 0d640e645b5e847e3aedc4027f5da311
   - enabled: 1
+    path: Assets/_Scenes/TestJoyStick.unity
+    guid: 514ac4c82578d4cdab10c22a25fc16be
+  - enabled: 1
     path: Assets/Gley/MobileAds/Example/Scenes/MobileAdsTest.unity
     guid: e76ae2aae34bec744a05361b56621ccf
   - enabled: 1

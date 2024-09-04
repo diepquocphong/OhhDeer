@@ -12475,31 +12475,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 185407629788396715, guid: e14d34ac2d0d049b78e817f9573e102b,
-        type: 3}
-      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 185407629788396715, guid: e14d34ac2d0d049b78e817f9573e102b,
-        type: 3}
-      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 185407629788396715, guid: e14d34ac2d0d049b78e817f9573e102b,
-        type: 3}
-      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 185407629788396715, guid: e14d34ac2d0d049b78e817f9573e102b,
-        type: 3}
-      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2479171120701962890, guid: e14d34ac2d0d049b78e817f9573e102b,
-        type: 3}
-      propertyPath: noChangeTime
-      value: 0.04
-      objectReference: {fileID: 0}
     - target: {fileID: 2548515639625728938, guid: e14d34ac2d0d049b78e817f9573e102b,
         type: 3}
       propertyPath: managedReferences[4702992233078194706].m_GameObject
